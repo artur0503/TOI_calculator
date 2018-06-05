@@ -1,10 +1,10 @@
 package App.classes.view;
 
-import App.interfaces.controller.Controller;
-import App.classes.controller.ControllerHuffman;
-import App.classes.controller.ControllerShenon;
+import App.interfaces.controller.BaseController;
+import App.classes.controller.coding.HuffmanController;
+import App.classes.controller.coding.ShenonController;
 import App.classes.model.POJO.Data;
-import App.interfaces.view.View;
+import App.interfaces.view.BaseView;
 import Testing.Test;
 
 import java.util.LinkedList;
@@ -13,7 +13,7 @@ import java.util.Scanner;
 /**
  * Created by Arthur 31.01.2018 15:59.
  */
-public class ConsoleView implements View {
+public class ConsoleView implements BaseView {
 
     private LinkedList<Data> list;
 
@@ -23,25 +23,28 @@ public class ConsoleView implements View {
     public void execute() {
         Scanner sc = new Scanner(System.in);
         while (true) {
-            System.out.println("1 Ввод частот");
+            System.out.println("\n1 Ввод частот");
             System.out.println("2 Код Хаффмана");
             System.out.println("3 Код Шенона-Фанно");
             System.out.println("4 Арефметическое кодирование");
             System.out.print("Выберете пункт: ");
             switch (sc.nextInt()){
                 case 1:
+                    System.out.println();
                     afterAction();
                     break;
                 case 2:
-                    Controller haf = new ControllerHuffman(getInputData());
+                    System.out.println();
+                    BaseController haf = new HuffmanController(getInputData());
                     haf.execute();
                     break;
                 case 3:
-                    Controller sh = new ControllerShenon(getInputData());
+                    System.out.println();
+                    BaseController sh = new ShenonController(getInputData());
                     sh.execute();
                     break;
                 case 4:
-
+                    //arithmetic
                     break;
             }
         }

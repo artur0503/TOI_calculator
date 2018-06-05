@@ -1,7 +1,6 @@
 package Testing;
 
 import App.classes.model.POJO.Data;
-import App.interfaces.model.Model;
 
 import java.util.LinkedList;
 
@@ -89,27 +88,27 @@ public class Test {
 //        magic.add(new Data(5, "g", 7));
     }
 
-    public void test1(Model magic){
-        magic.add(22, "A");
-        magic.add(16, "B");
-        magic.add(15, "C");
-        magic.add(14, "D");
-        magic.add(12, "E");
-        magic.add(9, "F");
-        magic.add(5, "G");
-        magic.add(5, "J");
-        magic.add(1, "H");
-        magic.add(1, "I");
-    }
-
-    public void test2(Model magic){
-        magic.add(27, "a");
-        magic.add(20, "b");
-        magic.add(15, "c");
-        magic.add(11, "d");
-        magic.add(10, "e");
-        magic.add(9, "f");
-        magic.add(8, "g");
-    }
+//    public void test1(ModelCoding magic){
+//        magic.add(22, "A");
+//        magic.add(16, "B");
+//        magic.add(15, "C");
+//        magic.add(14, "D");
+//        magic.add(12, "E");
+//        magic.add(9, "F");
+//        magic.add(5, "G");
+//        magic.add(5, "J");
+//        magic.add(1, "H");
+//        magic.add(1, "I");
+//    }
+//
+//    public void test2(ModelCoding magic){
+//        magic.add(27, "a");
+//        magic.add(20, "b");
+//        magic.add(15, "c");
+//        magic.add(11, "d");
+//        magic.add(10, "e");
+//        magic.add(9, "f");
+//        magic.add(8, "g");
+//    }
 
 }

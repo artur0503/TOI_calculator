@@ -1,7 +1,7 @@
 package App;
 
 import App.classes.view.ConsoleView;
-import App.interfaces.view.View;
+import App.interfaces.view.BaseView;
 
 /**
  * Created by Arthur 31.01.2018 15:54.
@@ -9,7 +9,7 @@ import App.interfaces.view.View;
 public class StartApp {
 
     public static void main(String[] args) {
-        View cView = new ConsoleView();
+        BaseView cView = new ConsoleView();
         cView.execute();
     }
 
