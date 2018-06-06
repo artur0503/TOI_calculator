@@ -1,6 +1,7 @@
 package App.classes.controller.coding;
 
 import App.classes.model.POJO.Data;
+import App.classes.model.core.coding.Huffman;
 import App.classes.model.core.coding.ShenonFano;
 import App.interfaces.controller.ControllerCoding;
 import App.interfaces.model.coding.ModelCodingTree;
@@ -13,9 +14,8 @@ import java.util.LinkedList;
 public class ShenonController implements ControllerCoding {
 
     private LinkedList<Data> resData;
-    private LinkedList<String> drawCode;
-    private LinkedList<LinkedList<Data>> drawData;
-    private String text;
+    private LinkedList<Data> drawCode;
+//    private LinkedList<LinkedList<Data>> drawData;
 
     public ShenonController(LinkedList<Data> resData) {
         this.resData = resData;
@@ -27,21 +27,13 @@ public class ShenonController implements ControllerCoding {
     }
 
     @Override
-    public LinkedList<String> getCodeToDraw() {
+    public LinkedList<Data> getCodeToDraw() {
         return drawCode;
     }
 
     @Override
     public LinkedList<LinkedList<Data>> getDataToDraw() {
-        return drawData;
-    }
-
-    public void setDrawCode(LinkedList<String> drawCode) {
-        this.drawCode = drawCode;
-    }
-
-    public void setDrawData(LinkedList<LinkedList<Data>> drawData) {
-        this.drawData = drawData;
+        return null;
     }
 
     @Override
@@ -55,16 +47,10 @@ public class ShenonController implements ControllerCoding {
                 magic.sortCh();
                 System.out.println();
                 magic.showConsole();
+                setDrawCode(magic.dataResult());
             }
         }else
             System.out.println("ERROR (SUM < 1)");
-//            convertToDraw(magic);
-//
-
-//                ДЕКОДИРОВАНИЕ
-
-
-//        }
         //пойдет во view
 //        if (drawCode.size() == drawData.size()) {
 //            for (int i = 0; i < drawCode.size(); i++) {
@@ -76,15 +62,12 @@ public class ShenonController implements ControllerCoding {
 //            }
 //        }
     }
-//
-//    private void convertToDraw(ModelCoding magic){
-//        Iterator<String> iterator = magic.dataForDrawing().keySet().iterator();
-//        drawData = new LinkedList<>();
-//        drawCode = new LinkedList<>();
-//        while (iterator.hasNext()) {
-//            String key = iterator.next();
-//            drawData.add(magic.dataForDrawing().get(key));
-//            drawCode.add(key);
-//        }
+
+    private void setDrawCode(LinkedList<Data> drawCode) {
+        this.drawCode = drawCode;
+    }
+
+//    public void setDrawData(LinkedList<LinkedList<Data>> drawData) {
+//        this.drawData = drawData;
 //    }
 }

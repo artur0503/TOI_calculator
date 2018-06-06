@@ -6,6 +6,8 @@ import App.classes.model.POJO.Data;
 import App.classes.model.POJO.Node;
 import App.interfaces.model.coding.ModelCodingTree;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.LinkedList;
 
 /**
@@ -13,9 +15,9 @@ import java.util.LinkedList;
  */
 public class ShenonFano implements ModelCodingTree {
 
-    private LinkedList<Data> list = new LinkedList<>();
+    private LinkedList<Data> list;
+    private LinkedList<Data> list1;
     private LinkedList<Data> oldList = new LinkedList<>();
-//    private int k = 0;
     private int index;
 
     /**GET DATA FOR DRAWING TREE**/
@@ -34,7 +36,7 @@ public class ShenonFano implements ModelCodingTree {
         for (Data anOldList : oldList) {
             for (Data aList : list) {
                 if (anOldList.getNameS().equals(aList.getNameS())) {
-                    anOldList.setCode(aList.getCode());
+                    anOldList.setCodeBinary(aList.getCodeBinary());
                 }
             }
         }
@@ -59,35 +61,24 @@ public class ShenonFano implements ModelCodingTree {
         list.sort(new IndexComparatorUp());
     }
 
-//    /**ADDING INT**/
-//    @Override
-//    public void add(int chance, int name){
-//        list.add(new Data(chance, name, k++));
-//    }
-//
-//    /**ADDING STRING**/
-//    @Override
-//    public void add(double chance, String name){
-//        list.add(new Data(chance, name, k++));
-//    }
-
     /**SHOW**/
     @Override
     public void showConsole(){
         sortCh();
         for (int i = 0; i < dataResult().size(); i++) {
-            System.out.println(dataResult().get(i).getNameS() + " (" + dataResult().get(i).getChance() + ") " + ": " + dataResult().get(i).getCode());
+            double chance = new BigDecimal((dataResult().get(i).getChance()))
+                    .setScale(4, RoundingMode.HALF_UP)
+                    .doubleValue();
+            System.out.println(dataResult().get(i).getNameS()
+                    + " (" + chance + ") "
+                    + ": " + dataResult().get(i).getCodeBinary());
         }
     }
 
     /**CHECK**/
     @Override
     public boolean check(){
-        double sum = 0;
-        for (Data aList : list) {
-            sum = sum + aList.getChance();
-        }
-        return !(sum != 100);
+        return !(sum(list) != 1);
     }
 
     /**CREATE TREE**/
@@ -107,14 +98,14 @@ public class ShenonFano implements ModelCodingTree {
     /**GIVE A CODE**/
     private void giveCode(Node node){
         if (node.getLeft() != null){
-            node.getLeft().getNode().getData().setCode(node.getData().getCode() + "0");
+            node.getLeft().getNode().getData().setCodeBinary(node.getData().getCodeBinary() + "0");
             giveCode(node.getLeft().getNode());
         }
 
         list.add(node.getData());
 
         if (node.getRight() != null){
-            node.getRight().getNode().getData().setCode(node.getData().getCode() + "1");
+            node.getRight().getNode().getData().setCodeBinary(node.getData().getCodeBinary() + "1");
             giveCode(node.getRight().getNode());
         }
     }
@@ -124,6 +115,7 @@ public class ShenonFano implements ModelCodingTree {
         double sum = 0;
         for (Data aList : list) {
             sum = sum + aList.getChance();
+            sum = new BigDecimal(sum).setScale(4, RoundingMode.HALF_UP).doubleValue();
         }
         return sum;
     }
@@ -146,7 +138,7 @@ public class ShenonFano implements ModelCodingTree {
             LinkedList<Data> left = new LinkedList<>();
             LinkedList<Data> right = new LinkedList<>();
 
-            double mid = Math.round((sum(list) / 2) * 100) / 100.0d;
+            double mid = Math.round((sum(list) / 2) * 1000) / 1000.0d;
             double ind = mid;
             double n = mid - list.getLast().getChance();
             double indT;
@@ -156,7 +148,7 @@ public class ShenonFano implements ModelCodingTree {
                 ind = Math.abs(ind - aList.getChance());
                 if (indT < ind) {
                     ind = indT;
-                    ind = Math.round(ind * 100) / 100.0d;
+                    ind = Math.round(ind * 1000) / 1000.0d;
                     break;
                 }
             }
@@ -168,8 +160,8 @@ public class ShenonFano implements ModelCodingTree {
             else {
                 right.add(list.getLast());
                 for (int i = list.size() - 2; i >= 0; i--) {
-                    double e1 = (Math.round((sum(right) + list.get(i).getChance()) * 100) / 100.0d);
-                    double e2 = (Math.round((mid + ind) * 100) / 100.0d);
+                    double e1 = (Math.round((sum(right) + list.get(i).getChance()) * 1000) / 1000.0d);
+                    double e2 = (Math.round((mid + ind) * 1000) / 1000.0d);
                     if (e1 <= e2) {
                         right.add(list.get(i));
                     } else {

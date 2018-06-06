@@ -10,11 +10,26 @@ import java.util.LinkedList;
 public class HuffmanController implements ControllerCoding {
 
     private LinkedList<Data> resData;
-    private LinkedList<String> drawCode;
-    private LinkedList<LinkedList<Data>> drawData;
+    private LinkedList<Data> drawCode;
+//    private LinkedList<LinkedList<Data>> drawData;
 
     public HuffmanController(LinkedList<Data> resData) {
         this.resData = resData;
+    }
+
+    @Override
+    public LinkedList<Data> getDataFromView() {
+        return resData;
+    }
+
+    @Override
+    public LinkedList<Data> getCodeToDraw() {
+        return drawCode;
+    }
+
+    @Override
+    public LinkedList<LinkedList<Data>> getDataToDraw() {
+        return null;
     }
 
     @Override
@@ -29,32 +44,24 @@ public class HuffmanController implements ControllerCoding {
                 magic.sortInd();
                 System.out.println();
                 magic.showConsole();
+                setDrawCode(magic.dataResult());
+//                setDrawData();
             }
-        }else
-            System.out.println("ERROR (SUM < 1)");
+        } else
+            System.out.println("###ERROR###\n SUM < 1");
 //            int N = 16;
 
 //            double maxE = new BigDecimal(((-N*((1.0/N)*(Math.log(1.0/N)))))).setScale(3, RoundingMode.UP).doubleValue();
 //
 //            System.out.println("Макс. энтропия: " + maxE);
 
-
-//        }else
-//            System.out.println("сумма меньше 1");
     }
 
-    @Override
-    public LinkedList<Data> getDataFromView() {
-        return resData;
+    private void setDrawCode(LinkedList<Data> drawCode) {
+        this.drawCode = drawCode;
     }
 
-    @Override
-    public LinkedList<String> getCodeToDraw() {
-        return null;
-    }
-
-    @Override
-    public LinkedList<LinkedList<Data>> getDataToDraw() {
-        return null;
-    }
+//    public void setDrawData(LinkedList<LinkedList<Data>> drawData) {
+//        this.drawData = drawData;
+//    }
 }

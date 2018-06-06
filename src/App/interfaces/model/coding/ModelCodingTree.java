@@ -1,7 +1,5 @@
 package App.interfaces.model.coding;
 
-import App.interfaces.model.coding.ModelCoding;
-
 public interface ModelCodingTree extends ModelCoding {
 
     void sortCh();

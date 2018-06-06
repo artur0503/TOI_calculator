@@ -1,47 +1,30 @@
 package App.classes.model.core.decoding;
 
 import App.classes.model.POJO.Data;
+import App.interfaces.model.decoding.ModelDecodingBinary;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Decoder {
+public class BinaryDecoder implements ModelDecodingBinary {
 
     private String text;
     private LinkedList<Data> code;
     private String res = "";
 
-    public Decoder(String text, LinkedList<Data> code) {
+    public BinaryDecoder(String text, LinkedList<Data> code) {
         this.text = text;
         this.code = code;
     }
 
-    private int getMaxByte(ArrayList<String[]> splitCode){
-        int maxByte = 0;
-        for (int i = 0; i < splitCode.size(); i++){
-            for (int j = i; j < splitCode.size();j++){
-                maxByte = (splitCode.get(i).length - 1);
-                if ((splitCode.get(j).length - 1) >= maxByte)
-                    maxByte = (splitCode.get(j).length - 1);
-            }
-        }
-        return maxByte;
+    @Override
+    public void decoding() {
+        decoding(getConvertCode(), text);
     }
 
-    private ArrayList<String[]> convertCode(LinkedList<Data> code){
-        ArrayList<String[]> splitCode = new ArrayList<>();
-        for (Data aCode : code) {
-            splitCode.add(aCode.getCode().split(""));
-        }
-        return splitCode;
-    }
-
-    private ArrayList<String[]> getConvertCode(){
-        return convertCode(code);
-    }
-
-    private String removeFirstChar(String str) {
-        return str.substring(0, 0) + str.substring(1);
+    @Override
+    public String getResult() {
+        return getDecoding();
     }
 
     private void decoding(ArrayList<String[]> splitCode, String text) {
@@ -79,7 +62,7 @@ public class Decoder {
                 }
             }
             for (Data aCode : code) {
-                if (aCode.getCode().equals(lastEl.toString()))
+                if (aCode.getCodeBinary().equals(lastEl.toString()))
                     res = res + aCode.getNameS();
             }
             if (!res.equals("")) {
@@ -95,17 +78,54 @@ public class Decoder {
                 }
             }
         }catch (Exception e){
-            res = "ERROR";
+            res = "###ERROR###";
         }
     }
 
-    private String getDecoding(){
-        decoding(getConvertCode(), text);
-        return res;
+    private int getMaxByte(ArrayList<String[]> splitCode){
+        int maxByte = 0;
+        for (int i = 0; i < splitCode.size(); i++){
+            for (int j = i; j < splitCode.size();j++){
+                maxByte = (splitCode.get(i).length - 1);
+                if ((splitCode.get(j).length - 1) >= maxByte)
+                    maxByte = (splitCode.get(j).length - 1);
+            }
+        }
+        return maxByte;
     }
 
-    public String getResult() {
-        return getDecoding();
+    private ArrayList<String[]> convertCode(LinkedList<Data> code){
+        ArrayList<String[]> splitCode = new ArrayList<>();
+        for (Data aCode : code) {
+            splitCode.add(aCode.getCodeBinary().split(""));
+        }
+        return splitCode;
+    }
+
+    private ArrayList<String[]> getConvertCode(){
+        return convertCode(code);
+    }
+
+    private String removeFirstChar(String str) {
+        return str.substring(0, 0) + str.substring(1);
+    }
+
+    private String getDecoding(){
+        decoding();
+        if (check())
+            return res;
+        else
+            return "###ERROR###";
+    }
+
+    private boolean check(){
+        int count = 0;
+        String [] strArr = text.split("");
+        for (String str : strArr){
+            if (str.equals("0") || str.equals("1"))
+                count++;
+        }
+        return count == strArr.length;
     }
 
     public void showConsole(){

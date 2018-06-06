@@ -9,18 +9,18 @@ public class Node {
     private Left left;
     private Right right;
 
-    public Node() {
-    }
+//    public Node() {
+//    }
 
     public Node(Data data) {
         this.data = data;
     }
 
-    public Node(Data data, Left left, Right right) {
-        this.data = data;
-        this.left = left;
-        this.right = right;
-    }
+//    public Node(Data data, Left left, Right right) {
+//        this.data = data;
+//        this.left = left;
+//        this.right = right;
+//    }
 
     public Node(Left left, Right right) {
         this.left = left;
@@ -76,9 +76,9 @@ public class Node {
             return node;
         }
 
-        public void setNode(Node node) {
-            this.node = node;
-        }
+//        public void setNode(Node node) {
+//            this.node = node;
+//        }
     }
 
 }

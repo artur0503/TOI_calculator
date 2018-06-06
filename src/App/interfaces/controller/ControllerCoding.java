@@ -8,7 +8,7 @@ public interface ControllerCoding extends BaseController {
 
     LinkedList<Data> getDataFromView();
 
-    LinkedList<String> getCodeToDraw();
+    LinkedList<Data> getCodeToDraw();
 
     LinkedList<LinkedList<Data>> getDataToDraw();
 

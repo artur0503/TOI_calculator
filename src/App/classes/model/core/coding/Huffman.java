@@ -7,6 +7,8 @@ import App.classes.model.POJO.Data;
 import App.classes.model.POJO.Node;
 import App.interfaces.model.coding.ModelCodingTree;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.LinkedList;
 import java.util.Objects;
 
@@ -22,7 +24,7 @@ public class Huffman implements ModelCodingTree {
 
     @Override
     public LinkedList<Data> dataForDrawing() {
-        return null;
+        return list;
     }
 
     @Override
@@ -45,43 +47,54 @@ public class Huffman implements ModelCodingTree {
         list.sort(new IndexComparatorDown());
     }
 
-
     private void sortNode(){
         listNode.sort(new NodeComparatorUp());
     }
 
+//    public LinkedList<Data> convertChances(LinkedList<Data> list){
+//        for(Data aData : list){
+//            double chance = new BigDecimal(aData.getChance() * 100)
+//                    .setScale(4, RoundingMode.HALF_UP)
+//                    .doubleValue();
+//            aData.setChance(chance);
+//        }
+//        return list;
+//    }
+
     @Override
     public boolean check() {
+        return !(sum(list) != 1);
+    }
+
+    /**SUM OF CHANCES**/
+    private double sum(LinkedList<Data> list){
         double sum = 0;
-        if (!list.isEmpty()) {
-            for (Data aList : list) {
-                sum = sum + aList.getChance();
-            }
-        }else {
-            for (Data aList : listOld) {
-                sum = sum + aList.getChance();
-            }
+        for (Data aList : list) {
+            sum = sum + aList.getChance();
+            sum = new BigDecimal(sum).setScale(4, RoundingMode.HALF_UP).doubleValue();
         }
-        return !(sum != 100);
+        return sum;
     }
 
     @Override
     public void tree() {
-//        if(check()){
             while (!list.isEmpty()){
                 listOld.add(list.getFirst());
                 listNode.add(new Node(list.poll()));
             }
             growTree(listNode);
             giveCode(root);
-//        }else
-//            System.out.println("ERROR (SUM < 1)");
     }
 
     @Override
     public void showConsole() {
-        for (Data aListOld : listOld) {
-            System.out.println(aListOld.getNameS() + " (" + aListOld.getChance() + ") " + ": " + aListOld.getCode());
+        for (int i = 0; i < dataResult().size(); i++) {
+            double chance = new BigDecimal((dataResult().get(i).getChance()))
+                    .setScale(4, RoundingMode.HALF_UP)
+                    .doubleValue();
+            System.out.println(dataResult().get(i).getNameS()
+                    + " (" + chance + ") "
+                    + ": " + dataResult().get(i).getCodeBinary());
         }
     }
 
@@ -106,14 +119,14 @@ public class Huffman implements ModelCodingTree {
 
     private void giveCode(Node node){
         if (node.getRight() != null){
-            node.getRight().getNode().getData().setCode(node.getData().getCode() + "0");
+            node.getRight().getNode().getData().setCodeBinary(node.getData().getCodeBinary() + "0");
             giveCode(node.getRight().getNode());
         }
 
         list.add(node.getData());
 
         if (node.getLeft() != null){
-            node.getLeft().getNode().getData().setCode(node.getData().getCode() + "1");
+            node.getLeft().getNode().getData().setCodeBinary(node.getData().getCodeBinary() + "1");
             giveCode(node.getLeft().getNode());
         }
     }

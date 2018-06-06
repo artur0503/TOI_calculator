@@ -3,8 +3,6 @@ package App.classes.model.comparator.huffmanComp;
 import App.classes.model.POJO.Data;
 import App.classes.model.comparator.BaseComparator;
 
-import java.util.Comparator;
-
 /**
  * Created by Arthur 29.11.2017 19:05.
  */

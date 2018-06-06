@@ -7,59 +7,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb67758f-f615-43f7-8a4c-be7f47dbd23d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/classes/controller/coding/ArithmeticController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/classes/controller/decoding/BinaryDecoderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/classes/model/comparator/BaseComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/classes/model/core/coding/Arithmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/classes/model/core/utils/Formulas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/interfaces/controller/ControllerCoding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/interfaces/controller/ControllerDecoding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/interfaces/model/BaseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingArithmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecoding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingArithmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingBinary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/classes/model/core/utils/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/m100.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/m100.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/ControllerHuffman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/ControllerHuffman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/ControllerShenon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/ControllerShenon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/FanoShenon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/Huffman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/Huffman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/coding/ArithmeticController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/coding/ArithmeticController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/coding/HuffmanController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/coding/HuffmanController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/coding/ShenonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/coding/ShenonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/decoding/BinaryDecoderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/decoding/BinaryDecoderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Node$Right.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Node$Right.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/huffmanComp/DataComparatorUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/huffmanComp/DataComparatorUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/huffmanComp/NodeComparatorUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/huffmanComp/NodeComparatorUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/shenonComp/DataComparatorDown.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/shenonComp/DataComparatorDown.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/shenonComp/IndexComparatorUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/shenonComp/IndexComparatorUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/coding/Arithmetic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/coding/Arithmetic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/coding/Huffman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/coding/Huffman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/coding/ShenonFano.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/coding/ShenonFano.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/decoding/Decoder.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/view/ConsoleView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/ArefmeticModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/HuffmanModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/ModelHuffman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/ShenonModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/ModelShenon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/controller/ControllerCoding.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/controller/ControllerCoding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/coding/ModelCodingArithmetic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/coding/ModelCodingArithmetic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/decoding/ModelDecoding.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/decoding/ModelDecoding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/decoding/ModelDecodingArithmetic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/decoding/ModelDecodingArithmetic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Testing/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Testing/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TOI_APP/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/StartApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/StartApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/ControllerHuffman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/controller/coding/HuffmanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/ControllerShenon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/controller/coding/ShenonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/coding/ArithmeticController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/controller/coding/ArithmeticController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/coding/HuffmanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/controller/coding/HuffmanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/coding/ShenonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/controller/coding/ShenonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/decoding/BinaryDecoderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/controller/decoding/BinaryDecoderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/model/POJO/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/POJO/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/model/POJO/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/POJO/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/DataComparatorUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/DataComparatorUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/IndexComparatorUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/IndexComparatorDown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/NodeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/NodeComparatorUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/NodeComparatorUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/NodeComparatorUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/DataComparatorDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/DataComparatorDown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/IndexComparatorDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/IndexComparatorUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/core/decoding/Decoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/Huffman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/core/coding/Huffman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/ShenonFano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/core/coding/ShenonFano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/IndexComparatorUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/IndexComparatorUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/coding/Arithmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/core/coding/Arithmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/coding/Huffman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/core/coding/Huffman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/coding/ShenonFano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/core/coding/ShenonFano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/decoding/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/model/core/decoding/BinaryDecoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/classes/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/classes/view/ConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/ArefmeticModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/HuffmanModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/Model.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/ShenonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCoding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/view/BaseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/interfaces/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/interfaces/controller/ControllerCoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/controller/ControllerCoding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingArithmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingArithmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecoding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingArithmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingArithmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingBinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingBinary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Testing/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Testing/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -70,21 +63,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/TOI_calculator$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1528286702106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Practice.ArithmeticCoding.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="TOI_APP" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ArithemeticDecoderController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App/classes/controller/decoding/ArithemeticDecoderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -101,33 +89,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App/View/ConsoleView.java" />
-        <option value="$PROJECT_DIR$/src/App/Model/classes/Node.java" />
-        <option value="$PROJECT_DIR$/src/App/Model/classes/usefull/Data.java" />
-        <option value="$PROJECT_DIR$/src/App/Model/classes/POJO/Node.java" />
-        <option value="$PROJECT_DIR$/src/App/View/View.java" />
-        <option value="$PROJECT_DIR$/src/App/View/interfaces/view/View.java" />
-        <option value="$PROJECT_DIR$/src/App/View/interfaces/View.java" />
-        <option value="$PROJECT_DIR$/src/App/View/interfaces/model/ShenonModel.java" />
-        <option value="$PROJECT_DIR$/src/App/Model/classes/Haffman/MagicClass.java" />
-        <option value="$PROJECT_DIR$/src/App/Model/classes/ShenonFano/MagicClass.java" />
-        <option value="$PROJECT_DIR$/src/App/View/classes/model/HuffmanModel.java" />
-        <option value="$PROJECT_DIR$/src/App/Controller/Huffman/ControllerHuffman.java" />
-        <option value="$PROJECT_DIR$/src/App/Controller/Shenon/ControllerShenon.java" />
-        <option value="$PROJECT_DIR$/src/App/classes/model/ModelHuffman.java" />
-        <option value="$PROJECT_DIR$/src/App/classes/model/core/ModelHuffman.java" />
-        <option value="$PROJECT_DIR$/src/App/classes/model/core/ModelShenon.java" />
-        <option value="$PROJECT_DIR$/src/App/shenon/interfaces/model/ModelHuffman.java" />
         <option value="$PROJECT_DIR$/src/App/shenon/interfaces/classes/model/comparator/shenonComp/DataComparatorDown.java" />
         <option value="$PROJECT_DIR$/src/App/interfaces/model/ModelDecoder.java" />
-        <option value="$PROJECT_DIR$/src/Testing/Test.java" />
         <option value="$PROJECT_DIR$/src/App/interfaces/model/ModelShenon.java" />
-        <option value="$PROJECT_DIR$/src/App/classes/view/ConsoleView.java" />
         <option value="$PROJECT_DIR$/src/App/classes/model/core/Arithmetic.java" />
         <option value="$PROJECT_DIR$/src/App/interfaces/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/App/classes/controller/ControllerHuffman.java" />
         <option value="$PROJECT_DIR$/src/App/interfaces/controller/ControllerTree.java" />
-        <option value="$PROJECT_DIR$/src/App/interfaces/controller/ControllerCoding.java" />
         <option value="$PROJECT_DIR$/src/App/classes/model/core/Decoder.java" />
         <option value="$PROJECT_DIR$/src/App/interfaces/controller/ControllerDecoding.java" />
         <option value="$PROJECT_DIR$/src/App/classes/controller/ControllerDecoder.java" />
@@ -135,7 +103,6 @@
         <option value="$PROJECT_DIR$/src/App/interfaces/model/ModelTreeCoding.java" />
         <option value="$PROJECT_DIR$/src/App/classes/model/core/ShenonFano.java" />
         <option value="$PROJECT_DIR$/src/App/classes/model/core/TreeCoding.java" />
-        <option value="$PROJECT_DIR$/src/App/classes/model/POJO/Data.java" />
         <option value="$PROJECT_DIR$/src/App/classes/model/core/Huffman.java" />
         <option value="$PROJECT_DIR$/src/App/classes/controller/ControllerShenon.java" />
         <option value="$PROJECT_DIR$/src/App/interfaces/model/Model.java" />
@@ -152,6 +119,27 @@
         <option value="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/DataComparatorUp.java" />
         <option value="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/NodeComparatorUp.java" />
         <option value="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/IndexComparatorDown.java" />
+        <option value="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecoding.java" />
+        <option value="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingBinary.java" />
+        <option value="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingArithmetic.java" />
+        <option value="$PROJECT_DIR$/src/App/interfaces/controller/ControllerCoding.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/controller/decoding/BinaryDecoderController.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/model/core/decoding/BinaryDecoder.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/model/core/utils/Validation.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/model/core/utils/Convert.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/model/POJO/Node.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/model/POJO/Data.java" />
+        <option value="$PROJECT_DIR$/src/Testing/Test.java" />
+        <option value="$PROJECT_DIR$/src/Practice/ArithmeticCoding/Arithmetic.java" />
+        <option value="$PROJECT_DIR$/src/Practice/ArithmeticCoding/Main.java" />
+        <option value="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingArithmetic.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/controller/coding/ArithmeticController.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/controller/coding/HuffmanController.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/model/core/coding/Arithmetic.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/controller/coding/ShenonController.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/model/core/coding/Huffman.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/view/ConsoleView.java" />
+        <option value="$PROJECT_DIR$/src/App/classes/model/core/coding/ShenonFano.java" />
       </list>
     </option>
   </component>
@@ -172,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -199,11 +186,117 @@
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="coding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="coding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="POJO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="coding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Testing" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,17 +360,6 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="HuffmanCodeTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ttt.HuffmanCodeTest" />
-      <module name="TOI_APP" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ttt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration name="HuffmanCodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Model.Haffman.HuffmanCodeTest" />
       <module name="TOI_APP" />
@@ -285,6 +367,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="App.Model.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Practice.ArithmeticCoding.Main" />
+      <module name="TOI_APP" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Practice.ArithmeticCoding.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -370,15 +463,15 @@
       <item itemvalue="Application.App" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.HuffmanCodeTest" />
-      <item itemvalue="Application.HuffmanCodeTest (1)" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.StartApp" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.HuffmanCodeTest" />
-        <item itemvalue="Application.HuffmanCodeTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -424,12 +517,14 @@
       <workItem from="1528114126754" duration="1870000" />
       <workItem from="1528117625598" duration="99000" />
       <workItem from="1528148474066" duration="3231000" />
-      <workItem from="1528200442564" duration="4840000" />
+      <workItem from="1528200442564" duration="25460000" />
+      <workItem from="1528282375812" duration="2578000" />
+      <workItem from="1528286124449" duration="25351000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240098000" />
+    <option name="totallyTimeSpent" value="288647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -444,24 +539,25 @@
       <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49785176" weight="0.28827587" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49785176" weight="0.50344825" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3294271" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32915717" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.4935065" visible="true" weight="0.2376302" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.4935065" visible="true" weight="0.2063802" />
       <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32689655" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.24973147" />
       <window_info x="1284" y="218" width="563" height="567" id="UI Designer" order="2" weight="0.32975295" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="3" sideWeight="0.5064935" side_tool="true" weight="0.26852846" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.39586207" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.34206897" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32689655" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" x="891" y="150" width="137" height="729" id="Palette" order="4" weight="0.1536643" />
@@ -469,7 +565,7 @@
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49785176" visible="true" weight="0.27034482" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="3" sideWeight="0.5064935" side_tool="true" weight="0.26852846" />
+      <window_info anchor="bottom" id="Message" order="5" />
       <window_info content_ui="combo" id="Project" order="4" sideWeight="0.4935065" weight="0.2076823" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
@@ -479,7 +575,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info id="Designer" order="1" />
       <window_info x="1284" y="218" width="563" height="567" id="UI Designer" order="2" weight="0.32975295" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.3281768" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32915717" />
@@ -488,10 +584,10 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5021482" side_tool="true" weight="0.32232347" />
       <window_info id="Capture Tool" order="0" />
-      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.3281768" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32689655" />
       <window_info anchor="right" id="Maven Projects" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info id="Favorites" order="3" sideWeight="0.5064935" side_tool="true" weight="0.26852846" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +598,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="137" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/App/classes/model/core/decoding/BinaryDecoder.java</url>
+          <line>114</line>
+          <properties />
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/App/classes/model/core/coding/Huffman.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="169" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -524,35 +634,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/classes/controller/coding/HuffmanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/view/ConsoleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/coding/Huffman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Model/ShenonFano/Node.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="716" selection-start-line="716" selection-end-line="716" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -581,450 +662,12 @@
     <entry file="file://$PROJECT_DIR$/src/App/Model/interfaces/HuffmanModel.java" />
     <entry file="file://$PROJECT_DIR$/src/App/Model/interfaces/ShenonModel.java" />
     <entry file="file://$PROJECT_DIR$/src/App/Model/interfaces/ArefmeticModel.java" />
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/POJO/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/View/classes/model/HuffmanModel.java" />
-    <entry file="file://$PROJECT_DIR$/src/App/StartApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Testing/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="112" column="7" lean-forward="true" selection-start-line="91" selection-start-column="6" selection-end-line="112" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/view/ConsoleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/ModelShenon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/App.classes">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>App.classes</OriginalElement>
-          <nodes>
-            <node x="" y="">App.interfaces.view</node>
-            <node x="" y="">App.interfaces.controller.ControllerDecoding</node>
-            <node x="" y="">App.interfaces.model</node>
-            <node x="" y="">App.StartApp</node>
-            <node x="" y="">App.classes.model.comparator</node>
-            <node x="" y="">App.classes.model.core</node>
-            <node x="" y="">App.interfaces.controller.Controller</node>
-            <node x="" y="">App.interfaces.controller.ControllerCoding</node>
-            <node x="" y="">App.classes.controller</node>
-            <node x="" y="">App.classes.model.POJO</node>
-            <node x="" y="">App.classes.view</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="171.0" y="111.5" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/App">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>App</OriginalElement>
-          <nodes>
-            <node x="1093.6236024033437" y="507.0">App.classes.controller.ControllerShenon</node>
-            <node x="190.61461163357717" y="507.0">App.classes.model.core.TreeCoding</node>
-            <node x="1356.417866161616" y="378.0">App.classes.controller.ControllerDecoder</node>
-            <node x="107.81110240334363" y="0.0">App.classes.model.POJO.Node.Right</node>
-            <node x="728.6562783002439" y="219.0">App.classes.model.comparator.huffmanComp.DataComparatorUp</node>
-            <node x="325.5191374956462" y="378.0">App.classes.model.core.ShenonFano</node>
-            <node x="901.6562783002439" y="219.0">App.classes.model.comparator.huffmanComp.IndexComparatorUp</node>
-            <node x="1269.2396116335772" y="665.0">App.classes.view.ConsoleView</node>
-            <node x="1077.9517393765236" y="0.0">App.classes.model.POJO.Data</node>
-            <node x="1087.7396116335772" y="219.0">App.classes.model.core.Arithmetic</node>
-            <node x="1174.1236024033437" y="586.0">App.classes.controller.ControllerHuffman</node>
-            <node x="73.13333333333344" y="378.0">App.classes.model.comparator.huffmanComp.NodeComparator</node>
-            <node x="161.519435736677" y="219.0">App.classes.model.POJO.Node</node>
-            <node x="210.894435736677" y="0.0">App.classes.model.POJO.Node.Left</node>
-            <node x="348.6562783002439" y="219.0">App.classes.model.comparator.shenonComp.IndexComparatorDown</node>
-            <node x="540.6562783002439" y="219.0">App.classes.model.comparator.shenonComp.DataComparatorDown</node>
-            <node x="0.0" y="739.0">App.classes.model.core.Formulas</node>
-            <node x="1398.7095328282826" y="219.0">App.classes.model.core.Decoder</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="App.classes.view.ConsoleView" target="App.classes.model.POJO.Data">
-              <point x="43.5" y="-14.5" />
-              <point x="1370.7396116335772" y="645.0" />
-              <point x="1512.917866161616" y="645.0" />
-              <point x="1512.917866161616" y="99.0" />
-              <point x="1149.2926484674326" y="99.0" />
-              <point x="34.84090909090909" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.TreeCoding" target="App.classes.model.POJO.Node.Left">
-              <point x="4.5416666666667425" y="-14.5" />
-              <point x="249.6562783002439" y="437.0" />
-              <point x="267.30000000000007" y="437.0" />
-              <point x="267.30000000000007" y="79.0" />
-              <point x="261.894435736677" y="79.0" />
-              <point x="17.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.TreeCoding" target="App.classes.model.comparator.huffmanComp.NodeComparator">
-              <point x="-31.791666666666742" y="-14.5" />
-              <point x="213.32294496691043" y="467.0" />
-              <point x="143.63333333333344" y="467.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.ShenonFano" target="App.classes.model.POJO.Node.Left">
-              <point x="-12.444444444444343" y="-14.5" />
-              <point x="369.07469305120185" y="298.0" />
-              <point x="282.9062783002439" y="298.0" />
-              <point x="282.9062783002439" y="79.0" />
-              <point x="273.22776907001025" y="79.0" />
-              <point x="28.333333333333258" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.comparator.shenonComp.DataComparatorDown" target="App.classes.model.POJO.Data">
-              <point x="0.0" y="-14.5" />
-              <point x="624.6562783002439" y="149.0" />
-              <point x="1099.5199211947054" y="149.0" />
-              <point x="-14.931818181818187" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.comparator.huffmanComp.NodeComparator" target="App.classes.model.POJO.Node">
-              <point x="0.0" y="-14.5" />
-              <point x="143.63333333333344" y="358.0" />
-              <point x="178.019435736677" y="358.0" />
-              <point x="-22.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.POJO.Node.Left" target="App.classes.model.POJO.Node">
-              <point x="5.6666666666667425" y="14.5" />
-              <point x="250.56110240334374" y="79.0" />
-              <point x="219.269435736677" y="79.0" />
-              <point x="19.25" y="-14.5" />
-            </edge>
-            <edge source="App.classes.controller.ControllerHuffman" target="App.classes.model.core.TreeCoding">
-              <point x="-49.0" y="-14.5" />
-              <point x="1198.6236024033437" y="561.0" />
-              <point x="245.11461163357717" y="561.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.view.ConsoleView" target="App.classes.controller.ControllerHuffman">
-              <point x="-14.5" y="-14.5" />
-              <point x="1312.7396116335772" y="635.0" />
-              <point x="1247.6236024033437" y="635.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.controller.ControllerDecoder" target="App.classes.model.core.Decoder">
-              <point x="0.0" y="-14.5" />
-              <point x="1429.417866161616" y="358.0" />
-              <point x="1421.9595328282826" y="358.0" />
-              <point x="-23.25" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.POJO.Node" target="App.classes.model.POJO.Node.Right">
-              <point x="-26.950000000000045" y="-14.5" />
-              <point x="173.06943573667695" y="179.0" />
-              <point x="152.14443573667688" y="179.0" />
-              <point x="6.3333333333332575" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.TreeCoding" target="App.classes.model.comparator.huffmanComp.DataComparatorUp">
-              <point x="13.625" y="-14.5" />
-              <point x="258.73961163357717" y="447.0" />
-              <point x="804.6562783002439" y="447.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.POJO.Node" target="App.classes.model.POJO.Data">
-              <point x="34.65000000000009" y="-14.5" />
-              <point x="234.6694357366771" y="99.0" />
-              <point x="1082.9290121037964" y="99.0" />
-              <point x="-31.522727272727252" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.comparator.huffmanComp.IndexComparatorUp" target="App.classes.model.POJO.Data">
-              <point x="0.0" y="-14.5" />
-              <point x="979.6562783002439" y="179.0" />
-              <point x="1109.4744666492509" y="179.0" />
-              <point x="-4.977272727272691" y="14.5" />
-            </edge>
-            <edge source="App.classes.controller.ControllerHuffman" target="App.classes.model.POJO.Data">
-              <point x="0.0" y="-14.5" />
-              <point x="1247.6236024033437" y="561.0" />
-              <point x="1285.2396116335772" y="561.0" />
-              <point x="1285.2396116335772" y="159.0" />
-              <point x="1129.3835575583419" y="159.0" />
-              <point x="14.931818181818215" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.TreeCoding" target="App.classes.model.POJO.Node">
-              <point x="-22.708333333333258" y="-14.5" />
-              <point x="222.4062783002439" y="487.0" />
-              <point x="224.63333333333344" y="487.0" />
-              <point x="224.63333333333344" y="358.0" />
-              <point x="189.019435736677" y="358.0" />
-              <point x="-11.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.ShenonFano" target="App.classes.model.comparator.shenonComp.IndexComparatorDown">
-              <point x="37.33333333333326" y="-14.5" />
-              <point x="418.85247082897945" y="348.0" />
-              <point x="434.6562783002439" y="348.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.ShenonFano" target="App.classes.model.comparator.shenonComp.DataComparatorDown">
-              <point x="49.77777777777783" y="-14.5" />
-              <point x="431.296915273424" y="358.0" />
-              <point x="624.6562783002439" y="358.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.view.ConsoleView" target="App.classes.controller.ControllerShenon">
-              <point x="-43.5" y="-14.5" />
-              <point x="1283.7396116335772" y="645.0" />
-              <point x="1163.6236024033437" y="645.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.POJO.Node" target="App.classes.model.POJO.Node.Left">
-              <point x="-3.849999999999909" y="-14.5" />
-              <point x="196.1694357366771" y="49.0" />
-              <point x="216.56110240334374" y="49.0" />
-              <point x="-28.333333333333258" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.ShenonFano" target="App.classes.model.POJO.Data">
-              <point x="24.888888888888914" y="-14.5" />
-              <point x="406.4080263845351" y="268.0" />
-              <point x="338.1562783002439" y="268.0" />
-              <point x="338.1562783002439" y="129.0" />
-              <point x="1092.8835575583419" y="129.0" />
-              <point x="-21.568181818181813" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.TreeCoding" target="App.classes.model.comparator.huffmanComp.IndexComparatorUp">
-              <point x="31.791666666666742" y="-14.5" />
-              <point x="276.9062783002439" y="467.0" />
-              <point x="979.6562783002439" y="467.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.comparator.shenonComp.IndexComparatorDown" target="App.classes.model.POJO.Data">
-              <point x="0.0" y="-14.5" />
-              <point x="434.6562783002439" y="139.0" />
-              <point x="1096.2017393765236" y="139.0" />
-              <point x="-18.25" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.TreeCoding" target="App.classes.model.POJO.Data">
-              <point x="40.875" y="-14.5" />
-              <point x="285.98961163357717" y="477.0" />
-              <point x="1068.156278300244" y="477.0" />
-              <point x="1068.156278300244" y="189.0" />
-              <point x="1112.7926484674329" y="189.0" />
-              <point x="-1.659090909090878" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.TreeCoding" target="App.classes.model.POJO.Node.Right">
-              <point x="-49.958333333333485" y="-14.5" />
-              <point x="195.15627830024368" y="487.0" />
-              <point x="25.0" y="487.0" />
-              <point x="25.0" y="199.0" />
-              <point x="114.14443573667688" y="199.0" />
-              <point x="-31.666666666666742" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.Arithmetic" target="App.classes.model.POJO.Data">
-              <point x="0.0" y="-14.5" />
-              <point x="1139.2396116335772" y="189.0" />
-              <point x="1119.4290121037964" y="189.0" />
-              <point x="4.977272727272748" y="14.5" />
-            </edge>
-            <edge source="App.classes.controller.ControllerShenon" target="App.classes.model.POJO.Data">
-              <point x="0.0" y="-14.5" />
-              <point x="1163.6236024033437" y="487.0" />
-              <point x="1201.2396116335772" y="487.0" />
-              <point x="1201.2396116335772" y="179.0" />
-              <point x="1122.7471939219781" y="179.0" />
-              <point x="8.29545454545459" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.ShenonFano" target="App.classes.model.POJO.Node.Right">
-              <point x="-49.77777777777783" y="-14.5" />
-              <point x="331.74135971786836" y="328.0" />
-              <point x="138.65523989898975" y="328.0" />
-              <point x="138.65523989898975" y="199.0" />
-              <point x="126.81110240334363" y="199.0" />
-              <point x="-19.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.core.ShenonFano" target="App.classes.model.POJO.Node">
-              <point x="-24.888888888888914" y="-14.5" />
-              <point x="356.6302486067573" y="308.0" />
-              <point x="233.019435736677" y="308.0" />
-              <point x="33.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.comparator.huffmanComp.DataComparatorUp" target="App.classes.model.POJO.Data">
-              <point x="0.0" y="-14.5" />
-              <point x="804.6562783002439" y="159.0" />
-              <point x="1102.8381030128874" y="159.0" />
-              <point x="-11.613636363636374" y="14.5" />
-            </edge>
-            <edge source="App.classes.controller.ControllerShenon" target="App.classes.model.core.ShenonFano">
-              <point x="-46.666666666666686" y="-14.5" />
-              <point x="1116.956935736677" y="437.0" />
-              <point x="381.5191374956462" y="437.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="App.classes.controller.ControllerDecoder" target="App.classes.model.POJO.Data">
-              <point x="-48.66666666666663" y="-14.5" />
-              <point x="1380.7511994949493" y="358.0" />
-              <point x="1383.2741880006965" y="358.0" />
-              <point x="1383.2741880006965" y="129.0" />
-              <point x="1139.3381030128874" y="129.0" />
-              <point x="24.88636363636371" y="14.5" />
-            </edge>
-            <edge source="App.classes.model.POJO.Node.Right" target="App.classes.model.POJO.Node">
-              <point x="19.0" y="14.5" />
-              <point x="164.81110240334363" y="169.0" />
-              <point x="180.769435736677" y="169.0" />
-              <point x="-19.25" y="-14.5" />
-            </edge>
-            <edge source="App.classes.model.core.Decoder" target="App.classes.model.POJO.Data">
-              <point x="23.25" y="-14.5" />
-              <point x="1468.4595328282826" y="109.0" />
-              <point x="1145.974466649251" y="109.0" />
-              <point x="31.52272727272731" y="14.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.9" x="172.6666666666668" y="258.6666666666667" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/POJO/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/ModelShenon.java" />
     <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/BaseModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingArithmetic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingArithmetic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingBinary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/controller/ControllerDecoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/controller/ControllerCoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/coding/Arithmetic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/coding/Huffman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/coding/ShenonFano.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/decoding/Decoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1035,10 +678,309 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/controller/decoding/BinaryDecoderController.java">
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecoding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/App">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>App</OriginalElement>
+          <nodes>
+            <node x="" y="">App.classes.model.POJO.Data</node>
+            <node x="" y="">App.classes.controller.decoding.ArithemeticDecoderController</node>
+            <node x="" y="">App.classes.model.core.coding.Arithmetic</node>
+            <node x="" y="">App.classes.controller.coding.ArithmeticController</node>
+            <node x="" y="">App.classes.model.core.coding.Huffman</node>
+            <node x="" y="">App.classes.model.comparator.huffmanComp.IndexComparatorDown</node>
+            <node x="" y="">App.classes.model.core.coding.ShenonFano</node>
+            <node x="" y="">App.classes.model.POJO.Node.Right</node>
+            <node x="" y="">App.classes.model.core.utils.Formulas</node>
+            <node x="" y="">App.classes.model.comparator.huffmanComp.DataComparatorUp</node>
+            <node x="" y="">App.classes.model.comparator.shenonComp.IndexComparatorUp</node>
+            <node x="" y="">App.classes.model.POJO.Node</node>
+            <node x="" y="">App.classes.controller.coding.ShenonController</node>
+            <node x="" y="">App.classes.model.POJO.Node.Left</node>
+            <node x="" y="">App.classes.model.comparator.shenonComp.DataComparatorDown</node>
+            <node x="" y="">App.classes.controller.decoding.BinaryDecoderController</node>
+            <node x="" y="">App.classes.model.comparator.BaseComparator</node>
+            <node x="" y="">App.classes.model.core.decoding.BinaryDecoder</node>
+            <node x="" y="">App.classes.model.comparator.huffmanComp.NodeComparatorUp</node>
+            <node x="" y="">App.classes.controller.coding.HuffmanController</node>
+            <node x="" y="">App.classes.view.ConsoleView</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8" x="642.0" y="297.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/App.interfaces.model.decoding.ModelDecodingBinary">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>App.interfaces.model.decoding.ModelDecodingBinary</OriginalElement>
+          <nodes>
+            <node x="" y="">App.interfaces.controller.ControllerDecoding</node>
+            <node x="" y="">App.interfaces.model.coding.ModelCodingTree</node>
+            <node x="" y="">App.interfaces.model.decoding.ModelDecoding</node>
+            <node x="" y="">App.interfaces.model.BaseModel</node>
+            <node x="" y="">App.interfaces.controller.BaseController</node>
+            <node x="" y="">App.interfaces.view.BaseView</node>
+            <node x="" y="">App.interfaces.model.decoding.ModelDecodingBinary</node>
+            <node x="" y="">App.interfaces.controller.ControllerCoding</node>
+            <node x="" y="">App.interfaces.model.coding.ModelCoding</node>
+            <node x="" y="">App.interfaces.model.decoding.ModelDecodingArithmetic</node>
+            <node x="" y="">App.interfaces.model.coding.ModelCodingArithmetic</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="227.0" y="112.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/App.classes">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>App.classes</OriginalElement>
+          <nodes>
+            <node x="" y="">App.classes.model</node>
+            <node x="" y="">App.classes.controller</node>
+            <node x="" y="">App.classes.view</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="65.0" y="89.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingBinary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingArithmetic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/controller/ControllerDecoding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/view/BaseView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/decoding/BinaryDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2126">
+          <caret line="117" column="33" selection-start-line="117" selection-start-column="33" selection-end-line="117" selection-end-column="33" />
+          <folding>
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#3351#3352#0" expanded="true" />
+            <element signature="e#3391#3392#0" expanded="true" />
+            <element signature="e#3441#3442#0" expanded="true" />
+            <element signature="e#3502#3503#0" expanded="true" />
+            <element signature="e#3954#3955#0" expanded="true" />
+            <element signature="e#4017#4018#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/utils/Validation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/utils/Convert.java" />
+    <entry file="file://$PROJECT_DIR$/src/App/classes/controller/decoding/ArithemeticDecoderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/controller/decoding/BinaryDecoderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/DataComparatorUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="51" lean-forward="true" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/IndexComparatorDown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/NodeComparatorUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="51" lean-forward="true" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/DataComparatorDown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/IndexComparatorUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="51" lean-forward="true" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/BaseComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/POJO/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="78" column="42" lean-forward="true" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCoding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Testing/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/ArithmeticCoding/Arithmetic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="11" column="14" selection-start-line="11" selection-end-line="134" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#3139#3140#0" expanded="true" />
+            <element signature="e#3177#3178#0" expanded="true" />
+            <element signature="e#3224#3225#0" expanded="true" />
+            <element signature="e#3262#3263#0" expanded="true" />
+            <element signature="e#3633#3634#0" expanded="true" />
+            <element signature="e#3670#3671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/ArithmeticCoding/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/controller/ControllerCoding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingArithmetic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/StartApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/coding/Arithmetic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="118" column="7" lean-forward="true" selection-start-line="110" selection-start-column="6" selection-end-line="118" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1047,84 +989,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/classes/controller/coding/ArithmeticController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="383">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/controller/coding/HuffmanController.java">
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/POJO/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="357">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#969#970#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/classes/controller/coding/ShenonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="383">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/interfaces/view/BaseView.java">
+    <entry file="file://$PROJECT_DIR$/src/App/classes/controller/coding/HuffmanController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        <state relative-caret-position="185">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/BaseComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/App/classes/view/ConsoleView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/IndexComparatorUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/DataComparatorDown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/DataComparatorUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/NodeComparatorUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/IndexComparatorDown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        <state relative-caret-position="143">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#execute#0;class#ConsoleView#0" />
+            <element signature="method#secMenu#0;class#ConsoleView#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/classes/controller/decoding/ArithemeticDecoderController.java">
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/coding/ShenonFano.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="1013">
+          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding>
+            <element signature="method#makeDataResult#0;class#ShenonFano#0" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#2450#2451#0" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/classes/model/core/coding/Huffman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+          <folding>
+            <element signature="e#1704#1705#0" expanded="true" />
+            <element signature="e#1738#1739#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

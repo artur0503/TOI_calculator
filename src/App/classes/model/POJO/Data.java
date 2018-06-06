@@ -7,7 +7,9 @@ public class Data {
 
     private double chance;
     private String nameS;
-    private String code = "";
+    private String codeBinary = "";
+    private double[] codeArithm;
+    private double[] interval;
     private int index;
 
     public Data(double chance, int nameI, int index) {
@@ -22,12 +24,16 @@ public class Data {
         this.index = index;
     }
 
-    public int getIndex() {
-        return index;
+    public Data(double chance, String nameS, double[] codeArithm, double[] interval, int index) {
+        this.chance = chance;
+        this.nameS = nameS;
+        this.codeArithm = codeArithm;
+        this.interval = interval;
+        this.index = index;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
+    public int getIndex() {
+        return index;
     }
 
     public double getChance() {
@@ -42,16 +48,27 @@ public class Data {
         return nameS;
     }
 
-    public void setNameS(String nameS) {
-        this.nameS = nameS;
+    public String getCodeBinary() {
+        return codeBinary;
     }
 
-    public String getCode() {
-        return code;
+    public void setCodeBinary(String codeBinary) {
+        this.codeBinary = codeBinary;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public double[] getCodeArithm() {
+        return codeArithm;
     }
 
+    public void setCodeArithm(double[] codeArithm) {
+        this.codeArithm = codeArithm;
+    }
+
+    public double[] getInterval() {
+        return interval;
+    }
+
+    public void setInterval(double[] interval) {
+        this.interval = interval;
+    }
 }

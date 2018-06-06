@@ -1,6 +1,7 @@
 package Testing;
 
 import App.classes.model.POJO.Data;
+import App.interfaces.model.coding.ModelCoding;
 
 import java.util.LinkedList;
 
@@ -46,60 +47,47 @@ public class Test {
     }
 
     public void test0(LinkedList<Data> magic){
-        magic.add(new Data(14.5, "-", 1));
-        magic.add(new Data(9.5, "О", 2));
-        magic.add(new Data(7.4, "Е", 3));
-        magic.add(new Data(6.4, "А", 4));
-        magic.add(new Data(6.2, "И", 5));//тут изменил 6.4->6.2
-        magic.add(new Data(5.6, "Т", 6));
-
-        magic.add(new Data(5.6, "Н", 7));
-        magic.add(new Data(4.7, "С", 8));
-        magic.add(new Data(4.1, "Р", 9));
-        magic.add(new Data(3.9, "В", 10));
-        magic.add(new Data(3.6, "Л", 11));
-        magic.add(new Data(2.9, "К", 12));
-        magic.add(new Data(2.6, "М", 13));
-        magic.add(new Data(2.6, "Д", 14));
-        magic.add(new Data(2.4, "П", 15));
-        magic.add(new Data(2.1, "у", 16));
-        magic.add(new Data(1.9, "Я", 17));
-        magic.add(new Data(1.6, "Ы", 18));
-        magic.add(new Data(1.5, "З", 19));
-        magic.add(new Data(1.5, "Ь", 20));
-        magic.add(new Data(1.5, "Б", 21));
-        magic.add(new Data(1.4, "Г", 22));
-        magic.add(new Data(1.3, "Ч", 23));
-        magic.add(new Data(1.0, "Й", 24));
-        magic.add(new Data(0.9, "X", 25));
-        magic.add(new Data(0.8, "Ж", 26));
-        magic.add(new Data(0.7, "Ю", 27));
-        magic.add(new Data(0.6, "Ш", 28));
-        magic.add(new Data(0.4, "Ц", 29));
-        magic.add(new Data(0.3, "Щ", 30));
-        magic.add(new Data(0.3, "Э", 31));
-        magic.add(new Data(0.2, "Ф", 32));
-//        magic.add(new Data(25, "a", 1));
-//        magic.add(new Data(25, "b", 2));
-//        magic.add(new Data(25, "c", 3));
-//        magic.add(new Data(10, "d", 4));
-//        magic.add(new Data(5, "e", 5));
-//        magic.add(new Data(5, "f", 6));
-//        magic.add(new Data(5, "g", 7));
+        magic.add(new Data(0.145, "_", 1));
+        magic.add(new Data(0.095, "О", 2));
+        magic.add(new Data(0.074, "Е", 3));
+        magic.add(new Data(0.064, "А", 4));
+        magic.add(new Data(0.062, "И", 5));//тут изменил 6.4->6.2
+        magic.add(new Data(0.056, "Т", 6));
+        magic.add(new Data(0.056, "Н", 7));
+        magic.add(new Data(0.047, "С", 8));
+        magic.add(new Data(0.041, "Р", 9));
+        magic.add(new Data(0.039, "В", 10));
+        magic.add(new Data(0.036, "Л", 11));
+        magic.add(new Data(0.029, "К", 12));
+        magic.add(new Data(0.026, "М", 13));
+        magic.add(new Data(0.026, "Д", 14));
+        magic.add(new Data(0.024, "П", 15));
+        magic.add(new Data(0.021, "у", 16));
+        magic.add(new Data(0.019, "Я", 17));
+        magic.add(new Data(0.016, "Ы", 18));
+        magic.add(new Data(0.015, "З", 19));
+        magic.add(new Data(0.015, "Ь", 20));
+        magic.add(new Data(0.015, "Б", 21));
+        magic.add(new Data(0.014, "Г", 22));
+        magic.add(new Data(0.013, "Ч", 23));
+        magic.add(new Data(0.010, "Й", 24));
+        magic.add(new Data(0.009, "X", 25));
+        magic.add(new Data(0.008, "Ж", 26));
+        magic.add(new Data(0.007, "Ю", 27));
+        magic.add(new Data(0.006, "Ш", 28));
+        magic.add(new Data(0.004, "Ц", 29));
+        magic.add(new Data(0.003, "Щ", 30));
+        magic.add(new Data(0.003, "Э", 31));
+        magic.add(new Data(0.002, "Ф", 32));
     }
 
-//    public void test1(ModelCoding magic){
-//        magic.add(22, "A");
-//        magic.add(16, "B");
-//        magic.add(15, "C");
-//        magic.add(14, "D");
-//        magic.add(12, "E");
-//        magic.add(9, "F");
-//        magic.add(5, "G");
-//        magic.add(5, "J");
-//        magic.add(1, "H");
-//        magic.add(1, "I");
-//    }
+    public void test1(LinkedList<Data> magic){
+        magic.add(new Data(0.5, "T", 1));
+        magic.add(new Data(0.1, "R", 2));
+        magic.add(new Data(0.2, "A", 3));
+        magic.add(new Data(0.1, "B", 4));
+        magic.add(new Data(0.1, "_", 5));
+    }
 //
 //    public void test2(ModelCoding magic){
 //        magic.add(27, "a");
