@@ -1,7 +1,6 @@
 package App.classes.controller.coding;
 
 import App.classes.model.POJO.Data;
-import App.classes.model.core.coding.Huffman;
 import App.classes.model.core.coding.ShenonFano;
 import App.interfaces.controller.ControllerCoding;
 import App.interfaces.model.coding.ModelCodingTree;
@@ -13,27 +12,47 @@ import java.util.LinkedList;
  */
 public class ShenonController implements ControllerCoding {
 
-    private LinkedList<Data> resData;
-    private LinkedList<Data> drawCode;
-//    private LinkedList<LinkedList<Data>> drawData;
+    private LinkedList<Data> inputData;
+    private LinkedList<Data> resCode;
+    private LinkedList<Data> drawData;
 
-    public ShenonController(LinkedList<Data> resData) {
-        this.resData = resData;
+    public ShenonController(LinkedList<Data> inputData) {
+        this.inputData = inputData;
+    }
+
+    private LinkedList<Data> getResCode() {
+        return resCode;
+    }
+
+    private void setResCode(LinkedList<Data> resCode) {
+        this.resCode = resCode;
+    }
+
+    private LinkedList<Data> getDrawData() {
+        return drawData;
+    }
+
+    private void setDrawData(LinkedList<Data> drawData) {
+        this.drawData = drawData;
+    }
+
+    private LinkedList<Data> getInputData() {
+        return inputData;
     }
 
     @Override
     public LinkedList<Data> getDataFromView() {
-        return resData;
+        return getInputData();
     }
 
     @Override
     public LinkedList<Data> getCodeToDraw() {
-        return drawCode;
+        return getResCode();
     }
 
     @Override
-    public LinkedList<LinkedList<Data>> getDataToDraw() {
-        return null;
+    public LinkedList<Data> getDataToDraw() {
+        return getDrawData();
     }
 
     @Override
@@ -47,27 +66,20 @@ public class ShenonController implements ControllerCoding {
                 magic.sortCh();
                 System.out.println();
                 magic.showConsole();
-                setDrawCode(magic.dataResult());
+                setResCode(magic.dataResult());
+                setDrawData(magic.dataForDrawing());
             }
         }else
             System.out.println("ERROR (SUM < 1)");
         //пойдет во view
-//        if (drawCode.size() == drawData.size()) {
-//            for (int i = 0; i < drawCode.size(); i++) {
+//        if (resCode.size() == drawData.size()) {
+//            for (int i = 0; i < resCode.size(); i++) {
 //                System.out.println();
 //                for (int j = 0; j < drawData.get(i).size(); j++){
 //                    System.out.print(drawData.get(i).get(j).getNameS() + " ");
 //                }
-//                System.out.println(": " + drawCode.get(i));
+//                System.out.println(": " + resCode.get(i));
 //            }
 //        }
     }
-
-    private void setDrawCode(LinkedList<Data> drawCode) {
-        this.drawCode = drawCode;
-    }
-
-//    public void setDrawData(LinkedList<LinkedList<Data>> drawData) {
-//        this.drawData = drawData;
-//    }
 }

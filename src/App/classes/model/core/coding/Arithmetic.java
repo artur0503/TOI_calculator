@@ -16,12 +16,12 @@ public class Arithmetic implements ModelCodingArithmetic {
 
     @Override
     public LinkedList<Data> dataForDrawing() {
-        return resList;
+        return listWithInterval();
     }
 
     @Override
     public LinkedList<Data> dataResult() {
-        return null;
+        return resList;
     }
 
     @Override
@@ -108,22 +108,8 @@ public class Arithmetic implements ModelCodingArithmetic {
         }
     }
 
-//    public LinkedList<Data> convertChances(LinkedList<Data> list){
-//        for(Data aData : list){
-//            double chance = new BigDecimal(aData.getChance() / 100)
-//                    .setScale(4, RoundingMode.HALF_UP)
-//                    .doubleValue();
-//            aData.setChance(chance);
-//        }
-//        return list;
-//    }
-
-    private void setResList(LinkedList<Data> resList) {
-        this.resList = resList;
-    }
-
-    private void setResCode(double resCode) {
-        this.resCode = resCode;
+    private LinkedList<Data> listWithInterval(){
+        return giveInterval();
     }
 
     private LinkedList<Data> giveInterval(){
@@ -137,6 +123,14 @@ public class Arithmetic implements ModelCodingArithmetic {
             end = begin;
         }
         return list;
+    }
+
+    private void setResList(LinkedList<Data> resList) {
+        this.resList = resList;
+    }
+
+    private void setResCode(double resCode) {
+        this.resCode = resCode;
     }
 
     private String[] getTextArray(){

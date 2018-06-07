@@ -40,10 +40,6 @@ public class Data {
         return chance;
     }
 
-    public void setChance(double chance) {
-        this.chance = chance;
-    }
-
     public String getNameS() {
         return nameS;
     }

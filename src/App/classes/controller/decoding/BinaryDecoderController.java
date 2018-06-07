@@ -17,6 +17,14 @@ public class BinaryDecoderController implements ControllerDecoding {
         this.list = list;
     }
 
+    private String getText() {
+        return text;
+    }
+
+    private LinkedList<Data> getList() {
+        return list;
+    }
+
     private String getRes() {
         return res;
     }
@@ -27,7 +35,8 @@ public class BinaryDecoderController implements ControllerDecoding {
 
     @Override
     public void execute() {
-        BinaryDecoder decoder = new BinaryDecoder(text, list);
+        BinaryDecoder decoder = new BinaryDecoder(getText(), getList());
+        decoder.decoding();
         setRes(decoder.getResult());
     }
 
@@ -35,4 +44,5 @@ public class BinaryDecoderController implements ControllerDecoding {
     public String getDecodingResult() {
         return getRes();
     }
+
 }

@@ -16,7 +16,6 @@ import java.util.LinkedList;
 public class ShenonFano implements ModelCodingTree {
 
     private LinkedList<Data> list;
-    private LinkedList<Data> list1;
     private LinkedList<Data> oldList = new LinkedList<>();
     private int index;
 

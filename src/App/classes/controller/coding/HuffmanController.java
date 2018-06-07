@@ -9,27 +9,47 @@ import java.util.LinkedList;
 
 public class HuffmanController implements ControllerCoding {
 
-    private LinkedList<Data> resData;
-    private LinkedList<Data> drawCode;
-//    private LinkedList<LinkedList<Data>> drawData;
+    private LinkedList<Data> inputData;
+    private LinkedList<Data> resCode;
+    private LinkedList<Data> drawData;
 
-    public HuffmanController(LinkedList<Data> resData) {
-        this.resData = resData;
+    public HuffmanController(LinkedList<Data> inputData) {
+        this.inputData = inputData;
+    }
+
+    private LinkedList<Data> getInputData() {
+        return inputData;
+    }
+
+    private LinkedList<Data> getResCode() {
+        return resCode;
+    }
+
+    private void setResCode(LinkedList<Data> resCode) {
+        this.resCode = resCode;
+    }
+
+    private LinkedList<Data> getDrawData() {
+        return drawData;
+    }
+
+    private void setDrawData(LinkedList<Data> drawData) {
+        this.drawData = drawData;
     }
 
     @Override
     public LinkedList<Data> getDataFromView() {
-        return resData;
+        return getInputData();
     }
 
     @Override
     public LinkedList<Data> getCodeToDraw() {
-        return drawCode;
+        return getResCode();
     }
 
     @Override
-    public LinkedList<LinkedList<Data>> getDataToDraw() {
-        return null;
+    public LinkedList<Data> getDataToDraw() {
+        return getDrawData();
     }
 
     @Override
@@ -44,8 +64,8 @@ public class HuffmanController implements ControllerCoding {
                 magic.sortInd();
                 System.out.println();
                 magic.showConsole();
-                setDrawCode(magic.dataResult());
-//                setDrawData();
+                setResCode(magic.dataResult());
+                setDrawData(magic.dataForDrawing());
             }
         } else
             System.out.println("###ERROR###\n SUM < 1");
@@ -56,12 +76,4 @@ public class HuffmanController implements ControllerCoding {
 //            System.out.println("Макс. энтропия: " + maxE);
 
     }
-
-    private void setDrawCode(LinkedList<Data> drawCode) {
-        this.drawCode = drawCode;
-    }
-
-//    public void setDrawData(LinkedList<LinkedList<Data>> drawData) {
-//        this.drawData = drawData;
-//    }
 }

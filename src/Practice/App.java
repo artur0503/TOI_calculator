@@ -84,13 +84,10 @@ public class App extends JDialog {
         CellConstraints cc = new CellConstraints();
         root.add(panel1, cc.xy(1, 1));
         inputButton = new JButton();
-        inputButton.setText("Входные данные");
         panel1.add(inputButton, cc.xy(1, 1));
         hafButton = new JButton();
-        hafButton.setText("Кодирование Хаффмена");
         panel1.add(hafButton, cc.xy(3, 1));
         shButton = new JButton();
-        shButton.setText("Кодирование Шеннона-Фано");
         panel1.add(shButton, cc.xy(2, 1));
         magicLayout = new JPanel();
         magicLayout.setLayout(new FormLayout("fill:d:grow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,fill:d:grow", "center:d:grow,top:4dlu:noGrow,center:max(d;4px):noGrow"));

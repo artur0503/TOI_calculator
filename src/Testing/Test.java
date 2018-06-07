@@ -1,7 +1,6 @@
 package Testing;
 
 import App.classes.model.POJO.Data;
-import App.interfaces.model.coding.ModelCoding;
 
 import java.util.LinkedList;
 
@@ -16,8 +15,8 @@ public class Test {
             test.add((int) (1 + Math.random() * 30));
         }
         int sum = 0;
-        for (int i = 0; i < test.size(); i++) {
-            sum = sum + test.get(i);
+        for (Integer aTest : test) {
+            sum = sum + aTest;
         }
         if (sum > 100){
             int sum2 = sum;

@@ -9,40 +9,67 @@ import java.util.LinkedList;
 
 public class ArithmeticController implements ControllerCoding {
 
-    private LinkedList<Data> inputData;
     private String text;
+    private LinkedList<Data> inputData;
+    private LinkedList<Data> resCode;
+    private LinkedList<Data> drawData;
 
     public ArithmeticController(LinkedList<Data> inputData) {
         this.inputData = inputData;
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    private String getText() {
+        return text;
+    }
+
+    private LinkedList<Data> getInputData() {
+        return inputData;
+    }
+
+    private LinkedList<Data> getResCode() {
+        return resCode;
+    }
+
+    private void setResCode(LinkedList<Data> resCode) {
+        this.resCode = resCode;
+    }
+
+    private LinkedList<Data> getDrawData() {
+        return drawData;
+    }
+
+    private void setDrawData(LinkedList<Data> drawData) {
+        this.drawData = drawData;
+    }
+
     @Override
     public LinkedList<Data> getDataFromView() {
-        return inputData;
+        return getInputData();
     }
 
     @Override
     public LinkedList<Data> getCodeToDraw() {
-        return null;
+        return getResCode();
     }
 
     @Override
-    public LinkedList<LinkedList<Data>> getDataToDraw() {
-        return null;
+    public LinkedList<Data> getDataToDraw() {
+        return getDrawData();
     }
-
-    public void setTextForCoding(String text){
-        this.text = text;
-    }
-
     @Override
     public void execute() {
         ModelCodingArithmetic magic = new Arithmetic();
         magic.create(getDataFromView());
-        magic.textForCoding(text);
+        magic.textForCoding(getText());
         if (magic.check()) {
             magic.coding();
             magic.showConsole();
+            setResCode(magic.dataResult());
+            setDrawData(magic.dataForDrawing());
             System.out.println("Результат: " + magic.resultCode());
         }
     }

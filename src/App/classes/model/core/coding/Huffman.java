@@ -51,16 +51,6 @@ public class Huffman implements ModelCodingTree {
         listNode.sort(new NodeComparatorUp());
     }
 
-//    public LinkedList<Data> convertChances(LinkedList<Data> list){
-//        for(Data aData : list){
-//            double chance = new BigDecimal(aData.getChance() * 100)
-//                    .setScale(4, RoundingMode.HALF_UP)
-//                    .doubleValue();
-//            aData.setChance(chance);
-//        }
-//        return list;
-//    }
-
     @Override
     public boolean check() {
         return !(sum(list) != 1);

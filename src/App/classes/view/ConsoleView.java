@@ -3,9 +3,11 @@ package App.classes.view;
 import App.classes.controller.coding.ArithmeticController;
 import App.classes.controller.coding.HuffmanController;
 import App.classes.controller.coding.ShenonController;
+import App.classes.controller.decoding.ArithmeticDecoderController;
 import App.classes.controller.decoding.BinaryDecoderController;
 import App.classes.model.POJO.Data;
 import App.interfaces.controller.ControllerCoding;
+import App.interfaces.controller.ControllerDecoding;
 import App.interfaces.view.BaseView;
 import Testing.Test;
 import java.util.LinkedList;
@@ -29,9 +31,11 @@ public class ConsoleView implements BaseView {
     @Override
     public void afterAction(){
         //введенные данные которые получили после нажатия кнопки
-
         LinkedList<Data> linkedList = new LinkedList<>();
-        new Test().test0(linkedList);
+
+//        new Test().test1(linkedList);
+        new Test().test0(linkedList);//введенные пользователем элементы
+
         setInputData(linkedList);
     }
 
@@ -51,47 +55,40 @@ public class ConsoleView implements BaseView {
 
     private void mainMenu(Scanner sc){
         a:while (true) {
-            System.out.println("\nМЕНЮ\n1 Ввод частот");
-            System.out.println("2 Код Хаффмана");
-            System.out.println("3 Код Шенона-Фанно");
-            System.out.println("4 Арефметическое кодирование");
-            System.out.println("5 Выйти");
+            System.out.println("МЕНЮ\n1) Ввод частот");
+            System.out.println("2) Код Хаффмана");
+            System.out.println("3) Код Шенона-Фанно");
+            System.out.println("4) Арефметическое кодирование");
+            System.out.println("5) Выйти");
 
             System.out.print("Выберете пункт: ");
             switch (sc.nextInt()){
                 case 1:
-                    System.out.println();
+                    System.out.println("\nВвод данных: ");
                     afterAction();
+                    System.out.println();
                     break;
                 case 2:
-                    System.out.println();
+                    System.out.println("\n  КОДИРОВАНИЕ ХАФМАНА ");
                     if (getInputData() != null) {
                         ControllerCoding huffman = new HuffmanController(transportList());
                         huffman.execute();
-                        secMenu(sc, huffman);
+                        binaryDecodingMenu(sc, huffman);
                     } else
-                        System.out.println("###ERROR###\n" +
-                                "Введите элементы");
+                        System.out.println("###ERROR###\n" + "Введите элементы");
                     break;
                 case 3:
-                    System.out.println();
+                    System.out.println("\n  КОДИРОВАНИЕ ШЕНОНА-ФАНО ");
                     if (getInputData() != null){
                     ControllerCoding shanon = new ShenonController(transportList());
                     shanon.execute();
-                    secMenu(sc, shanon);
+                    binaryDecodingMenu(sc, shanon);
                     } else
-                        System.out.println("###ERROR###\n" +
-                                "Введите элементы");
+                        System.out.println("###ERROR###\n" + "Введите элементы");
             break;
                 case 4:
-                    System.out.println();
-                    if (getInputData() != null) {
-                        ControllerCoding arithm = new ArithmeticController(transportList());
-                        System.out.print("Введите строку: ");
-                        String str = new Scanner(System.in).nextLine();
-                        ((ArithmeticController) arithm).setTextForCoding(str);
-                        arithm.execute();
-                    }
+                    if (getInputData() != null)
+                        arithmeticMenu(sc);
                     break;
                 case 5:
                     break a;
@@ -99,20 +96,56 @@ public class ConsoleView implements BaseView {
         }
     }
 
-    private void secMenu(Scanner sc1, ControllerCoding cc){
+    private void binaryDecodingMenu(Scanner sc1, ControllerCoding cc){
         Scanner sc2 = new Scanner(System.in);
         a:while (true) {
-            System.out.println("\nПроизвести декодирование \n1 да\n2 нет");
+            System.out.println("\nПроизвести декодирование: \n1) да\n2) нет");
             System.out.print("Выберете пункт: ");
             switch (sc1.nextInt()){
                 case 1:
-                    System.out.println("Введите строку: ");
+                    System.out.println("Введите строку(пример '10100...'): ");
                     String text = sc2.nextLine();
-                    BinaryDecoderController decoder2 = new BinaryDecoderController(text, cc.getCodeToDraw());
-                    decoder2.execute();
-                    System.out.println("Результат: " + decoder2.getDecodingResult());
+                    ControllerDecoding decoder = new BinaryDecoderController(text, cc.getCodeToDraw());
+                    decoder.execute();
+                    System.out.println("Результат: " + decoder.getDecodingResult());
                     break;
                 case 2:
+                    System.out.println();
+                    break a;
+            }
+        }
+    }
+
+    private void arithmeticMenu(Scanner sc1){
+        a:while (true) {
+            System.out.println("\n АРЕФМЕТИЧЕСКОЕ КОДИРОВАНИЕ  ");
+            System.out.println("1) Закодировать");
+            System.out.println("2) Декодировать");
+            System.out.println("3) В Меню");
+            System.out.print("Выберете пункт: ");
+            switch (sc1.nextInt()) {
+                case 1:
+                    System.out.print("Введите строку: ");
+                    String str = new Scanner(System.in).nextLine();
+                    ControllerCoding arithm = new ArithmeticController(transportList());
+                    ((ArithmeticController) arithm).setText(str);
+                    arithm.execute();
+                    break;
+                case 2:
+                    try {
+                        System.out.print("Введите кол-во элементов: ");
+                        int count = new Scanner(System.in).nextInt();
+                        System.out.println("Введите строку(пример '0,12345....'): ");
+                        double text = new Scanner(System.in).nextDouble();
+                        ControllerDecoding decoder = new ArithmeticDecoderController(text, count, transportList());
+                        decoder.execute();
+                        System.out.println("Результат: " + decoder.getDecodingResult());
+                    } catch (Exception e){
+                        System.out.println("###ERROR###\n  Неправильные символы");
+                    }
+                    break;
+                case 3:
+                    System.out.println();
                     break a;
             }
         }

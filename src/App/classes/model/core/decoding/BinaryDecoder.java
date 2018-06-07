@@ -111,7 +111,6 @@ public class BinaryDecoder implements ModelDecodingBinary {
     }
 
     private String getDecoding(){
-        decoding();
         if (check())
             return res;
         else
@@ -128,7 +127,7 @@ public class BinaryDecoder implements ModelDecodingBinary {
         return count == strArr.length;
     }
 
-    public void showConsole(){
-        System.out.println("Результат: " + getResult());
-    }
+//    public void showConsole(){
+//        System.out.println("Результат: " + getResult());
+//    }
 }
