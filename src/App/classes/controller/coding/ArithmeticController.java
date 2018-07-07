@@ -13,6 +13,7 @@ public class ArithmeticController implements ControllerCoding {
     private LinkedList<Data> inputData;
     private LinkedList<Data> resCode;
     private LinkedList<Data> drawData;
+    private double res;
 
     public ArithmeticController(LinkedList<Data> inputData) {
         this.inputData = inputData;
@@ -46,6 +47,14 @@ public class ArithmeticController implements ControllerCoding {
         this.drawData = drawData;
     }
 
+    public double getRes() {
+        return res;
+    }
+
+    private void setRes(double res) {
+        this.res = res;
+    }
+
     @Override
     public LinkedList<Data> getDataFromView() {
         return getInputData();
@@ -70,7 +79,7 @@ public class ArithmeticController implements ControllerCoding {
             magic.showConsole();
             setResCode(magic.dataResult());
             setDrawData(magic.dataForDrawing());
-            System.out.println("Результат: " + magic.resultCode());
+            setRes(magic.resultCode());
         }
     }
 }

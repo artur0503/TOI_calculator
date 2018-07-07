@@ -5,9 +5,11 @@ import App.classes.controller.coding.HuffmanController;
 import App.classes.controller.coding.ShenonController;
 import App.classes.controller.decoding.ArithmeticDecoderController;
 import App.classes.controller.decoding.BinaryDecoderController;
+import App.classes.controller.formulas.FormulasController;
 import App.classes.model.POJO.Data;
 import App.interfaces.controller.ControllerCoding;
 import App.interfaces.controller.ControllerDecoding;
+import App.interfaces.controller.ControllerFormulas;
 import App.interfaces.view.BaseView;
 import Testing.Test;
 import java.util.LinkedList;
@@ -73,6 +75,14 @@ public class ConsoleView implements BaseView {
                     if (getInputData() != null) {
                         ControllerCoding huffman = new HuffmanController(transportList());
                         huffman.execute();
+                        ControllerFormulas formulas = new FormulasController(huffman.getCodeToDraw());
+                        formulas.execute();
+                        System.out.println(" N - " + formulas.resCountMessage()
+                                + "\n E - " + formulas.resEntropy()
+                                + "\n Emax - " + formulas.resMaxEntropy()
+                                + "\n Mav - " + formulas.resAverageLength()
+                                + "\n R - " + formulas.resRedundancy()
+                        );
                         binaryDecodingMenu(sc, huffman);
                     } else
                         System.out.println("###ERROR###\n" + "Введите элементы");
@@ -130,6 +140,7 @@ public class ConsoleView implements BaseView {
                     ControllerCoding arithm = new ArithmeticController(transportList());
                     ((ArithmeticController) arithm).setText(str);
                     arithm.execute();
+                    System.out.println("Результат: " + ((ArithmeticController) arithm).getRes());
                     break;
                 case 2:
                     try {

@@ -38,23 +38,28 @@ public class ArithmeticDecoder implements ModelDecodingArithmetic {
         a:for (int i = 0; i < count; i++){
             double textDouble = this.textDouble;
             for (Data aCode : code) {
-                if (res.split("").length == count)
-                    break a;
+                if (res.split("").length == count & !res.equals("")) break a;
                 if (res.equals("")) {
                     if (textDouble > aCode.getInterval()[0] & textDouble <= aCode.getInterval()[1]) {
                         res = res + aCode.getNameS();
+
+//                        System.out.println(i + ") " + textDouble + " - " + aCode.getInterval()[0] + " / " + aCode.getChance()
+//                                + " = " + aCode.getNameS());
+
                         textDouble = (textDouble - aCode.getInterval()[0]) / aCode.getChance();
-                        textDouble = new BigDecimal(textDouble).setScale(10, RoundingMode.HALF_UP).doubleValue();
+                        textDouble = new BigDecimal(textDouble).setScale(17, RoundingMode.HALF_UP).doubleValue();
                         this.textDouble = textDouble;
                         break;
                     }
                 } else {
-                    double h = aCode.getInterval()[0];
-                    double k = aCode.getInterval()[1];
-                    if (textDouble > h & textDouble <= k) {
+                    if (textDouble > aCode.getInterval()[0] & textDouble <= aCode.getInterval()[1]) {
                         res = res + aCode.getNameS();
+
+//                        System.out.println(i + ") " + textDouble + " - " + aCode.getInterval()[0] + " / " + aCode.getChance()
+//                                + " = " + aCode.getNameS());
+
                         textDouble = (textDouble - aCode.getInterval()[0]) / aCode.getChance();
-                        textDouble = new BigDecimal(textDouble).setScale(10, RoundingMode.HALF_UP).doubleValue();
+                        textDouble = new BigDecimal(textDouble).setScale(17, RoundingMode.HALF_UP).doubleValue();
                         this.textDouble = textDouble;
                     }
                 }

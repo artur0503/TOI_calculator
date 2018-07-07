@@ -1,8 +1,16 @@
 package Testing;
 
+import App.classes.controller.coding.ArithmeticController;
+import App.classes.controller.decoding.ArithmeticDecoderController;
 import App.classes.model.POJO.Data;
+import App.classes.model.core.coding.Arithmetic;
+import App.classes.model.core.decoding.ArithmeticDecoder;
+import App.interfaces.model.coding.ModelCodingArithmetic;
+import App.interfaces.model.decoding.ModelDecoding;
+import App.interfaces.model.decoding.ModelDecodingArithmetic;
 
 import java.util.LinkedList;
+import java.util.Random;
 
 /**
  * Created by Arthur 31.01.2018 14:19.
@@ -61,7 +69,7 @@ public class Test {
         magic.add(new Data(0.026, "М", 13));
         magic.add(new Data(0.026, "Д", 14));
         magic.add(new Data(0.024, "П", 15));
-        magic.add(new Data(0.021, "у", 16));
+        magic.add(new Data(0.021, "У", 16));
         magic.add(new Data(0.019, "Я", 17));
         magic.add(new Data(0.016, "Ы", 18));
         magic.add(new Data(0.015, "З", 19));
@@ -70,7 +78,7 @@ public class Test {
         magic.add(new Data(0.014, "Г", 22));
         magic.add(new Data(0.013, "Ч", 23));
         magic.add(new Data(0.010, "Й", 24));
-        magic.add(new Data(0.009, "X", 25));
+        magic.add(new Data(0.009, "Х", 25));
         magic.add(new Data(0.008, "Ж", 26));
         magic.add(new Data(0.007, "Ю", 27));
         magic.add(new Data(0.006, "Ш", 28));
@@ -97,5 +105,44 @@ public class Test {
 //        magic.add(9, "f");
 //        magic.add(8, "g");
 //    }
+
+    public static void main(String[] args) {
+        LinkedList<Data> list = new LinkedList<>();
+        Test test = new Test();
+        test.test1(list);
+        int res1 = 0;
+        int count = 1000000;
+        for (int i = 0; i < count; i++){
+           res1 = res1 + test.testForArithm(list);
+        }
+        System.out.println(res1 / count);
+    }
+
+    private int testForArithm(LinkedList<Data> list){
+        String text = "";
+        int count;
+        Random random = new Random();
+        count = 100 + (int) (Math.random()*1000);
+        for (int j = 0; j < count; j++) {
+            text = text + list.get(random.nextInt(list.size()-1)).getNameS();
+        }
+        count = text.split("").length;
+        ArithmeticController coding = new ArithmeticController(list);
+        coding.setText(text);
+        coding.execute();
+        ArithmeticDecoderController arithmetic = new ArithmeticDecoderController(coding.getRes(), count, list);
+        arithmetic.execute();
+        String[] strArr = text.split("");
+        int c = 0;
+        count = 0;
+        for (String s : arithmetic.getDecodingResult().split("")) {
+            if (s.equals(strArr[c])) {
+                count++;
+            }
+            else break;
+            c++;
+        }
+        return count;
+    }
 
 }

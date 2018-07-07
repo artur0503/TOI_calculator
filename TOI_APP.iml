@@ -10,5 +10,7 @@
     <orderEntry type="library" name="jgoodies:forms:1.0.5" level="application" />
     <orderEntry type="library" name="JFormDesigner" level="application" />
     <orderEntry type="library" name="jgoodies:forms:1.0.4" level="project" />
+    <orderEntry type="library" name="JFormDesigner-6.0.3-intellij-idea" level="project" />
+    <orderEntry type="library" name="com.github.adedayo.intellij.sdk:forms_rt:142.1" level="project" />
   </component>
 </module>

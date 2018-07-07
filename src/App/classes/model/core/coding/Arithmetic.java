@@ -1,10 +1,13 @@
 package App.classes.model.core.coding;
 
 import App.classes.model.POJO.Data;
+import App.classes.model.comparator.huffmanComp.DataComparatorUp;
 import App.interfaces.model.coding.ModelCodingArithmetic;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.LinkedList;
 
 public class Arithmetic implements ModelCodingArithmetic {
@@ -41,12 +44,13 @@ public class Arithmetic implements ModelCodingArithmetic {
 
     @Override
     public void showConsole() {
+        resList.sort(new DataComparatorUp());
         for (Data data : resList) {
             System.out.println(data.getNameS()
-                    + " (" + data.getInterval()[0]
-                    + " - " + data.getInterval()[1] + "):"
-                    + "\n  H = " + data.getCodeArithm()[0] + ";"
-                    + "\n  K = " + data.getCodeArithm()[1] + ";");
+                    + " (" + data.getChance() + ")"
+                    + " (" + data.getInterval()[0] + " - " + data.getInterval()[1] + ")"
+                    + "\n  H = " + new DecimalFormat("###,###.##############").format(data.getCodeArithm()[0]) + ";"
+                    + "\n  K = " + new DecimalFormat("###,###.##############").format(data.getCodeArithm()[1])+ ";");
         }
     }
 
@@ -86,8 +90,8 @@ public class Arithmetic implements ModelCodingArithmetic {
                             h = h1 + aData.getInterval()[0] * (k1 - h1);
                             k = h1 + aData.getInterval()[1] * (k1 - h1);
                         }
-                        h = new BigDecimal(h).setScale(10, RoundingMode.HALF_UP).doubleValue();
-                        k = new BigDecimal(k).setScale(10, RoundingMode.HALF_UP).doubleValue();
+                        h = new BigDecimal(h).setScale(32, RoundingMode.HALF_UP).doubleValue();
+                        k = new BigDecimal(k).setScale(32, RoundingMode.HALF_UP).doubleValue();
                         aData.setCodeArithm(new double[]{h, k});
                         listText.add(new Data(aData.getChance(),
                                 aData.getNameS(),
@@ -99,7 +103,7 @@ public class Arithmetic implements ModelCodingArithmetic {
                 }
             }
             double res = (listText.getLast().getCodeArithm()[0] + listText.getLast().getCodeArithm()[1]) / 2;
-            res = new BigDecimal(res).setScale(10, RoundingMode.HALF_UP).doubleValue();
+            res = new BigDecimal(res).setScale(32, RoundingMode.HALF_UP).doubleValue();
             setResList(listText);
             setResCode(res);
         } catch (Exception e){
