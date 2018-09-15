@@ -1,9 +1,11 @@
 package Practice.UI;
 
-import App.classes.model.POJO.Data;
-import App.interfaces.view.BaseView;
-import Practice.UI.panels.MenuPanel;
+import App.core.classes.model.POJO.Data;
+import App.core.interfaces.view.BaseView;
 import Practice.UI.panels.RootPanel;
+import Practice.UI.panels.menu.InputPanel;
+import Practice.UI.panels.menu.MenuPanel;
+import Testing.Test;
 import com.intellij.uiDesigner.core.GridConstraints;
 
 import javax.swing.*;
@@ -16,11 +18,12 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
     @Override
     public void execute() {
         setVisible(true);
-        
         RootPanel rootPanel = new RootPanel();
         rootPanel.createRootPanel();
         add(rootPanel.getRootPanel());
-        mainMenu(rootPanel.getRootPanel());
+        //input data
+        inputMenu(rootPanel.getRootPanel());
+//        mainMenu(rootPanel.getRootPanel());
     }
 
     @Override
@@ -46,13 +49,66 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
         /*first screen(menu)*/
     }
 
-    private void mainMenu(JPanel rootPanel){
-        MenuPanel menuPanel = new MenuPanel("Алгоритмы сжатия информации");
+    private void inputMenu(final JPanel rootPanel){
+        InputPanel inputPanel = new InputPanel("Выберите вариант ввода");
+        inputPanel.createInputPanel();
+        inputPanel.setOnMenuClickListener((flag, name) -> {
+            if (flag){
+                inputPanel.getInputPanel().setVisible(false);
+                if (name == InputPanel.INPUT){
+                    //OPEN INPUT
+                }
+                else if (name == InputPanel.VAR_1) {
+                    //OPEN MAIN MENU WITH VAR_1
+                    setInputData(new Test().test0());
+                    mainMenu(rootPanel, inputPanel.getInputPanel(), "Вариант 1", getInputData());
+                }
+                else if (name == InputPanel.VAR_2){
+                    //OPEN MAIN MENU WITH VAR_2
+                    setInputData(new Test().test0());
+                    mainMenu(rootPanel, inputPanel.getInputPanel(), "Вариант 2", getInputData());
+                }
+                else if (name == InputPanel.VAR_3){
+                    //OPEN MAIN MENU WITH VAR_3
+                    setInputData(new Test().test0());
+                    mainMenu(rootPanel, inputPanel.getInputPanel(), "Вариант 3", getInputData());
+                }
+            }
+        });
+        rootPanel.add(inputPanel.getInputPanel(),
+                new GridConstraints(
+                        0, 0, 1, 1,
+                        GridConstraints.ANCHOR_NORTH,
+                        GridConstraints.FILL_HORIZONTAL,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                        null, null, null, 0, false
+                ));
+    }
+
+    private void mainMenu(JPanel rootPanel, JPanel inputPanel, String var, LinkedList<Data> inputData){
+        MenuPanel menuPanel = new MenuPanel(inputData, "<html>Алгоритмы сжатия информации<br> "+ var + "</html>");
         menuPanel.createMenuPanel();
-        menuPanel.setOnMenuClickListener(flag -> {
+        menuPanel.setOnMenuClickListener((flag, name) -> {
             if (flag){
                 menuPanel.getMenuPanel().setVisible(false);
                 setSize(1000, 700);
+                if (name == MenuPanel.HUFFMAN){
+                    //OPEN HUFFMAN
+                }
+                else if (name == MenuPanel.SHENON) {
+                    //OPEN SHENON
+                }
+                else if (name == MenuPanel.ARITHMETIC){
+                    //OPEN ARITHMETIC
+                }
+                else if (name == MenuPanel.ARITHM_DECODING){
+                    //OPEN DECODING
+                }
+            }
+            else {
+                menuPanel.getMenuPanel().setVisible(false);
+                inputPanel.setVisible(true);
             }
         });
         rootPanel.add(menuPanel.getMenuPanel(),
@@ -66,11 +122,14 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
                 ));
     }
 
+
+
     @Override
     public void windowOpened(WindowEvent e) {
 
     }
 
+    //close app
     @Override
     public void windowClosing(WindowEvent e) {
         System.exit(0);

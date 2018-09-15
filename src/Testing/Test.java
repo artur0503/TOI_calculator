@@ -1,13 +1,8 @@
 package Testing;
 
-import App.classes.controller.coding.ArithmeticController;
-import App.classes.controller.decoding.ArithmeticDecoderController;
-import App.classes.model.POJO.Data;
-import App.classes.model.core.coding.Arithmetic;
-import App.classes.model.core.decoding.ArithmeticDecoder;
-import App.interfaces.model.coding.ModelCodingArithmetic;
-import App.interfaces.model.decoding.ModelDecoding;
-import App.interfaces.model.decoding.ModelDecodingArithmetic;
+import App.core.classes.controller.coding.ArithmeticController;
+import App.core.classes.controller.decoding.ArithmeticDecoderController;
+import App.core.classes.model.POJO.Data;
 
 import java.util.LinkedList;
 import java.util.Random;
@@ -53,7 +48,8 @@ public class Test {
         }
     }
 
-    public void test0(LinkedList<Data> magic){
+    public LinkedList<Data> test0(){
+        LinkedList<Data> magic = new LinkedList<>();
         magic.add(new Data(0.145, "_", 1));
         magic.add(new Data(0.095, "О", 2));
         magic.add(new Data(0.074, "Е", 3));
@@ -86,6 +82,7 @@ public class Test {
         magic.add(new Data(0.003, "Щ", 30));
         magic.add(new Data(0.003, "Э", 31));
         magic.add(new Data(0.002, "Ф", 32));
+        return magic;
     }
 
     public void test1(LinkedList<Data> magic){
