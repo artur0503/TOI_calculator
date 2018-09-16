@@ -7,97 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb67758f-f615-43f7-8a4c-be7f47dbd23d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/ArithmeticDecodingPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/ArithmeticPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/ChancePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/ShenonPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEMP/InputPanel.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEMP/InputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TEMP/TEST.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TEMP/TEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/StartApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/StartApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/coding/ArithmeticController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/coding/HuffmanController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/coding/ShenonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/decoding/ArithmeticDecoderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/decoding/BinaryDecoderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/controller/formulas/FormulasController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Node$Left.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Node$Right.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/POJO/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/BaseComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/huffmanComp/DataComparatorUp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/huffmanComp/IndexComparatorDown.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/huffmanComp/NodeComparatorUp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/shenonComp/DataComparatorDown.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/comparator/shenonComp/IndexComparatorUp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/coding/Arithmetic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/coding/Huffman.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/coding/ShenonFano.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/decoding/ArithmeticDecoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/decoding/BinaryDecoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/model/core/formulas/Formulas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/classes/view/ConsoleView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/controller/BaseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/controller/ControllerCoding.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/controller/ControllerDecoding.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/controller/ControllerFormulas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/BaseModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/coding/ModelCoding.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/coding/ModelCodingArithmetic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/coding/ModelCodingTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/decoding/ModelDecoding.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/decoding/ModelDecodingArithmetic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/decoding/ModelDecodingBinary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/model/formulas/ModelFormulas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/interfaces/view/BaseView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/AppUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/AppUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/MenuPanel$OnMenuClickListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/MenuPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Testing/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Testing/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/StartApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/StartApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/coding/ArithmeticController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/controller/coding/ArithmeticController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/coding/HuffmanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/controller/coding/HuffmanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/coding/ShenonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/controller/coding/ShenonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/decoding/ArithmeticDecoderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/controller/decoding/ArithmeticDecoderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/decoding/BinaryDecoderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/controller/decoding/BinaryDecoderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/controller/formulas/FormulasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/controller/formulas/FormulasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/POJO/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/POJO/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/POJO/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/POJO/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/BaseComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/comparator/BaseComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/DataComparatorUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/comparator/huffmanComp/DataComparatorUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/IndexComparatorDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/comparator/huffmanComp/IndexComparatorDown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/huffmanComp/NodeComparatorUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/comparator/huffmanComp/NodeComparatorUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/DataComparatorDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/comparator/shenonComp/DataComparatorDown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/comparator/shenonComp/IndexComparatorUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/comparator/shenonComp/IndexComparatorUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/coding/Arithmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/logic/coding/Arithmetic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/coding/Huffman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/logic/coding/Huffman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/coding/ShenonFano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/logic/coding/ShenonFano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/decoding/ArithmeticDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/logic/decoding/ArithmeticDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/decoding/BinaryDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/logic/decoding/BinaryDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/model/core/formulas/Formulas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/logic/formulas/Formulas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/classes/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/view/ConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/controller/ControllerCoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/controller/ControllerCoding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/controller/ControllerDecoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/controller/ControllerDecoding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/controller/ControllerFormulas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/controller/ControllerFormulas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/model/BaseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/model/coding/ModelCoding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingArithmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/model/coding/ModelCodingArithmetic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/coding/ModelCodingTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/model/coding/ModelCodingTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/model/decoding/ModelDecoding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingArithmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/model/decoding/ModelDecodingArithmetic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/decoding/ModelDecodingBinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/model/decoding/ModelDecodingBinary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/model/formulas/ModelFormulas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/model/formulas/ModelFormulas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/interfaces/view/BaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/interfaces/view/BaseView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practice/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/functional/ChancePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/menu/InputPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/menu/MenuPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/menu/MenuPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/TEMP/InputPanel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practice/UI/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/AppUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/menu/MenuPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Testing/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Testing/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/functional/ChancePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/menu/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/menu/OptionsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/menu/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/menu/MenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/InputPanel.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/InputPanel.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,69 +45,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="InputPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMP/InputPanel.java">
+      <file leaf-file-name="InputPanel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputPanel.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMP/InputPanel.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file leaf-file-name="MenuPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/menu/MenuPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <state relative-caret-position="515">
+              <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1125#1126#0" expanded="true" />
-                <element signature="e#1159#1160#0" expanded="true" />
-                <element signature="e#1223#1224#0" expanded="true" />
-                <element signature="e#1269#1270#0" expanded="true" />
-                <element signature="method#addButtons#0;class#MenuPanel#0" />
-                <element signature="method#createButton#0;class#MenuPanel#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/menu/InputPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#886#887#0" expanded="true" />
                 <element signature="method#addButtons#0;class#InputPanel#0" />
-                <element signature="method#actionPerformed#0;class#InputPanel#0" />
+                <element signature="method#addLable#0;class#InputPanel#0" />
+                <element signature="method#addScrollPane#0;class#InputPanel#0" />
+                <element signature="method#addPanel#0;class#InputPanel#0" />
+                <element signature="method#addTextField#0;class#InputPanel#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RootPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/RootPanel.java">
+      <file leaf-file-name="OptionsPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/menu/OptionsPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Components.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,20 +79,49 @@
       <file leaf-file-name="AppUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="88" column="102" selection-start-line="88" selection-start-column="102" selection-end-line="88" selection-end-column="102" />
+            <state relative-caret-position="-219">
+              <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#afterAction#0;class#AppUI#0" />
-                <element signature="method#mainMenu#0;class#AppUI#0" />
+                <element signature="method#mainMenuScreen#0;class#AppUI#0" />
+                <element signature="method#inputScreen#0;class#AppUI#0" />
                 <element signature="method#windowOpened#0;class#AppUI#0" />
-                <element signature="e#4546#4547#0" expanded="true" />
-                <element signature="e#4576#4577#0" expanded="true" />
                 <element signature="method#windowClosed#0;class#AppUI#0" />
                 <element signature="method#windowIconified#0;class#AppUI#0" />
                 <element signature="method#windowDeiconified#0;class#AppUI#0" />
                 <element signature="method#windowActivated#0;class#AppUI#0" />
                 <element signature="method#windowDeactivated#0;class#AppUI#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Components.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#createTitleLabel#0;class#Components#0" />
+                <element signature="method#createButton#0;class#Components#0" />
+                <element signature="method#createLabel#0;class#Components#0" />
+                <element signature="method#createJPanel#0;class#Components#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/RootPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="method#createDevelopInfo#0;class#RootPanel#0" />
               </folding>
             </state>
           </provider>
@@ -229,14 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App/classes/model/POJO/Node.java" />
-        <option value="$PROJECT_DIR$/src/Practice/TestArefmCoding.java" />
-        <option value="$PROJECT_DIR$/src/Practice/ArithmeticCoding.java" />
-        <option value="$PROJECT_DIR$/src/Practice/PracticeClass.java" />
-        <option value="$PROJECT_DIR$/src/App/classes/model/core/coding/Arithmetic.java" />
-        <option value="$PROJECT_DIR$/src/App/classes/model/core/decoding/ArithmeticDecoder.java" />
-        <option value="$PROJECT_DIR$/src/App/classes/controller/coding/ArithmeticController.java" />
-        <option value="$PROJECT_DIR$/src/Practice/Formulas.java" />
         <option value="$PROJECT_DIR$/src/App/interfaces/model/formulas/ModelFormulas.java" />
         <option value="$PROJECT_DIR$/src/App/classes/model/formulas/Formulas.java" />
         <option value="$PROJECT_DIR$/src/App/interfaces/controller/ControllerCoding.java" />
@@ -274,12 +181,20 @@
         <option value="$PROJECT_DIR$/src/Testing/Test.java" />
         <option value="$PROJECT_DIR$/src/App/core/classes/view/ConsoleView.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/listeners/OnClickListener.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/panels/menu/InputPanel.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/ArithmeticDecodingPanel.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/ArithmeticPanel.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/ShenonPanel.java" />
         <option value="$PROJECT_DIR$/src/TEMP/InputPanel.java" />
         <option value="$PROJECT_DIR$/src/TEMP/InputPanel.form" />
-        <option value="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" />
-        <option value="$PROJECT_DIR$/src/Practice/UI/panels/menu/InputPanel.java" />
-        <option value="$PROJECT_DIR$/src/Practice/UI/AppUI.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/panels/menu/MenuPanel.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/panels/menu/OptionsPanel.java" />
+        <option value="$PROJECT_DIR$/src/TEMP/TEST.form" />
+        <option value="$PROJECT_DIR$/src/TEMP/TEST.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/AppUI.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java" />
       </list>
     </option>
   </component>
@@ -289,18 +204,20 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="920" />
-    <option name="width" value="1020" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-20" />
+    <option name="y" value="1" />
+    <option name="width" value="1183" />
+    <option name="height" value="1083" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -371,6 +288,15 @@
               <item name="Practice" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="panels" type="462c0819:PsiDirectoryNode" />
+              <item name="functional" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="panels" type="462c0819:PsiDirectoryNode" />
               <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -392,7 +318,7 @@
               <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="TEMP" type="462c0819:PsiDirectoryNode" />
-              <item name="InputPanel" type="e9f4de52:FormNode" />
+              <item name="TEST" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
@@ -404,7 +330,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -645,14 +570,16 @@
       <workItem from="1531650579643" duration="2774000" />
       <workItem from="1536862495556" duration="1282000" />
       <workItem from="1537030148805" duration="11403000" />
+      <workItem from="1537093528216" duration="28976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380974000" />
+    <option name="totallyTimeSpent" value="409950000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-16" y="1" width="946" height="866" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" x="891" y="150" width="137" height="729" id="Palette" order="4" weight="0.10067114" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -664,11 +591,11 @@
       <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49798658" weight="0.28062677" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49798658" weight="0.269863" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32915717" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.2181208" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4935065" weight="0.31627908" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32621083" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
@@ -685,38 +612,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32965517" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.24973147" />
-      <window_info id="Designer" order="1" />
-      <window_info anchor="right" x="891" y="150" width="137" height="729" id="Palette" order="4" weight="0.10067114" />
-      <window_info id="Image Layers" order="5" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49798658" visible="true" weight="0.28062677" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.3294271" />
-      <window_info x="1284" y="218" width="563" height="567" id="UI Designer" order="2" weight="0.32975295" />
-      <window_info id="Favorites" order="3" sideWeight="0.5064935" side_tool="true" weight="0.26852846" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32915717" />
-      <window_info id="Capture Tool" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32965517" />
-      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50201344" side_tool="true" weight="0.32905984" />
-      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49934897" weight="0.32621083" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="0" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.2181208" />
-      <window_info anchor="right" id="Database" order="9" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Palette&#9;" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32621083" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.34188035" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -752,7 +647,7 @@
           <option name="timeStamp" value="215" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="216" />
+      <option name="time" value="218" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -779,20 +674,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/core/classes/model/logic/coding/Huffman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/core/interfaces/model/coding/ModelCoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/core/classes/controller/coding/ShenonController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
@@ -998,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnClickListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1012,67 +886,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/ArithmeticDecodingPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/ChancePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/ArithmeticDecodingPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/ShenonPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/ArithmeticPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMP/InputPanel.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMP/InputPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/ShenonPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/menu/InputPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Practice/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/menu/MenuPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addButtons#0;class#InputPanel#0" />
-            <element signature="method#actionPerformed#0;class#InputPanel#0" />
+            <element signature="method#addButtons#0;class#MenuPanel#0" />
+            <element signature="method#createButton#0;class#MenuPanel#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/adedayo/intellij/sdk/forms_rt/142.1/forms_rt-142.1.jar!/com/intellij/uiDesigner/core/GridLayoutManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="466" selection-start-line="466" selection-end-line="466" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/RootPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="100">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="method#createDevelopInfo#0;class#RootPanel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMP/TEST.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TEMP/TEST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="109" lean-forward="true" selection-start-line="107" selection-start-column="8" selection-end-line="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/menu/OptionsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1081,15 +984,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="88" column="102" selection-start-line="88" selection-start-column="102" selection-end-line="88" selection-end-column="102" />
+        <state relative-caret-position="-219">
+          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#afterAction#0;class#AppUI#0" />
-            <element signature="method#mainMenu#0;class#AppUI#0" />
+            <element signature="method#mainMenuScreen#0;class#AppUI#0" />
+            <element signature="method#inputScreen#0;class#AppUI#0" />
             <element signature="method#windowOpened#0;class#AppUI#0" />
-            <element signature="e#4546#4547#0" expanded="true" />
-            <element signature="e#4576#4577#0" expanded="true" />
             <element signature="method#windowClosed#0;class#AppUI#0" />
             <element signature="method#windowIconified#0;class#AppUI#0" />
             <element signature="method#windowDeiconified#0;class#AppUI#0" />
@@ -1099,28 +1001,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/menu/MenuPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="229">
+          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1223#1224#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="method#addButtons#0;class#MenuPanel#0" />
-            <element signature="method#createButton#0;class#MenuPanel#0" />
+            <element signature="method#createTitleLabel#0;class#Components#0" />
+            <element signature="method#createButton#0;class#Components#0" />
+            <element signature="method#createLabel#0;class#Components#0" />
+            <element signature="method#createJPanel#0;class#Components#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="515">
+          <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="method#addButtons#0;class#InputPanel#0" />
+            <element signature="method#addLable#0;class#InputPanel#0" />
+            <element signature="method#addScrollPane#0;class#InputPanel#0" />
+            <element signature="method#addPanel#0;class#InputPanel#0" />
+            <element signature="method#addTextField#0;class#InputPanel#0" />
           </folding>
         </state>
       </provider>

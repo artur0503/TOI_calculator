@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.LinkedList;
 
-public class MenuPanel extends JPanel implements ActionListener {
+public class MenuPanel implements ActionListener {
 
     private JPanel menuPanel;
     private JButton huf;
@@ -61,7 +61,7 @@ public class MenuPanel extends JPanel implements ActionListener {
 
 
         /*create spacer and add it to menu panel*/
-        menuPanel.add(createSpacer(),
+        menuPanel.add(Components.createSpacer(),
                 new GridConstraints(0, 0, 1, 1,
                         GridConstraints.ANCHOR_NORTH, GridConstraints.FILL_NONE, 1,
                         GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(-1, 10),
@@ -80,14 +80,14 @@ public class MenuPanel extends JPanel implements ActionListener {
         addButtons(jPanel);
 
         /*create spacer and add it to menu panel*/
-        menuPanel.add(createSpacer(),
+        menuPanel.add(Components.createSpacer(),
                 new GridConstraints(2, 0, 1, 1,
                         GridConstraints.ANCHOR_NORTH, GridConstraints.FILL_NONE, 1,
                         GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(-1, 40),
                         new Dimension(-1, 40), new Dimension(-1, 40), 0, false));
 
         /*create spacer and add it to menu panel*/
-        menuPanel.add(createSpacer(),
+        menuPanel.add(Components.createSpacer(),
                 new GridConstraints(0, 0, 1, 1,
                         GridConstraints.ANCHOR_NORTH, GridConstraints.FILL_NONE, 1,
                         GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(-1, 10),
@@ -170,11 +170,6 @@ public class MenuPanel extends JPanel implements ActionListener {
         }
 
     }
-
-    private Spacer createSpacer(){
-        return new Spacer();
-    }
-
     private JButton createButton(String text){
         JButton button = new JButton();
         button.setBackground(new Color(-12070914));

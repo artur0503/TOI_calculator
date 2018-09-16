@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class InputPanel extends JPanel implements ActionListener {
+public class OptionsPanel implements ActionListener {
 
     public final static int INPUT = 1;
     public final static int VAR_1 = 2;
@@ -30,7 +30,7 @@ public class InputPanel extends JPanel implements ActionListener {
         this.listener = listener;
     }
 
-    public InputPanel(String title) {
+    public OptionsPanel(String title) {
         this.title = title;
     }
 
@@ -38,7 +38,7 @@ public class InputPanel extends JPanel implements ActionListener {
         return inputPanel;
     }
 
-    public void createInputPanel(){
+    public void createOptionsPanel(){
         inputPanel = new JPanel();
         inputPanel.setLayout(new GridLayoutManager(4, 1,
                 new Insets(0, 0, 0, 0), -1, -1));
