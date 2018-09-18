@@ -41,7 +41,7 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
     }
 
     public AppUI() {
-        this.addWindowListener(this);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("TOI Calculator");
         setSize(700, 500);
         setResizable(false);
