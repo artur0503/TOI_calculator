@@ -48,6 +48,8 @@ public class MenuPanel implements ActionListener {
     }
 
     public void createMenuPanel(){
+        System.out.println(getListChances().size());
+
         menuPanel = new JPanel();
         menuPanel.setLayout(new GridLayoutManager(5, 1,
                 new Insets(0, 0, 0, 0), -1, -1));

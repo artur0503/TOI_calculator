@@ -67,4 +67,13 @@ public class Data {
     public void setInterval(double[] interval) {
         this.interval = interval;
     }
+
+    @Override
+    public String toString() {
+        return "Data{" +
+                "chance=" + chance +
+                ", nameS='" + nameS + '\'' +
+                ", index=" + index +
+                '}';
+    }
 }

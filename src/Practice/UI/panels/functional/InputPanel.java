@@ -1,6 +1,9 @@
 package Practice.UI.panels.functional;
 
+import App.core.classes.model.POJO.Data;
+import Practice.UI.listeners.OnInputListener;
 import Practice.UI.supporting.Components;
+import Practice.Validation.ValidationUI;
 import com.intellij.uiDesigner.core.GridConstraints;
 
 import javax.swing.*;
@@ -10,43 +13,41 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class InputPanel implements ActionListener, ChangeListener {
 
-
     private final static int DEFAULT = 16;
-
-    private int now = 15;
+    private int now = 2;
 
     private JPanel inputPanel;
-    private JPanel charPanel;
-    private JPanel chancePanel;
-    private JPanel textPanel;
-
     private ArrayList<JPanel> arrPanels;
-
     private JButton backButton;
     private JButton nextButton;
-    private JSpinner spinner;
+    private OnInputListener listener;
+
+    public void setOnInputListener(OnInputListener listener) {
+        this.listener = listener;
+    }
 
     public JPanel getInputPanel() {
         return inputPanel;
     }
 
-    private void addSpacer(JPanel panel, int row, int column, Dimension size){
+    private void addSpacer(JPanel panel, int column, Dimension size){
         panel.add(Components.createSpacer(),
-                new GridConstraints(row, column, 1, 1,
+                new GridConstraints(0, column, 1, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL,
                         GridConstraints.SIZEPOLICY_WANT_GROW, 1,
                         size, size, size, 0, false));
     }
 
-    private void addSpacer(JPanel panel, int row, int column, Dimension size, int type){
+    private void addSpacer(JPanel panel){
         panel.add(Components.createSpacer(),
-                new GridConstraints(row, column, 1, 1,
+                new GridConstraints(InputPanel.DEFAULT, 0, 1, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL,
-                        GridConstraints.SIZEPOLICY_WANT_GROW, type,
-                        size, size, size, 0, false));
+                        GridConstraints.SIZEPOLICY_WANT_GROW, 2,
+                        null, null, null, 0, false));
     }
 
     private void addButton(JPanel panel, JButton button, int column){
@@ -59,19 +60,19 @@ public class InputPanel implements ActionListener, ChangeListener {
         button.addActionListener(this);
     }
 
-    private void addLabel(JPanel panel, String text, int row, int column){
+    private void addLabel(JPanel panel, String text, int column){
         JLabel labelCount = Components.createLabel(text);
         panel.add(labelCount,
-                new GridConstraints(row, column, 1, 1,
+                new GridConstraints(0, column, 1, 1,
                         GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE,
                         GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED,
                         null, null, null,
                         0, false));
     }
 
-    private void addSpinner(JPanel panel, JSpinner spinner, int row, int column){
+    private void addSpinner(JPanel panel, JSpinner spinner){
         panel.add(spinner,
-                new GridConstraints(row, column, 1, 1,
+                new GridConstraints(0, 2, 1, 1,
                         GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL,
                         GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED,
                         new Dimension(40, 30),
@@ -82,9 +83,9 @@ public class InputPanel implements ActionListener, ChangeListener {
         ((JSpinner.DefaultEditor) spinner.getEditor()).getTextField().setEditable(false);
     }
 
-    private void addScrollPane(JPanel panel, JScrollPane scrollPane, int row, int column){
+    private void addScrollPane(JPanel panel, JScrollPane scrollPane){
         panel.add(scrollPane,
-                new GridConstraints(row, column, 1, 12,
+                new GridConstraints(2, 0, 1, 12,
                         GridConstraints.ANCHOR_WEST, GridConstraints.FILL_VERTICAL,
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW,
@@ -101,15 +102,16 @@ public class InputPanel implements ActionListener, ChangeListener {
 
     }
 
-    private void addTextField(JPanel panel, int row, int column){
-        JTextField textField = Components.createJTextField();
+    private void addTextField(JPanel panel, int column, boolean isChar, int number){
+        JTextField textField = Components.createJTextField(isChar);
         panel.add(textField,
-                new GridConstraints(row, column, 1, 1,
+                new GridConstraints(0, column, 1, 1,
                         GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL,
                         GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED,
-                        new Dimension(40, 20), new Dimension(40, 20),
-                        new Dimension(40, 20), 0, false));
-
+                        new Dimension(45, 25), new Dimension(45, 25),
+                        new Dimension(45, 25), 0, false));
+        if (isChar)
+            textField.setText(textField.getText() + number);
     }
 
     public void createInputPanel(){
@@ -117,74 +119,108 @@ public class InputPanel implements ActionListener, ChangeListener {
         inputPanel = Components.createJPanel(4, 17);
         backButton = Components.createButton("Назад", this);
         nextButton = Components.createButton("Далее", this);
-        spinner = Components.createSpinner(1, DEFAULT - 1, now, this);
-        textPanel = Components.createJPanel(DEFAULT + 1, 1);
+        JSpinner spinner = Components.createSpinner(1, DEFAULT - 1, now, this);
+        JPanel textPanel = Components.createJPanel(DEFAULT + 1, 1);
         JPanel jPanel1 = Components.createJPanel(1, 2);
         JPanel jPanel2 = Components.createJPanel(1, 3);
 
         JScrollPane scrollPane = new JScrollPane();
         addPanel(inputPanel, jPanel2, 0, 0);
-        addSpacer(jPanel2, 0, 0, null);
-        addLabel(jPanel2, "Кол-во:", 0, 1);
-        addSpinner(jPanel2, spinner, 0, 2);
+        addSpacer(jPanel2, 0, null);
+        addLabel(jPanel2, "Кол-во:", 1);
+        addSpinner(jPanel2, spinner);
 
         addPanel(inputPanel, jPanel1, 0, 1);
         addButton(jPanel1, backButton, 0);
         addButton(jPanel1, nextButton, 1);
 
-        addSpacer(inputPanel, 0, 4, null);
-        addScrollPane(inputPanel, scrollPane, 2, 0);
+        addSpacer(inputPanel, 4, null);
+        addScrollPane(inputPanel, scrollPane);
         scrollPane.setViewportView(textPanel);
         addInput(textPanel, now);
     }
 
     private void addInput(JPanel textPanel, int now){
-        addSpacer(textPanel, 0, 0, new Dimension(20, 0));
+        addSpacer(textPanel, 0, new Dimension(20, 0));
         JPanel jPanel3 = Components.createJPanel(1, 4);
         addPanel(textPanel, jPanel3, 0, 0);
-        addSpacer(jPanel3, 0, 1, null);
-        addLabel(jPanel3, "Символ:", 0, 0);
-        addLabel(jPanel3, "Вер-сть:", 0, 2);
-        addSpacer(jPanel3, 0,  2, new Dimension(160, 0));
-        addSpacer(textPanel, DEFAULT, 0, null, 2);
+        addSpacer(jPanel3, 1, null);
+        addLabel(jPanel3, "Символ:", 0);
+        addLabel(jPanel3, "Вер-сть:", 2);
+        addSpacer(jPanel3, 2, new Dimension(160, 0));
+        addSpacer(textPanel);
 
-        for (int i = 1; i < DEFAULT  ; i++){
+        for (int i = 1; i < DEFAULT; i++){
             addChance(textPanel, i);
             if (i <= now ){
                 arrPanels.get(i - 1 ).setVisible(true);
             }
         }
-        arrPanels.get(0).setBackground(Color.cyan);
-        System.out.println(arrPanels.size());
     }
 
     private void addChance(JPanel textPanel, int i){
         JPanel jPanel4 = Components.createJPanel(1, 4);
         addPanel(textPanel, jPanel4, i, 0);
-        addTextField(jPanel4, 0, 1);
-        addTextField(jPanel4, 0, 2);
+        addTextField(jPanel4, 1, true, i);
+        addTextField(jPanel4, 2, false, 0);
         arrPanels.add(jPanel4);
-        addSpacer(jPanel4, 0,  3, new Dimension(50, 0));
+        addSpacer(jPanel4, 3, new Dimension(50, 0));
         jPanel4.setVisible(false);
     }
 
+    private ArrayList<Double> prepareToValidate(){
+        ArrayList<Double> arrayList = new ArrayList<>();
+        for (int i = 0; i < now; i++){
+            arrayList.add(Double.parseDouble(((JTextField) arrPanels.get(i).getComponent(1)).getText()));
+        }
+        return arrayList;
+    }
+
+    private LinkedList<Data> prepareModelList(){
+        LinkedList<Data> chanceModels = new LinkedList<>();
+        for (int i = 0; i < now; i++){
+            double chance = Double.parseDouble(((JTextField) arrPanels.get(i).getComponent(1)).getText());
+            String mChar = (((JTextField) arrPanels.get(i).getComponent(0)).getText());
+            chanceModels.add(new Data(chance, mChar, i));
+        }
+        return chanceModels;
+    }
+
+    private boolean flag;
+
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if (e.getSource() == nextButton){
+            ValidationUI validation = new ValidationUI(prepareToValidate());
+            if (validation.isValid()){
+                listener.OnInput(true, prepareModelList());
+            }
+            else {
+                if (!flag) {
+                    JOptionPane.showMessageDialog(new Frame(), "Сумма равна: " + validation.getWrongSum());
+                    flag = true;
+                }
+                else
+                    flag = false;
+            }
+        }
+        if (e.getSource() == backButton){
+            listener.OnInput(false, null);
+        }
     }
 
 
     @Override
     public void stateChanged(ChangeEvent e) {
         JSpinner spinner = (JSpinner) e.getSource();
-//        ((JTextField)arrPanels.get(0).getComponent(0)).setText("suka");
         if (((int) spinner.getValue()) > now) {
             now = (int) spinner.getValue();
             arrPanels.get(now - 1).setVisible(true);
-            ((JTextField)arrPanels.get(now - 1).getComponent(0)).setText("blaaa");
         } else if (((int) spinner.getValue()) < now) {
             now = (int) spinner.getValue();
             System.out.println(now);
+            ((JTextField) arrPanels.get(now).getComponent(0)).setText("");
+            ((JTextField) arrPanels.get(now).getComponent(1)).setText("0.");
             arrPanels.get(now).setVisible(false);
         }
     }

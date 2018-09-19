@@ -4,8 +4,8 @@ import App.core.classes.model.POJO.Data;
 import App.core.interfaces.view.BaseView;
 import Practice.UI.panels.RootPanel;
 import Practice.UI.panels.functional.InputPanel;
-import Practice.UI.panels.menu.OptionsPanel;
 import Practice.UI.panels.menu.MenuPanel;
+import Practice.UI.panels.menu.OptionsPanel;
 import Testing.Test;
 import com.intellij.uiDesigner.core.GridConstraints;
 
@@ -16,6 +16,8 @@ import java.util.LinkedList;
 
 public class AppUI extends JFrame implements BaseView, WindowListener {
 
+    private LinkedList<Data> list;
+
     @Override
     public void execute() {
         setVisible(true);
@@ -23,6 +25,7 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
         rootPanel.createRootPanel();
         add(rootPanel.getRootPanel());
         optionsMenuScreen(rootPanel.getRootPanel());
+        setResizable(false);
     }
 
     @Override
@@ -32,19 +35,18 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
 
     @Override
     public void setInputData(LinkedList<Data> list) {
-
+        this.list = list;
     }
 
     @Override
     public LinkedList getInputData() {
-        return null;
+        return list;
     }
 
     public AppUI() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("TOI Calculator");
         setSize(700, 500);
-        setResizable(false);
     }
 
     private void optionsMenuScreen(final JPanel rootPanel){
@@ -56,22 +58,26 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
                 if (name == OptionsPanel.INPUT){
                     setSize(350, 500);
                     optionsPanel.getInputPanel().setVisible(false);
+                    rootPanel.removeAll();
                     inputScreen(rootPanel);
                 }
                 else if (name == OptionsPanel.VAR_1) {
                     //OPEN MAIN MENU WITH VAR_1
                     setInputData(new Test().test0());
-                    mainMenuScreen(rootPanel, optionsPanel.getInputPanel(), "Вариант 1", getInputData());
+                    rootPanel.removeAll();
+                    mainMenuScreen(rootPanel, "Вариант 1", getInputData());
                 }
                 else if (name == OptionsPanel.VAR_2){
                     //OPEN MAIN MENU WITH VAR_2
                     setInputData(new Test().test0());
-                    mainMenuScreen(rootPanel, optionsPanel.getInputPanel(), "Вариант 2", getInputData());
+                    rootPanel.removeAll();
+                    mainMenuScreen(rootPanel, "Вариант 2", getInputData());
                 }
                 else if (name == OptionsPanel.VAR_3){
                     //OPEN MAIN MENU WITH VAR_3
                     setInputData(new Test().test0());
-                    mainMenuScreen(rootPanel, optionsPanel.getInputPanel(), "Вариант 3", getInputData());
+                    rootPanel.removeAll();
+                    mainMenuScreen(rootPanel, "Вариант 3", getInputData());
                 }
             }
         });
@@ -86,7 +92,7 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
                 ));
     }
 
-    private void mainMenuScreen(JPanel rootPanel, JPanel inputPanel, String var, LinkedList<Data> inputData){
+    private void mainMenuScreen(JPanel rootPanel, String var, LinkedList<Data> inputData){
         MenuPanel menuPanel = new MenuPanel(inputData, "<html>Алгоритмы сжатия информации<br> "+ var + "</html>");
         menuPanel.createMenuPanel();
         menuPanel.setOnMenuClickListener((flag, name) -> {
@@ -108,7 +114,8 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
             }
             else {
                 menuPanel.getMenuPanel().setVisible(false);
-                inputPanel.setVisible(true);
+                rootPanel.removeAll();
+                optionsMenuScreen(rootPanel);
             }
         });
         rootPanel.add(menuPanel.getMenuPanel(),
@@ -134,6 +141,19 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
                         null, null, null, 0, false
                 ));
+        inputPanel.setOnInputListener((flag, linkedList) -> {
+            inputPanel.getInputPanel().setVisible(false);
+            rootPanel.removeAll();
+            setSize(700, 500);
+            if (flag){
+                System.out.println(linkedList.size());
+                setInputData(linkedList);
+                mainMenuScreen(rootPanel, "", getInputData());
+            }
+            else {
+                optionsMenuScreen(rootPanel);
+            }
+        });
     }
 
     @Override

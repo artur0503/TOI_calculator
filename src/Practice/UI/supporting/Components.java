@@ -7,6 +7,8 @@ import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.text.Format;
+import java.text.NumberFormat;
 
 public class Components {
 
@@ -62,8 +64,16 @@ public class Components {
         return panel;
     }
 
-    public static JTextField createJTextField(){
-        JTextField textField = new JTextField();
+    public static JTextField createJTextField(boolean isChar){
+        JTextField textField;
+        if (!isChar) {
+            textField = new DoubleJTextField();
+            textField.setText("0.");
+        }
+        else {
+            textField = new StringJTextField();
+            textField.setText("X");
+        }
         textField.setFont(new Font("Arial", Font.PLAIN, 16));
         textField.setForeground(new Color(-16777216));
         return textField;
