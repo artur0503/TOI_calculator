@@ -9,11 +9,7 @@
     <list default="true" id="eb67758f-f615-43f7-8a4c-be7f47dbd23d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/functional/InputPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/functional/InputPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/TEMP/TEST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/TEMP/TEST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practice/UI/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/AppUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/TEST.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/TEST.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/TEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/TEST.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +35,11 @@
       <file leaf-file-name="InputPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="182" column="48" lean-forward="true" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
+            <state relative-caret-position="196">
+              <caret line="182" column="33" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1537311714589" expanded="true" signature="6146:6195" ph="..." />
+                <marker date="1537378123761" expanded="true" signature="6147:6196" ph="..." />
               </folding>
             </state>
           </provider>
@@ -61,7 +57,7 @@
       <file leaf-file-name="AppUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
+            <state relative-caret-position="476">
               <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -166,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,9 +209,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -457,11 +453,12 @@
       <workItem from="1537030148805" duration="11403000" />
       <workItem from="1537093528216" duration="28976000" />
       <workItem from="1537291745536" duration="16294000" />
+      <workItem from="1537376700764" duration="1591000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="426244000" />
+    <option name="totallyTimeSpent" value="427835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -476,13 +473,12 @@
       <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49798658" weight="0.26923078" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49798658" visible="true" weight="0.26923078" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32915717" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.3161074" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.32080537" />
       <window_info anchor="right" id="Database" order="9" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32621083" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.24973147" />
       <window_info x="1284" y="218" width="563" height="567" id="UI Designer" order="2" weight="0.32975295" />
@@ -491,6 +487,7 @@
       <window_info anchor="bottom" id="Debug" order="8" weight="0.34188035" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32621083" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.3294271" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -532,7 +529,7 @@
           <option name="timeStamp" value="215" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="218" />
+      <option name="time" value="221" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -559,6 +556,25 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#afterAction#0;class#AppUI#0" />
+            <element signature="method#mainMenuScreen#0;class#AppUI#0" />
+            <element signature="method#inputScreen#0;class#AppUI#0" />
+            <element signature="method#windowOpened#0;class#AppUI#0" />
+            <element signature="method#windowClosed#0;class#AppUI#0" />
+            <element signature="method#windowIconified#0;class#AppUI#0" />
+            <element signature="method#windowDeiconified#0;class#AppUI#0" />
+            <element signature="method#windowActivated#0;class#AppUI#0" />
+            <element signature="method#windowDeactivated#0;class#AppUI#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/core/classes/controller/coding/ShenonController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
@@ -816,11 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-            <element signature="method#createDevelopInfo#0;class#RootPanel#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,9 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,9 +854,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TEMP/TEST.form">
-      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/ArithmeticPanel.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -872,7 +877,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
+        <state relative-caret-position="476">
           <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -898,11 +903,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="182" column="48" lean-forward="true" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
+        <state relative-caret-position="196">
+          <caret line="182" column="33" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1537311714589" expanded="true" signature="6146:6195" ph="..." />
+            <marker date="1537378123761" expanded="true" signature="6147:6196" ph="..." />
           </folding>
         </state>
       </provider>

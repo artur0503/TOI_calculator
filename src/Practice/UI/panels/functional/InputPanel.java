@@ -16,7 +16,7 @@ public class InputPanel implements ActionListener, ChangeListener {
 
     private final static int DEFAULT = 16;
 
-    private int now = 1;
+    private int now = 15;
 
     private JPanel inputPanel;
     private JPanel charPanel;
@@ -148,10 +148,10 @@ public class InputPanel implements ActionListener, ChangeListener {
         addSpacer(jPanel3, 0,  2, new Dimension(160, 0));
         addSpacer(textPanel, DEFAULT, 0, null, 2);
 
-        for (int i = 0; i < DEFAULT  ; i++){
+        for (int i = 1; i < DEFAULT  ; i++){
             addChance(textPanel, i);
             if (i <= now ){
-                arrPanels.get(i).setVisible(true);
+                arrPanels.get(i - 1 ).setVisible(true);
             }
         }
         arrPanels.get(0).setBackground(Color.cyan);
@@ -177,12 +177,14 @@ public class InputPanel implements ActionListener, ChangeListener {
     @Override
     public void stateChanged(ChangeEvent e) {
         JSpinner spinner = (JSpinner) e.getSource();
-        System.out.println(now);
+//        ((JTextField)arrPanels.get(0).getComponent(0)).setText("suka");
         if (((int) spinner.getValue()) > now) {
             now = (int) spinner.getValue();
-            arrPanels.get(now).setVisible(true);
+            arrPanels.get(now - 1).setVisible(true);
+            ((JTextField)arrPanels.get(now - 1).getComponent(0)).setText("blaaa");
         } else if (((int) spinner.getValue()) < now) {
             now = (int) spinner.getValue();
+            System.out.println(now);
             arrPanels.get(now).setVisible(false);
         }
     }
