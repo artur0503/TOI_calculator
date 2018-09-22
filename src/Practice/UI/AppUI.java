@@ -3,6 +3,7 @@ package Practice.UI;
 import App.core.classes.model.POJO.Data;
 import App.core.interfaces.view.BaseView;
 import Practice.UI.panels.RootPanel;
+import Practice.UI.panels.functional.HuffmanPanel;
 import Practice.UI.panels.functional.InputPanel;
 import Practice.UI.panels.menu.MenuPanel;
 import Practice.UI.panels.menu.OptionsPanel;
@@ -10,6 +11,7 @@ import Testing.Test;
 import com.intellij.uiDesigner.core.GridConstraints;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.LinkedList;
@@ -47,6 +49,17 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("TOI Calculator");
         setSize(700, 500);
+        setToCenter();
+    }
+
+    private void setToCenter(){
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int sizeWidth = 800;
+        int sizeHeight = 600;
+        int locationX = (screenSize.width - sizeWidth) / 2;
+        int locationY = (screenSize.height - sizeHeight) / 2;
+        setBounds(locationX, locationY, sizeWidth, sizeHeight);
+
     }
 
     private void optionsMenuScreen(final JPanel rootPanel){
@@ -98,9 +111,17 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
         menuPanel.setOnMenuClickListener((flag, name) -> {
             if (flag){
                 menuPanel.getMenuPanel().setVisible(false);
-                setSize(1000, 700);
+                setSize(1000, 610);
                 if (name == MenuPanel.HUFFMAN){
                     //OPEN HUFFMAN
+                    rootPanel.add(new HuffmanPanel().getHuffmanPanel(), new GridConstraints(
+                            0, 0, 1, 1,
+                            GridConstraints.ANCHOR_NORTH,
+                            GridConstraints.FILL_HORIZONTAL,
+                            GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                            GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                            null, null, null, 0, false
+                    ));
                 }
                 else if (name == MenuPanel.SHENON) {
                     //OPEN SHENON
