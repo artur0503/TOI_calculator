@@ -10,8 +10,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/AppUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/AppUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/functional/HuffmanPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/functional/HuffmanPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/supporting/Components.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/supporting/Components.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practice/UI/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/AppUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,30 +34,32 @@
     <session id="81637510">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="form" value="2" />
-          <entry key="java" value="8" />
+          <entry key="java" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="GUI_DESIGNER_FORM" value="2" />
-          <entry key="JAVA" value="8" />
+          <entry key="JAVA" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="716" />
+          <entry key="java" value="4084" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="716" />
+          <entry key="JAVA" value="4084" />
         </counts>
       </usages-collector>
     </session>
@@ -68,12 +72,83 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+            <state relative-caret-position="301">
+              <caret line="194" column="53" selection-start-line="194" selection-start-column="53" selection-end-line="194" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addSpacer#0;class#HuffmanPanel#0" />
-                <element signature="method#addLabel#0;class#HuffmanPanel#0" />
+                <element signature="e#1415#1416#0" expanded="true" />
+                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1535#1536#0" expanded="true" />
+                <element signature="e#1566#1567#0" expanded="true" />
+                <element signature="e#1168#1169#0" expanded="true" />
+                <element signature="e#1208#1209#0" expanded="true" />
+                <element signature="e#1315#1316#0" expanded="true" />
+                <element signature="e#1357#1358#0" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
+                <element signature="e#1003#1004#0" expanded="true" />
+                <element signature="method#addInfoPanel#0;class#HuffmanPanel#0" />
+                <element signature="method#addLabelPanel#0;class#HuffmanPanel#0" />
+                <element signature="method#addButton#0;class#HuffmanPanel#0" />
+                <element signature="method#addLabel#1;class#HuffmanPanel#0" />
+                <element signature="method#createResultPanel#0;class#HuffmanPanel#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnInputListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnClickListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/Component.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="1476" column="20" selection-start-line="1476" selection-start-column="20" selection-end-line="1476" selection-end-column="20" />
+              <folding>
+                <element signature="e#50756#50757#0" expanded="true" />
+                <element signature="e#50781#50782#0" expanded="true" />
+                <element signature="e#114480#114481#0" expanded="true" />
+                <element signature="e#114527#114528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/BorderFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="380" column="31" selection-start-line="380" selection-start-column="31" selection-end-line="380" selection-end-column="31" />
+              <folding>
+                <element signature="e#14194#14195#0" expanded="true" />
+                <element signature="e#14240#14241#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,8 +157,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+            <state relative-caret-position="-1071">
+              <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -91,15 +166,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="114" column="47" lean-forward="true" selection-start-line="114" selection-start-column="47" selection-end-line="114" selection-end-column="47" />
+            <state relative-caret-position="2101">
+              <caret line="199" column="30" selection-start-line="199" selection-start-column="30" selection-end-line="199" selection-end-column="30" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TEMP/TEST.form">
-          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
     </leaf>
@@ -108,8 +178,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -119,7 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Practice/MainScreen.form" />
         <option value="$PROJECT_DIR$/src/Practice/UI.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI.form" />
         <option value="$PROJECT_DIR$/src/Practice/PracticeUI.java" />
@@ -158,7 +227,6 @@
         <option value="$PROJECT_DIR$/src/TEMP/TEST.java" />
         <option value="$PROJECT_DIR$/src/TEMP/TEST.form" />
         <option value="$PROJECT_DIR$/src/Practice/Validation/Validation.java" />
-        <option value="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/supporting/StringJTextField.java" />
         <option value="$PROJECT_DIR$/src/App/core/classes/model/POJO/Data.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/listeners/OnClickListener.java" />
@@ -168,6 +236,8 @@
         <option value="$PROJECT_DIR$/src/Practice/Validation/ValidationUI.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/supporting/DoubleJTextField.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/supporting/CustomJComponent.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/AppUI.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java" />
       </list>
@@ -190,6 +260,22 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TOI_calculator" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TOI_APP" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TOI_APP" type="616d4139:PackageViewModuleNode" />
+              <item name="TEMP" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,6 +307,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Practice" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="listeners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="panels" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -232,21 +326,13 @@
               <item name="panels" type="462c0819:PsiDirectoryNode" />
               <item name="functional" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
             <path>
-              <item name="TOI_calculator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TOI_APP" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="TOI_calculator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TOI_APP" type="616d4139:PackageViewModuleNode" />
-              <item name="TEMP" type="1f31426a:PackageElementNode" />
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="supporting" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -270,7 +356,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="326" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537647776376" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537729650265" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/TOI_APP_jar/META-INF/MANIFEST.MF" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -518,10 +604,10 @@
       <window_info id="Favorites" order="3" sideWeight="0.5064935" side_tool="true" weight="0.26852846" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.19395973" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.19664429" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50201344" side_tool="true" weight="0.32905984" />
-      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49934897" weight="0.32621083" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49934897" weight="0.3248227" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32915717" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -628,41 +714,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/core/classes/model/logic/decoding/ArithmeticDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/core/interfaces/model/BaseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/core/classes/controller/decoding/ArithmeticDecoderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/core/interfaces/controller/ControllerDecoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/core/interfaces/model/formulas/ModelFormulas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="4" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/core/interfaces/controller/ControllerFormulas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -833,13 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/StringJTextField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -851,13 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnClickListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -877,13 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnInputListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -935,31 +965,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/CustomJComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="1476" column="20" selection-start-line="1476" selection-start-column="20" selection-end-line="1476" selection-end-column="20" />
+          <folding>
+            <element signature="e#50756#50757#0" expanded="true" />
+            <element signature="e#50781#50782#0" expanded="true" />
+            <element signature="e#114480#114481#0" expanded="true" />
+            <element signature="e#114527#114528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/JComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39567">
+          <caret line="2679" column="34" lean-forward="true" selection-start-line="2679" selection-start-column="34" selection-end-line="2679" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TEMP/TEST.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/Container.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="114" column="47" lean-forward="true" selection-start-line="114" selection-start-column="47" selection-end-line="114" selection-end-column="47" />
+        <state relative-caret-position="156">
+          <caret line="972" selection-start-line="972" selection-end-line="972" />
+          <folding>
+            <element signature="e#37612#37613#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+        <state relative-caret-position="-1071">
+          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/BorderFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="380" column="31" selection-start-line="380" selection-start-column="31" selection-end-line="380" selection-end-column="31" />
+          <folding>
+            <element signature="e#14194#14195#0" expanded="true" />
+            <element signature="e#14240#14241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnClickListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnInputListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2101">
+          <caret line="199" column="30" selection-start-line="199" selection-start-column="30" selection-end-line="199" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+        <state relative-caret-position="301">
+          <caret line="194" column="53" selection-start-line="194" selection-start-column="53" selection-end-line="194" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addSpacer#0;class#HuffmanPanel#0" />
-            <element signature="method#addLabel#0;class#HuffmanPanel#0" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1566#1567#0" expanded="true" />
+            <element signature="e#1168#1169#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="method#addInfoPanel#0;class#HuffmanPanel#0" />
+            <element signature="method#addLabelPanel#0;class#HuffmanPanel#0" />
+            <element signature="method#addButton#0;class#HuffmanPanel#0" />
+            <element signature="method#addLabel#1;class#HuffmanPanel#0" />
+            <element signature="method#createResultPanel#0;class#HuffmanPanel#0" />
           </folding>
         </state>
       </provider>

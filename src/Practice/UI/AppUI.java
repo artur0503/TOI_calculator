@@ -2,6 +2,8 @@ package Practice.UI;
 
 import App.core.classes.model.POJO.Data;
 import App.core.interfaces.view.BaseView;
+import Practice.UI.listeners.OnClickListener;
+import Practice.UI.listeners.OnInputListener;
 import Practice.UI.panels.RootPanel;
 import Practice.UI.panels.functional.HuffmanPanel;
 import Practice.UI.panels.functional.InputPanel;
@@ -16,9 +18,10 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.LinkedList;
 
-public class AppUI extends JFrame implements BaseView, WindowListener {
+public class AppUI extends JFrame implements BaseView {
 
     private LinkedList<Data> list;
+    private String var = "";
 
     @Override
     public void execute() {
@@ -78,19 +81,22 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
                     //OPEN MAIN MENU WITH VAR_1
                     setInputData(new Test().test0());
                     rootPanel.removeAll();
+                    var = "Вариант 1";
                     mainMenuScreen(rootPanel, "Вариант 1", getInputData());
                 }
                 else if (name == OptionsPanel.VAR_2){
                     //OPEN MAIN MENU WITH VAR_2
                     setInputData(new Test().test0());
                     rootPanel.removeAll();
-                    mainMenuScreen(rootPanel, "Вариант 2", getInputData());
+                    var = "Вариант 2";
+                    mainMenuScreen(rootPanel, var, getInputData());
                 }
                 else if (name == OptionsPanel.VAR_3){
                     //OPEN MAIN MENU WITH VAR_3
                     setInputData(new Test().test0());
                     rootPanel.removeAll();
-                    mainMenuScreen(rootPanel, "Вариант 3", getInputData());
+                    var = "Вариант 3";
+                    mainMenuScreen(rootPanel, var, getInputData());
                 }
             }
         });
@@ -111,17 +117,10 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
         menuPanel.setOnMenuClickListener((flag, name) -> {
             if (flag){
                 menuPanel.getMenuPanel().setVisible(false);
-                setSize(1000, 610);
+                setSize(1010, 685);
                 if (name == MenuPanel.HUFFMAN){
                     //OPEN HUFFMAN
-                    rootPanel.add(new HuffmanPanel().getHuffmanPanel(), new GridConstraints(
-                            0, 0, 1, 1,
-                            GridConstraints.ANCHOR_NORTH,
-                            GridConstraints.FILL_HORIZONTAL,
-                            GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                            GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                            null, null, null, 0, false
-                    ));
+                    huffmanScreen(rootPanel);
                 }
                 else if (name == MenuPanel.SHENON) {
                     //OPEN SHENON
@@ -169,7 +168,8 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
             if (flag){
                 System.out.println(linkedList.size());
                 setInputData(linkedList);
-                mainMenuScreen(rootPanel, "", getInputData());
+                var = "";
+                mainMenuScreen(rootPanel, var, getInputData());
             }
             else {
                 optionsMenuScreen(rootPanel);
@@ -177,38 +177,44 @@ public class AppUI extends JFrame implements BaseView, WindowListener {
         });
     }
 
-    @Override
-    public void windowOpened(WindowEvent e) {
+    private void huffmanScreen(JPanel rootPanel){
+        HuffmanPanel huffmanPanel = new HuffmanPanel();
+        huffmanPanel.createHuffmanPanel();
+        rootPanel.add(huffmanPanel.getHuffmanPanel(), new GridConstraints(
+                0, 0, 1, 1,
+                GridConstraints.ANCHOR_NORTH,
+                GridConstraints.FILL_HORIZONTAL,
+                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                null, null, null, 0, false
+        ));
+        huffmanPanel.setOnInputListener((flag, linkedList) -> {
+            if (flag){
+                if (linkedList != null){
+                    //TODO:Декодирование
+                }
+            }
+        });
+
+        huffmanPanel.setOnClickListener((flag, name) -> {
+            setSize(700, 500);
+            if (!flag){
+                switch (name){
+                    case HuffmanPanel.INPUT_MENU:
+                        huffmanPanel.getHuffmanPanel().setVisible(false);
+                        rootPanel.removeAll();
+                        optionsMenuScreen(rootPanel);
+                        break;
+
+                    case HuffmanPanel.MAIN_MENU:
+                        huffmanPanel.getHuffmanPanel().setVisible(false);
+                        rootPanel.removeAll();
+                        mainMenuScreen(rootPanel, var, getInputData());
+                        break;
+                }
+            }
+        });
 
     }
 
-    //close app
-    @Override
-    public void windowClosing(WindowEvent e) {
-        System.exit(0);
-    }
-
-    @Override
-    public void windowClosed(WindowEvent e) {
-    }
-
-    @Override
-    public void windowIconified(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowDeiconified(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowActivated(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowDeactivated(WindowEvent e) {
-
-    }
 }

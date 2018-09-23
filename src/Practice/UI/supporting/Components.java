@@ -4,7 +4,10 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
 import javax.swing.event.ChangeListener;
+import javax.xml.soap.Text;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.text.Format;
@@ -51,8 +54,7 @@ public class Components {
     public static JLabel createLabel(String text){
         JLabel jLabel = new JLabel();
         jLabel.setForeground(new Color(-16777216));
-        Font font = new Font("Arial", Font.PLAIN, 16);
-        jLabel.setFont(font);
+        jLabel.setFont(new Font("Arial", Font.PLAIN, 16));
         jLabel.setText(text);
         return jLabel;
     }
@@ -77,6 +79,22 @@ public class Components {
         textField.setFont(new Font("Arial", Font.PLAIN, 16));
         textField.setForeground(new Color(-16777216));
         return textField;
+    }
+
+    public static TitledBorder createTitleBorder(String text){
+        TitledBorder titledBorder = new TitledBorder(text);
+        titledBorder.setTitleColor(new Color(-16777216));
+        titledBorder.setTitleFont(new Font("Arial", Font.PLAIN, 23));
+        return titledBorder;
+    }
+
+    public static JTextArea createJTextArea(String text){
+        JTextArea textArea = new JTextArea();
+        textArea.setText(text);
+        textArea.setEnabled(false);
+        textArea.setDisabledTextColor(new Color(-16777216));
+        textArea.setFont(new Font("Arial", Font.PLAIN, 16));
+        return textArea;
     }
 
 
