@@ -67,7 +67,7 @@ public class Formulas implements ModelFormulas {
     private double findEntropy(LinkedList<Data> list){
 
         double exp = list.size();
-
+        //TODO:УТОЧНИТЬ
         return new BigDecimal(exp)
                 .setScale(4, RoundingMode.HALF_UP)
                 .doubleValue();

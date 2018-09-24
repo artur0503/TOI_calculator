@@ -3,7 +3,7 @@ package Practice.UI.panels.functional;
 import App.core.classes.model.POJO.Data;
 import Practice.UI.listeners.OnInputListener;
 import Practice.UI.supporting.Components;
-import Practice.Validation.ValidationUI;
+import Practice.validation.ValidationUI;
 import com.intellij.uiDesigner.core.GridConstraints;
 
 import javax.swing.*;

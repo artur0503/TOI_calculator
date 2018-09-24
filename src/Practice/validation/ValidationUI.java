@@ -1,4 +1,4 @@
-package Practice.Validation;
+package Practice.validation;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

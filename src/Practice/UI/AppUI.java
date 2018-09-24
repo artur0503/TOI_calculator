@@ -1,12 +1,17 @@
 package Practice.UI;
 
+import App.core.classes.controller.coding.HuffmanController;
+import App.core.classes.controller.coding.ShenonController;
+import App.core.classes.controller.formulas.FormulasController;
 import App.core.classes.model.POJO.Data;
+import App.core.interfaces.controller.ControllerCoding;
+import App.core.interfaces.controller.ControllerFormulas;
 import App.core.interfaces.view.BaseView;
-import Practice.UI.listeners.OnClickListener;
-import Practice.UI.listeners.OnInputListener;
 import Practice.UI.panels.RootPanel;
+import Practice.UI.panels.functional.BinaryCodingPanel;
 import Practice.UI.panels.functional.HuffmanPanel;
 import Practice.UI.panels.functional.InputPanel;
+import Practice.UI.panels.functional.ShenonPanel;
 import Practice.UI.panels.menu.MenuPanel;
 import Practice.UI.panels.menu.OptionsPanel;
 import Testing.Test;
@@ -14,8 +19,6 @@ import com.intellij.uiDesigner.core.GridConstraints;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.util.LinkedList;
 
 public class AppUI extends JFrame implements BaseView {
@@ -41,6 +44,13 @@ public class AppUI extends JFrame implements BaseView {
     @Override
     public void setInputData(LinkedList<Data> list) {
         this.list = list;
+    }
+
+    private LinkedList<Data> transportList(){
+        LinkedList<Data> linkedList = new LinkedList<>();
+        if (list != null)
+            linkedList.addAll(list);
+        return linkedList;
     }
 
     @Override
@@ -117,13 +127,14 @@ public class AppUI extends JFrame implements BaseView {
         menuPanel.setOnMenuClickListener((flag, name) -> {
             if (flag){
                 menuPanel.getMenuPanel().setVisible(false);
-                setSize(1010, 685);
+                setSize(1010, 700);
                 if (name == MenuPanel.HUFFMAN){
                     //OPEN HUFFMAN
-                    huffmanScreen(rootPanel);
+                    huffmanScreen(rootPanel, transportList());
                 }
                 else if (name == MenuPanel.SHENON) {
                     //OPEN SHENON
+                    shenonScreen(rootPanel, transportList());
                 }
                 else if (name == MenuPanel.ARITHMETIC){
                     //OPEN ARITHMETIC
@@ -177,10 +188,14 @@ public class AppUI extends JFrame implements BaseView {
         });
     }
 
-    private void huffmanScreen(JPanel rootPanel){
+    private void huffmanScreen(JPanel rootPanel, LinkedList<Data> data){
+        ControllerCoding huffman = new HuffmanController(data);
+        huffman.execute();
+        ControllerFormulas formulas = new FormulasController(huffman.getCodeToDraw());
+        formulas.execute();
         HuffmanPanel huffmanPanel = new HuffmanPanel();
-        huffmanPanel.createHuffmanPanel();
-        rootPanel.add(huffmanPanel.getHuffmanPanel(), new GridConstraints(
+        huffmanPanel.createHuffmanPanel("Метод Хаффмана", huffman.getCodeToDraw(), huffman.getDataToDraw(), formulas);
+        rootPanel.add(huffmanPanel.getRootPanel(), new GridConstraints(
                 0, 0, 1, 1,
                 GridConstraints.ANCHOR_NORTH,
                 GridConstraints.FILL_HORIZONTAL,
@@ -200,14 +215,14 @@ public class AppUI extends JFrame implements BaseView {
             setSize(700, 500);
             if (!flag){
                 switch (name){
-                    case HuffmanPanel.INPUT_MENU:
-                        huffmanPanel.getHuffmanPanel().setVisible(false);
+                    case BinaryCodingPanel.INPUT_MENU:
+                        huffmanPanel.getRootPanel().setVisible(false);
                         rootPanel.removeAll();
                         optionsMenuScreen(rootPanel);
                         break;
 
-                    case HuffmanPanel.MAIN_MENU:
-                        huffmanPanel.getHuffmanPanel().setVisible(false);
+                    case BinaryCodingPanel.MAIN_MENU:
+                        huffmanPanel.getRootPanel().setVisible(false);
                         rootPanel.removeAll();
                         mainMenuScreen(rootPanel, var, getInputData());
                         break;
@@ -216,5 +231,50 @@ public class AppUI extends JFrame implements BaseView {
         });
 
     }
+
+    private void shenonScreen(JPanel rootPanel, LinkedList<Data> data){
+        ControllerCoding shenon = new ShenonController(data);
+        shenon.execute();
+        ControllerFormulas formulas = new FormulasController(shenon.getCodeToDraw());
+        formulas.execute();
+        ShenonPanel shenonPanel = new ShenonPanel();
+        shenonPanel.createHuffmanPanel("Метод Шенона-Фанно", shenon.getCodeToDraw(), shenon.getDataToDraw(), formulas);
+        rootPanel.add(shenonPanel.getRootPanel(), new GridConstraints(
+                0, 0, 1, 1,
+                GridConstraints.ANCHOR_NORTH,
+                GridConstraints.FILL_HORIZONTAL,
+                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                null, null, null, 0, false
+        ));
+        shenonPanel.setOnInputListener((flag, linkedList) -> {
+            if (flag){
+                if (linkedList != null){
+                    //TODO:Декодирование
+                }
+            }
+        });
+
+        shenonPanel.setOnClickListener((flag, name) -> {
+            setSize(700, 500);
+            if (!flag){
+                switch (name){
+                    case BinaryCodingPanel.INPUT_MENU:
+                        shenonPanel.getRootPanel().setVisible(false);
+                        rootPanel.removeAll();
+                        optionsMenuScreen(rootPanel);
+                        break;
+
+                    case BinaryCodingPanel.MAIN_MENU:
+                        shenonPanel.getRootPanel().setVisible(false);
+                        rootPanel.removeAll();
+                        mainMenuScreen(rootPanel, var, getInputData());
+                        break;
+                }
+            }
+        });
+
+    }
+
 
 }

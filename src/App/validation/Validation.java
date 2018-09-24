@@ -1,4 +1,4 @@
-package Practice.Validation;
+package App.validation;
 
 public interface Validation {
 

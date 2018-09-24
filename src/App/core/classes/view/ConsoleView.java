@@ -33,10 +33,10 @@ public class ConsoleView implements BaseView {
     @Override
     public void afterAction(){
         //введенные данные которые получили после нажатия кнопки
-        LinkedList<Data> linkedList = new LinkedList<>();
+        LinkedList<Data> linkedList = new Test().test0();
 
 //        new Test().test1(linkedList);
-//        new Test().test0(linkedList);//введенные пользователем элементы
+        //введенные пользователем элементы
 
         setInputData(linkedList);
     }
@@ -90,8 +90,16 @@ public class ConsoleView implements BaseView {
                 case 3:
                     System.out.println("\n  КОДИРОВАНИЕ ШЕНОНА-ФАНО ");
                     if (getInputData() != null){
-                    ControllerCoding shanon = new ShenonController(transportList());
-                    shanon.execute();
+                        ControllerCoding shanon = new ShenonController(transportList());
+                        shanon.execute();
+                        ControllerFormulas formulas = new FormulasController(shanon.getCodeToDraw());
+                        formulas.execute();
+                        System.out.println(" N - " + formulas.resCountMessage()
+                                + "\n E - " + formulas.resEntropy()
+                                + "\n Emax - " + formulas.resMaxEntropy()
+                                + "\n Mav - " + formulas.resAverageLength()
+                                + "\n R - " + formulas.resRedundancy()
+                        );
                     binaryDecodingMenu(sc, shanon);
                     } else
                         System.out.println("###ERROR###\n" + "Введите элементы");
