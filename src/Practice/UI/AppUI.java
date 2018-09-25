@@ -7,11 +7,13 @@ import App.core.classes.model.POJO.Data;
 import App.core.interfaces.controller.ControllerCoding;
 import App.core.interfaces.controller.ControllerFormulas;
 import App.core.interfaces.view.BaseView;
+import Practice.UI.listeners.OnClickListener;
 import Practice.UI.panels.RootPanel;
-import Practice.UI.panels.functional.BinaryCodingPanel;
-import Practice.UI.panels.functional.HuffmanPanel;
+import Practice.UI.panels.functional.binary.BinaryCodingPanel;
+import Practice.UI.panels.functional.binary.BinaryDecodingPanel;
+import Practice.UI.panels.functional.binary.HuffmanPanel;
 import Practice.UI.panels.functional.InputPanel;
-import Practice.UI.panels.functional.ShenonPanel;
+import Practice.UI.panels.functional.binary.ShenonPanel;
 import Practice.UI.panels.menu.MenuPanel;
 import Practice.UI.panels.menu.OptionsPanel;
 import Testing.Test;
@@ -46,16 +48,16 @@ public class AppUI extends JFrame implements BaseView {
         this.list = list;
     }
 
+    @Override
+    public LinkedList getInputData() {
+        return list;
+    }
+
     private LinkedList<Data> transportList(){
         LinkedList<Data> linkedList = new LinkedList<>();
         if (list != null)
             linkedList.addAll(list);
         return linkedList;
-    }
-
-    @Override
-    public LinkedList getInputData() {
-        return list;
     }
 
     public AppUI() {
@@ -72,7 +74,17 @@ public class AppUI extends JFrame implements BaseView {
         int locationX = (screenSize.width - sizeWidth) / 2;
         int locationY = (screenSize.height - sizeHeight) / 2;
         setBounds(locationX, locationY, sizeWidth, sizeHeight);
+    }
 
+    private void addPanel(JPanel rootPanel, JPanel panel){
+        rootPanel.add(panel, new GridConstraints(
+                0, 0, 1, 1,
+                GridConstraints.ANCHOR_NORTH,
+                GridConstraints.FILL_HORIZONTAL,
+                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                null, null, null, 0, false
+        ));
     }
 
     private void optionsMenuScreen(final JPanel rootPanel){
@@ -110,15 +122,7 @@ public class AppUI extends JFrame implements BaseView {
                 }
             }
         });
-        rootPanel.add(optionsPanel.getInputPanel(),
-                new GridConstraints(
-                        0, 0, 1, 1,
-                        GridConstraints.ANCHOR_NORTH,
-                        GridConstraints.FILL_HORIZONTAL,
-                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                        null, null, null, 0, false
-                ));
+        addPanel(rootPanel, optionsPanel.getInputPanel());
     }
 
     private void mainMenuScreen(JPanel rootPanel, String var, LinkedList<Data> inputData){
@@ -149,29 +153,13 @@ public class AppUI extends JFrame implements BaseView {
                 optionsMenuScreen(rootPanel);
             }
         });
-        rootPanel.add(menuPanel.getMenuPanel(),
-                new GridConstraints(
-                        0, 0, 1, 1,
-                        GridConstraints.ANCHOR_NORTH,
-                        GridConstraints.FILL_HORIZONTAL,
-                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                        null, null, null, 0, false
-                ));
+        addPanel(rootPanel, menuPanel.getMenuPanel());
     }
 
     private void inputScreen(JPanel rootPanel){
         InputPanel inputPanel = new InputPanel();
         inputPanel.createInputPanel();
-        rootPanel.add(inputPanel.getInputPanel(),
-                new GridConstraints(
-                        0, 0, 1, 1,
-                        GridConstraints.ANCHOR_NORTH,
-                        GridConstraints.FILL_HORIZONTAL,
-                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                        null, null, null, 0, false
-                ));
+        addPanel(rootPanel, inputPanel.getInputPanel());
         inputPanel.setOnInputListener((flag, linkedList) -> {
             inputPanel.getInputPanel().setVisible(false);
             rootPanel.removeAll();
@@ -195,18 +183,12 @@ public class AppUI extends JFrame implements BaseView {
         formulas.execute();
         HuffmanPanel huffmanPanel = new HuffmanPanel();
         huffmanPanel.createHuffmanPanel("Метод Хаффмана", huffman.getCodeToDraw(), huffman.getDataToDraw(), formulas);
-        rootPanel.add(huffmanPanel.getRootPanel(), new GridConstraints(
-                0, 0, 1, 1,
-                GridConstraints.ANCHOR_NORTH,
-                GridConstraints.FILL_HORIZONTAL,
-                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                null, null, null, 0, false
-        ));
+        addPanel(rootPanel, huffmanPanel.getRootPanel());
         huffmanPanel.setOnInputListener((flag, linkedList) -> {
             if (flag){
                 if (linkedList != null){
-                    //TODO:Декодирование
+                    huffmanPanel.getRootPanel().setVisible(false);
+                    binaryDecodingScreen(rootPanel);
                 }
             }
         });
@@ -239,18 +221,12 @@ public class AppUI extends JFrame implements BaseView {
         formulas.execute();
         ShenonPanel shenonPanel = new ShenonPanel();
         shenonPanel.createHuffmanPanel("Метод Шенона-Фанно", shenon.getCodeToDraw(), shenon.getDataToDraw(), formulas);
-        rootPanel.add(shenonPanel.getRootPanel(), new GridConstraints(
-                0, 0, 1, 1,
-                GridConstraints.ANCHOR_NORTH,
-                GridConstraints.FILL_HORIZONTAL,
-                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                null, null, null, 0, false
-        ));
+        addPanel(rootPanel, shenonPanel.getRootPanel());
         shenonPanel.setOnInputListener((flag, linkedList) -> {
             if (flag){
                 if (linkedList != null){
-                    //TODO:Декодирование
+                    shenonPanel.getRootPanel().setVisible(false);
+                    binaryDecodingScreen(rootPanel);
                 }
             }
         });
@@ -276,5 +252,20 @@ public class AppUI extends JFrame implements BaseView {
 
     }
 
+    private void binaryDecodingScreen(JPanel rootPanel){
+        BinaryDecodingPanel binaryDecodingPanel = new BinaryDecodingPanel();
+        binaryDecodingPanel.createDecoding(getInputData(), "Декодирование Хаффмана");
+        addPanel(rootPanel, binaryDecodingPanel.getBinaryDecodingPanel());
+        binaryDecodingPanel.setOnClickListener((flag, name) -> {
+            if (!flag){
+                if (name == BinaryDecodingPanel.INPUT_MENU){
+                    optionsMenuScreen(rootPanel);
+                }
+                else if (name == BinaryDecodingPanel.MAIN_MENU){
+                    mainMenuScreen(rootPanel, var, getInputData());
+                }
+            }
+        });
+    }
 
 }

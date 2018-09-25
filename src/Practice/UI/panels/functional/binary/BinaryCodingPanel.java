@@ -1,4 +1,4 @@
-package Practice.UI.panels.functional;
+package Practice.UI.panels.functional.binary;
 
 import App.core.classes.model.POJO.Data;
 import App.core.interfaces.controller.ControllerFormulas;
