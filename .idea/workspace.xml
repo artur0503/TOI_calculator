@@ -7,19 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb67758f-f615-43f7-8a4c-be7f47dbd23d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryDecodingPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Practice/UI/listeners/OnDecodingListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Practice/UI/supporting/BinaryJTextField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/functional/HuffmanPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/functional/ShenonPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/validation/Validation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/validation/ValidationUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/AppUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/AppUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/functional/binary/BinaryDecodingPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/panels/functional/binary/BinaryDecodingPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/supporting/Components.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/Practice/UI/supporting/Components.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practice/UI/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/AppUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/functional/BinaryCodingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryCodingPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/functional/HuffmanPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/HuffmanPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/functional/ShenonPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/ShenonPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/TEST.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/TEST.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/TEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/TEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryDecodingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryDecodingPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,34 +36,35 @@
     <session id="81637510">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="form" value="3" />
-          <entry key="java" value="56" />
+          <entry key="java" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="GUI_DESIGNER_FORM" value="3" />
-          <entry key="JAVA" value="56" />
+          <entry key="JAVA" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6614" />
+          <entry key="java" value="7611" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6614" />
+          <entry key="JAVA" value="7611" />
         </counts>
       </usages-collector>
     </session>
@@ -80,17 +77,133 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryDecodingPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="191" column="47" selection-start-line="191" selection-start-column="47" selection-end-line="191" selection-end-column="47" />
+            <state relative-caret-position="159">
+              <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#addScrollPane#0;class#BinaryDecodingPanel#0" />
                 <element signature="method#addSpacer#0;class#BinaryDecodingPanel#0" />
                 <element signature="method#addPanel#0;class#BinaryDecodingPanel#0" />
                 <element signature="method#addLabel#0;class#BinaryDecodingPanel#0" />
-                <element signature="method#createChancePanel#0;class#BinaryDecodingPanel#0" />
                 <element signature="method#convertListToString#0;class#BinaryDecodingPanel#0" />
+                <element signature="e#12498#12499#0" expanded="true" />
+                <element signature="e#12538#12539#0" expanded="true" />
+                <element signature="e#13296#13297#0" expanded="true" />
+                <element signature="e#13354#13355#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryCodingPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="303" column="28" selection-start-line="303" selection-start-column="28" selection-end-line="303" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/DoubleJTextField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#214#701#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/BinaryJTextField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <folding>
+                <element signature="e#214#479#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="257" column="19" selection-start-line="257" selection-start-column="19" selection-end-line="257" selection-end-column="19" />
+              <folding>
+                <element signature="method#execute#0;class#AppUI#0" />
+                <element signature="method#afterAction#0;class#AppUI#0" />
+                <element signature="method#transportList#0;class#AppUI#0" />
+                <element signature="method#AppUI#0;class#AppUI#0" />
+                <element signature="method#setToCenter#0;class#AppUI#0" />
+                <element signature="method#addPanel#0;class#AppUI#0" />
+                <element signature="method#optionsMenuScreen#0;class#AppUI#0" />
+                <element signature="method#mainMenuScreen#0;class#AppUI#0" />
+                <element signature="method#inputScreen#0;class#AppUI#0" />
+                <element signature="method#shenonScreen#0;class#AppUI#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/core/classes/view/ConsoleView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="126" column="38" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="116" column="35" lean-forward="true" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnInputListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnDecodingListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="100" column="34" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -101,8 +214,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -112,8 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Practice/UI/AppUI.form" />
-        <option value="$PROJECT_DIR$/src/Practice/UI/RootPanel.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/MenuPanel.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/panels/Count.form" />
         <option value="$PROJECT_DIR$/src/Practice/UI/panels/Count.java" />
@@ -147,9 +258,7 @@
         <option value="$PROJECT_DIR$/src/Practice/Validation/VaidationUI.java" />
         <option value="$PROJECT_DIR$/src/Practice/Validation/ValidationUI.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/supporting/DoubleJTextField.java" />
-        <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/supporting/CustomJComponent.java" />
-        <option value="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" />
         <option value="$PROJECT_DIR$/src/App/core/classes/view/ConsoleView.java" />
         <option value="$PROJECT_DIR$/src/App/ui/panels/functional/InputPanel.java" />
         <option value="$PROJECT_DIR$/src/Practice/validation/ValidationUI.java" />
@@ -161,6 +270,10 @@
         <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/ShenonPanel.java" />
         <option value="$PROJECT_DIR$/src/TEMP/TEST.form" />
         <option value="$PROJECT_DIR$/src/TEMP/TEST.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/listeners/OnDecodingListener.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/supporting/BinaryJTextField.java" />
+        <option value="$PROJECT_DIR$/src/Practice/UI/supporting/Components.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/AppUI.java" />
         <option value="$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryDecodingPanel.java" />
       </list>
@@ -202,22 +315,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TOI_calculator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TOI_APP" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="TOI_calculator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TOI_APP" type="616d4139:PackageViewModuleNode" />
-              <item name="TEMP" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,6 +344,31 @@
               <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Practice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -255,6 +377,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Practice" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="listeners" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
@@ -287,20 +417,37 @@
               <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TEMP" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="supporting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TOI_calculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="TOI_calculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="TEMP" type="462c0819:PsiDirectoryNode" />
-              <item name="TEST" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TOI_calculator" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TOI_APP" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="TOI_calculator" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TOI_APP" type="616d4139:PackageViewModuleNode" />
+              <item name="TEMP" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,7 +466,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="326" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537909940986" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537998097206" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/TOI_APP_jar/META-INF/MANIFEST.MF" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -329,22 +476,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Main\Desktop\github\TOI_calculator\src\Practice\UI" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="App.Model.ShenonFano" />
-      <recent name="App.Model.Comparator.AllComporator" />
-      <recent name="App.Model.Haffman" />
-      <recent name="Practice.Shanon_2" />
-      <recent name="App.Model.Comparator" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Main\Desktop\github\TOI_calculator\src\App" />
       <recent name="E:\Main\Desktop\github\TOI_calculator\src\App\ui" />
       <recent name="E:\Main\Desktop\github\TOI_calculator\src" />
       <recent name="E:\Main\Desktop\github\TOI_calculator\src\Testing" />
       <recent name="E:\Main\Desktop\github\TOI_calculator\src\App\classes\view" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Practice.UI.supporting" />
+      <recent name="App.Model.ShenonFano" />
+      <recent name="App.Model.Comparator.AllComporator" />
+      <recent name="App.Model.Haffman" />
+      <recent name="Practice.Shanon_2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Main\Desktop\github\TOI_calculator\src\Practice\UI" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -567,7 +714,7 @@
       <window_info id="Favorites" order="3" sideWeight="0.5064935" side_tool="true" weight="0.26852846" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.22751679" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.23087248" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50201344" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49934897" weight="0.3248227" />
@@ -671,14 +818,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/ChancePanel.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/adedayo/intellij/sdk/forms_rt/142.1/forms_rt-142.1.jar!/com/intellij/uiDesigner/core/GridLayoutManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="466" selection-start-line="466" selection-end-line="466" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/ArithmeticDecodingPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -747,16 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/DoubleJTextField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/menu/MenuPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -802,30 +931,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/core/classes/controller/coding/HuffmanController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#1182#1183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnInputListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,22 +956,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/core/classes/controller/formulas/FormulasController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,12 +989,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/validation/ValidationUI.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/validation/Validation.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/validation/ValidationUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/App/validation/Validation.java" />
     <entry file="file://$PROJECT_DIR$/src/App/ui/panels/functional/ArithmeticPanel.java" />
     <entry file="file://$PROJECT_DIR$/src/App/ui/panels/menu/OptionsPanel.java" />
     <entry file="file://$PROJECT_DIR$/src/App/ui/panels/functional/InputPanel.java" />
@@ -905,24 +998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="method#findRedundancy#0;class#Formulas#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/core/classes/view/ConsoleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2652">
-          <caret line="174" column="20" selection-start-line="174" selection-start-column="12" selection-end-line="174" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#binaryDecodingMenu#0;class#ConsoleView#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,20 +1060,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryCodingPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnInputListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="42" />
+        <state relative-caret-position="136">
+          <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/InputPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="116" column="35" lean-forward="true" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/listeners/OnDecodingListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/core/classes/view/ConsoleView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="126" column="38" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/Components.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="100" column="34" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/BinaryJTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="e#214#479#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/AppUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+        <state relative-caret-position="123">
+          <caret line="257" column="19" selection-start-line="257" selection-start-column="19" selection-end-line="257" selection-end-column="19" />
           <folding>
             <element signature="method#execute#0;class#AppUI#0" />
             <element signature="method#afterAction#0;class#AppUI#0" />
@@ -1009,25 +1128,48 @@
             <element signature="method#optionsMenuScreen#0;class#AppUI#0" />
             <element signature="method#mainMenuScreen#0;class#AppUI#0" />
             <element signature="method#inputScreen#0;class#AppUI#0" />
-            <element signature="method#huffmanScreen#0;class#AppUI#0" />
             <element signature="method#shenonScreen#0;class#AppUI#0" />
-            <element signature="method#binaryDecodingScreen#0;class#AppUI#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/supporting/DoubleJTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#214#701#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryCodingPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="303" column="28" selection-start-line="303" selection-start-column="28" selection-end-line="303" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/UI/panels/functional/binary/BinaryDecodingPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="191" column="47" selection-start-line="191" selection-start-column="47" selection-end-line="191" selection-end-column="47" />
+        <state relative-caret-position="159">
+          <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#addScrollPane#0;class#BinaryDecodingPanel#0" />
             <element signature="method#addSpacer#0;class#BinaryDecodingPanel#0" />
             <element signature="method#addPanel#0;class#BinaryDecodingPanel#0" />
             <element signature="method#addLabel#0;class#BinaryDecodingPanel#0" />
-            <element signature="method#createChancePanel#0;class#BinaryDecodingPanel#0" />
             <element signature="method#convertListToString#0;class#BinaryDecodingPanel#0" />
+            <element signature="e#12498#12499#0" expanded="true" />
+            <element signature="e#12538#12539#0" expanded="true" />
+            <element signature="e#13296#13297#0" expanded="true" />
+            <element signature="e#13354#13355#0" expanded="true" />
           </folding>
         </state>
       </provider>

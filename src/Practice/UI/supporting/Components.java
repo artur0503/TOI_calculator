@@ -81,6 +81,13 @@ public class Components {
         return textField;
     }
 
+    public static JTextField createInputJTextField(){
+        JTextField textField = new BinaryJTextField();
+        textField.setFont(new Font("Arial", Font.PLAIN, 16));
+        textField.setForeground(new Color(-16777216));
+        return textField;
+    }
+
     public static TitledBorder createTitleBorder(String text){
         TitledBorder titledBorder = new TitledBorder(text);
         titledBorder.setTitleColor(new Color(-16777216));
@@ -91,7 +98,7 @@ public class Components {
     public static JTextArea createJTextArea(String text){
         JTextArea textArea = new JTextArea();
         textArea.setText(text);
-        textArea.setEnabled(false);
+        textArea.setEditable(false);
         textArea.setDisabledTextColor(new Color(-16777216));
         textArea.setFont(new Font("Arial", Font.PLAIN, 16));
         return textArea;

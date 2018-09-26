@@ -2,40 +2,42 @@ package Practice.UI.panels.functional.binary;
 
 import App.core.classes.model.POJO.Data;
 import Practice.UI.listeners.OnClickListener;
+import Practice.UI.listeners.OnDecodingListener;
 import Practice.UI.supporting.Components;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyVetoException;
+import java.beans.VetoableChangeListener;
 import java.util.LinkedList;
 
-public class BinaryDecodingPanel implements ActionListener {
+public class BinaryDecodingPanel implements ActionListener, DocumentListener{
 
     private JPanel binaryDecodingPanel;
-    private JTextArea chanceArea;
     private JTextField inputTextField;
     private JButton okButton;
-    private JPanel chancePanel;
     private JPanel functionsPanel;
-    private JPanel inputTextPanel;
     private JButton homeButton;
     private JButton backButton;
-    private JTextArea textArea1;
-    private JPanel chanceLabelPanel;
-    private JPanel resultPanel;
-    private JPanel buttonPanel;
+    private JTextArea resultArea;
 
-    public static final int INPUT_MENU = 4129;
-    public static final int MAIN_MENU = 5894;
+    public static final String INPUT_MENU = "fke;,41'24ko213ew";
+    public static final String MAIN_MENU = "f1;'ef1L5wo53kf543o";
 
 
-    private OnClickListener listener;
+    private OnDecodingListener listener;
 
-    public void setOnClickListener(OnClickListener listener) {
+    public void setOnDecodingListener(OnDecodingListener listener) {
         this.listener = listener;
     }
 
@@ -43,8 +45,7 @@ public class BinaryDecodingPanel implements ActionListener {
         return binaryDecodingPanel;
     }
 
-    private void addButton(JPanel panel, int row, int column, String text){
-        JButton button = Components.createButton(text, this);
+    private void addButton(JPanel panel, JButton button, int row, int column){
         panel.add(button, new GridConstraints(row, column, 1, 1,
                 GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL,
                 GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
@@ -104,18 +105,19 @@ public class BinaryDecodingPanel implements ActionListener {
     }
 
     private void createInputPanel(JPanel rootPanel){
-        inputTextPanel = new JPanel();
-        inputTextPanel.setLayout(new GridLayoutManager(3, 1, new Insets(0, 0, 0, 0), -1, -1));
+        JPanel inputTextPanel = Components.createJPanel(3, 1);
         functionsPanel.add(inputTextPanel, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        inputTextField = new JTextField();
+        inputTextField = Components.createInputJTextField();
         inputTextPanel.add(inputTextField, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+
+        inputTextField.getDocument().addDocumentListener(this);
+
         final JPanel panel1 = new JPanel();
         panel1.setLayout(new GridLayoutManager(2, 3, new Insets(0, 0, 0, 0), -1, -1));
         inputTextPanel.add(panel1, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         final Spacer spacer3 = new Spacer();
         panel1.add(spacer3, new GridConstraints(0, 0, 2, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
-        final JLabel label2 = new JLabel();
-        label2.setText("Декодировать");
+        final JLabel label2 = Components.createLabel("Декодировать");
         panel1.add(label2, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer4 = new Spacer();
         panel1.add(spacer4, new GridConstraints(0, 2, 2, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
@@ -123,7 +125,10 @@ public class BinaryDecodingPanel implements ActionListener {
         panel2.setLayout(new GridLayoutManager(2, 3, new Insets(0, 0, 0, 0), -1, -1));
         inputTextPanel.add(panel2, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
 
-        addButton(panel2, 0, 1, "ОК");
+        okButton = Components.createButton("ОК", this);
+        addButton(panel2, okButton, 0, 1);
+
+        okButton.setEnabled(false);
 
         final Spacer spacer5 = new Spacer();
         panel2.add(spacer5, new GridConstraints(0, 0, 2, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
@@ -133,36 +138,42 @@ public class BinaryDecodingPanel implements ActionListener {
     }
 
     private void createResultPanel(JPanel rootPanel){
-        resultPanel = new JPanel();
-        resultPanel.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+        JPanel resultPanel = Components.createJPanel(1, 2);
         functionsPanel.add(resultPanel, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JScrollPane scrollPane2 = new JScrollPane();
-        resultPanel.add(scrollPane2, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
-        textArea1 = new JTextArea();
-        scrollPane2.setViewportView(textArea1);
+        resultPanel.add(scrollPane2,
+                new GridConstraints(0, 1, 1, 1,
+                        GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW,
+                        null, null, null, 0, false));
+        resultArea = Components.createJTextArea("");
+        scrollPane2.setViewportView(resultArea);
         final Spacer spacer7 = new Spacer();
         resultPanel.add(spacer7, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
 
     }
 
     private void createButtonPanel(JPanel rootPanel){
-        buttonPanel = new JPanel();
+        JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayoutManager(2, 3, new Insets(0, 0, 0, 0), -1, -1));
         functionsPanel.add(buttonPanel, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        homeButton = new JButton();
-        homeButton.setText("Button");
+        homeButton = Components.createButton("Меню", this);
         buttonPanel.add(homeButton, new GridConstraints(1, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer8 = new Spacer();
         buttonPanel.add(spacer8, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
         final Spacer spacer9 = new Spacer();
         buttonPanel.add(spacer9, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
-        backButton = new JButton();
-        backButton.setText("Button");
+        backButton = Components.createButton("Назад", this);
         buttonPanel.add(backButton, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer10 = new Spacer();
         functionsPanel.add(spacer10, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final Spacer spacer11 = new Spacer();
         functionsPanel.add(spacer11, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+    }
+
+    private void createFunctionalPanel(JPanel functionsPanel){
+
     }
 
     private String convertListToString(LinkedList<Data> input){
@@ -176,14 +187,13 @@ public class BinaryDecodingPanel implements ActionListener {
     public void createDecoding(LinkedList<Data> data, String title) {
         binaryDecodingPanel = new JPanel();
         binaryDecodingPanel.setLayout(new BorderLayout(0, 0));
-        binaryDecodingPanel.setBorder(BorderFactory.createTitledBorder(title));
+        binaryDecodingPanel.setBorder(Components.createTitleBorder(title));
 
 
 
-        functionsPanel = new JPanel();
-        functionsPanel.setLayout(new GridLayoutManager(4, 2, new Insets(0, 0, 0, 0), -1, -1));
-        functionsPanel.setPreferredSize(new Dimension(400, 400));
-        functionsPanel.setRequestFocusEnabled(false);
+        functionsPanel = Components.createJPanel(4, 2);
+//        functionsPanel.setPreferredSize(new Dimension(400, 400));
+//        functionsPanel.setRequestFocusEnabled(false);
         binaryDecodingPanel.add(functionsPanel, BorderLayout.CENTER);
 
         createChancePanel(binaryDecodingPanel, convertListToString(data));
@@ -193,8 +203,40 @@ public class BinaryDecodingPanel implements ActionListener {
 
     }
 
+    public void setTextToResult(String text){
+        resultArea.setText(text);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == okButton){
+            listener.OnDecoding(true, inputTextField.getText());
+        }
+        else if (e.getSource() == backButton){
+            listener.OnDecoding(false, MAIN_MENU);
+        }
+        else if (e.getSource() == homeButton){
+            listener.OnDecoding(false, INPUT_MENU);
+        }
+    }
 
+    @Override
+    public void insertUpdate(DocumentEvent e) {
+        if(inputTextField.getText().length() > 0){
+            okButton.setEnabled(true);
+        }
+    }
+
+    @Override
+    public void removeUpdate(DocumentEvent e) {
+        resultArea.setText("");
+        if (inputTextField.getText().length() == 0){
+            okButton.setEnabled(false);
+        }
+    }
+
+    @Override
+    public void changedUpdate(DocumentEvent e) {
+        System.out.println("lol3");
     }
 }

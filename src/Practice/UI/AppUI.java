@@ -2,9 +2,11 @@ package Practice.UI;
 
 import App.core.classes.controller.coding.HuffmanController;
 import App.core.classes.controller.coding.ShenonController;
+import App.core.classes.controller.decoding.BinaryDecoderController;
 import App.core.classes.controller.formulas.FormulasController;
 import App.core.classes.model.POJO.Data;
 import App.core.interfaces.controller.ControllerCoding;
+import App.core.interfaces.controller.ControllerDecoding;
 import App.core.interfaces.controller.ControllerFormulas;
 import App.core.interfaces.view.BaseView;
 import Practice.UI.listeners.OnClickListener;
@@ -253,17 +255,25 @@ public class AppUI extends JFrame implements BaseView {
     }
 
     private void binaryDecodingScreen(JPanel rootPanel){
+        setSize(705, 590);
         BinaryDecodingPanel binaryDecodingPanel = new BinaryDecodingPanel();
         binaryDecodingPanel.createDecoding(getInputData(), "Декодирование Хаффмана");
         addPanel(rootPanel, binaryDecodingPanel.getBinaryDecodingPanel());
-        binaryDecodingPanel.setOnClickListener((flag, name) -> {
+        binaryDecodingPanel.setOnDecodingListener((flag, string) -> {
             if (!flag){
-                if (name == BinaryDecodingPanel.INPUT_MENU){
+                if (string.equals(BinaryDecodingPanel.INPUT_MENU)){
+                    binaryDecodingPanel.getBinaryDecodingPanel().setVisible(false);
                     optionsMenuScreen(rootPanel);
                 }
-                else if (name == BinaryDecodingPanel.MAIN_MENU){
+                else if (string.equals(BinaryDecodingPanel.MAIN_MENU)){
+                    binaryDecodingPanel.getBinaryDecodingPanel().setVisible(false);
                     mainMenuScreen(rootPanel, var, getInputData());
                 }
+            }
+            else {
+                ControllerDecoding decoder = new BinaryDecoderController(string, getInputData());
+                decoder.execute();
+                binaryDecodingPanel.setTextToResult(decoder.getDecodingResult());
             }
         });
     }
