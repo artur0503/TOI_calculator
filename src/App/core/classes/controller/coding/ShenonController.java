@@ -14,7 +14,7 @@ public class ShenonController implements ControllerCoding {
 
     private LinkedList<Data> inputData;
     private LinkedList<Data> resCode;
-    private LinkedList<Data> drawData;
+    private LinkedList<String[]> drawData;
 
     public ShenonController(LinkedList<Data> inputData) {
         this.inputData = inputData;
@@ -28,11 +28,11 @@ public class ShenonController implements ControllerCoding {
         this.resCode = resCode;
     }
 
-    private LinkedList<Data> getDrawData() {
+    private LinkedList<String[]> getDrawData() {
         return drawData;
     }
 
-    private void setDrawData(LinkedList<Data> drawData) {
+    private void setDrawData(LinkedList<String[]> drawData) {
         this.drawData = drawData;
     }
 
@@ -51,7 +51,7 @@ public class ShenonController implements ControllerCoding {
     }
 
     @Override
-    public LinkedList<Data> getDataToDraw() {
+    public LinkedList<String[]> getDataToDraw() {
         return getDrawData();
     }
 

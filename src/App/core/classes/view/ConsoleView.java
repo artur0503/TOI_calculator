@@ -11,7 +11,8 @@ import App.core.interfaces.controller.ControllerCoding;
 import App.core.interfaces.controller.ControllerDecoding;
 import App.core.interfaces.controller.ControllerFormulas;
 import App.core.interfaces.view.BaseView;
-import Testing.Test;
+import App.options.Options;
+
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -33,9 +34,9 @@ public class ConsoleView implements BaseView {
     @Override
     public void afterAction(){
         //введенные данные которые получили после нажатия кнопки
-        LinkedList<Data> linkedList = new Test().test0();
+        LinkedList<Data> linkedList = new Options().optionAlphabet();
 
-//        new Test().test1(linkedList);
+//        new Options().option1(linkedList);
         //введенные пользователем элементы
 
         setInputData(linkedList);
@@ -145,10 +146,10 @@ public class ConsoleView implements BaseView {
                 case 1:
                     System.out.print("Введите строку: ");
                     String str = new Scanner(System.in).nextLine();
-                    ControllerCoding arithm = new ArithmeticController(transportList());
-                    ((ArithmeticController) arithm).setText(str);
+                    ArithmeticController arithm = new ArithmeticController(transportList());
+                    arithm.setText(str);
                     arithm.execute();
-                    System.out.println("Результат: " + ((ArithmeticController) arithm).getRes());
+                    System.out.println("Результат: " + arithm.getRes());
                     break;
                 case 2:
                     try {

@@ -66,9 +66,14 @@ public class ArithmeticController implements ControllerCoding {
     }
 
     @Override
-    public LinkedList<Data> getDataToDraw() {
+    public LinkedList<String[]> getDataToDraw() {
+        return null;
+    }
+
+    public LinkedList<Data> getDataToDrawArithm() {
         return getDrawData();
     }
+
     @Override
     public void execute() {
         ModelCodingArithmetic magic = new Arithmetic();
@@ -78,8 +83,11 @@ public class ArithmeticController implements ControllerCoding {
             magic.coding();
             magic.showConsole();
             setResCode(magic.dataResult());
-            setDrawData(magic.dataForDrawing());
+            setDrawData(magic.dataForDrawingArithm());
             setRes(magic.resultCode());
+        }
+        else {
+            setRes(-1);
         }
     }
 }

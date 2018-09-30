@@ -1,10 +1,12 @@
 package App.core.classes.model.logic.coding;
 
+import App.core.classes.model.POJO.Data;
+import App.core.classes.model.POJO.Node;
 import App.core.classes.model.comparator.huffmanComp.DataComparatorUp;
 import App.core.classes.model.comparator.huffmanComp.IndexComparatorDown;
 import App.core.classes.model.comparator.huffmanComp.NodeComparatorUp;
-import App.core.classes.model.POJO.Data;
-import App.core.classes.model.POJO.Node;
+import App.core.classes.model.comparator.shenonComp.DataComparatorDown;
+import App.core.classes.model.comparator.shenonComp.IndexComparatorUp;
 import App.core.interfaces.model.coding.ModelCodingTree;
 
 import java.math.BigDecimal;
@@ -23,13 +25,44 @@ public class Huffman implements ModelCodingTree {
     private Node root;
 
     @Override
-    public LinkedList<Data> dataForDrawing() {
-        return list;
+    public LinkedList<String[]> dataForDrawing() {
+        return drawingData(listOld);
+    }
+
+    private LinkedList<String[]> drawingData(LinkedList<Data> listData){
+        LinkedList<String[]> drawer = new LinkedList<>();
+        int max = 0;
+        for (Data data : listData){
+            int temp = data.getCodeBinary().split("").length;
+            if (temp >= max)
+                max = temp;
+        }
+        int j = 0;
+        while (drawer.size() != max) {
+            String[] arr = new String[listData.size()];
+            for (int i = 0; i < listData.size(); i++) {
+                try {
+                    arr[i] = listData.get(i).getCodeBinary().split("")[j];
+                }
+                catch (ArrayIndexOutOfBoundsException exp){
+                    arr[i] = "";
+                }
+            }
+            j++;
+            drawer.add(arr);
+        }
+        for (String[] str : drawer){
+            for (String s : str){
+                System.out.print(s);
+            }
+            System.out.println();
+        }
+        return drawer;
     }
 
     @Override
     public LinkedList<Data> dataResult() {
-        return listOld;
+        return sortResult(listOld);
     }
 
     @Override
@@ -40,6 +73,12 @@ public class Huffman implements ModelCodingTree {
     @Override
     public void sortCh() {
         list.sort(new DataComparatorUp());
+    }
+
+    private LinkedList<Data> sortResult(LinkedList<Data> listOld){
+        listOld.sort(new DataComparatorDown());
+        listOld.sort(new IndexComparatorUp());
+        return listOld;
     }
 
     @Override
@@ -109,14 +148,14 @@ public class Huffman implements ModelCodingTree {
 
     private void giveCode(Node node){
         if (node.getRight() != null){
-            node.getRight().getNode().getData().setCodeBinary(node.getData().getCodeBinary() + "0");
+            node.getRight().getNode().getData().setCodeBinary(node.getData().getCodeBinary() + "1");
             giveCode(node.getRight().getNode());
         }
 
         list.add(node.getData());
 
         if (node.getLeft() != null){
-            node.getLeft().getNode().getData().setCodeBinary(node.getData().getCodeBinary() + "1");
+            node.getLeft().getNode().getData().setCodeBinary(node.getData().getCodeBinary() + "0");
             giveCode(node.getLeft().getNode());
         }
     }

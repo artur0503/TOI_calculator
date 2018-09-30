@@ -1,6 +1,12 @@
 package App.core.interfaces.model.coding;
 
+import App.core.classes.model.POJO.Data;
+
+import java.util.LinkedList;
+
 public interface ModelCodingArithmetic extends ModelCoding {
+
+    LinkedList<Data> dataForDrawingArithm();
 
     void coding();
 

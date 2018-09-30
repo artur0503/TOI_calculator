@@ -11,7 +11,7 @@ public class HuffmanController implements ControllerCoding {
 
     private LinkedList<Data> inputData;
     private LinkedList<Data> resCode;
-    private LinkedList<Data> drawData;
+    private LinkedList<String[]> drawData;
 
     public HuffmanController(LinkedList<Data> inputData) {
         this.inputData = inputData;
@@ -29,11 +29,11 @@ public class HuffmanController implements ControllerCoding {
         this.resCode = resCode;
     }
 
-    private LinkedList<Data> getDrawData() {
+    private LinkedList<String[]> getDrawData() {
         return drawData;
     }
 
-    private void setDrawData(LinkedList<Data> drawData) {
+    private void setDrawData(LinkedList<String[]> drawData) {
         this.drawData = drawData;
     }
 
@@ -48,7 +48,7 @@ public class HuffmanController implements ControllerCoding {
     }
 
     @Override
-    public LinkedList<Data> getDataToDraw() {
+    public LinkedList<String[]> getDataToDraw() {
         return getDrawData();
     }
 
@@ -69,11 +69,5 @@ public class HuffmanController implements ControllerCoding {
             }
         } else
             System.out.println("###ERROR###\n SUM < 1");
-//            int N = 16;
-
-//            double maxE = new BigDecimal(((-N*((1.0/N)*(Math.log(1.0/N)))))).setScale(3, RoundingMode.UP).doubleValue();
-//
-//            System.out.println("Макс. энтропия: " + maxE);
-
     }
 }

@@ -10,6 +10,6 @@ public interface ControllerCoding extends BaseController {
 
     LinkedList<Data> getCodeToDraw();
 
-    LinkedList<Data> getDataToDraw();
+    LinkedList<String[]> getDataToDraw();
 
 }

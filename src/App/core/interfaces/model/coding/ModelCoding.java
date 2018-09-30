@@ -10,7 +10,7 @@ import java.util.LinkedList;
  */
 public interface ModelCoding extends BaseModel {
 
-    LinkedList<Data> dataForDrawing();
+    LinkedList<String[]> dataForDrawing();
 
     LinkedList<Data> dataResult();
 

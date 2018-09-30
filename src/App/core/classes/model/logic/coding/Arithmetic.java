@@ -17,8 +17,13 @@ public class Arithmetic implements ModelCodingArithmetic {
     private String text;
 
     @Override
-    public LinkedList<Data> dataForDrawing() {
+    public LinkedList<Data> dataForDrawingArithm() {
         return listWithInterval();
+    }
+
+    @Override
+    public LinkedList<String[]> dataForDrawing() {
+        return null;
     }
 
     @Override

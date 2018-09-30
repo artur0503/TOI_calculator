@@ -21,9 +21,41 @@ public class ShenonFano implements ModelCodingTree {
 
     /**GET DATA FOR DRAWING TREE**/
     @Override
-    public LinkedList<Data> dataForDrawing() {
-        return list;
+    public LinkedList<String[]> dataForDrawing() {
+        return drawingData(oldList);
     }
+
+    private LinkedList<String[]> drawingData(LinkedList<Data> listData){
+        LinkedList<String[]> drawer = new LinkedList<>();
+        int max = 0;
+        for (Data data : listData){
+            int temp = data.getCodeBinary().split("").length;
+            if (temp >= max)
+                max = temp;
+        }
+        int j = 0;
+        while (drawer.size() != max) {
+            String[] arr = new String[listData.size()];
+            for (int i = 0; i < listData.size(); i++) {
+                try {
+                    arr[i] = listData.get(i).getCodeBinary().split("")[j];
+                }
+                catch (ArrayIndexOutOfBoundsException exp){
+                    arr[i] = "";
+                }
+            }
+            j++;
+            drawer.add(arr);
+        }
+        for (String[] str : drawer){
+            for (String s : str){
+                System.out.print(s);
+            }
+            System.out.println();
+        }
+        return drawer;
+    }
+
 
     /**GET DATA WITH RESULT**/
     @Override
