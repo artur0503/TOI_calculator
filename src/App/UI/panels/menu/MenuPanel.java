@@ -140,6 +140,7 @@ public class MenuPanel implements ActionListener {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
                         GridConstraints.SIZEPOLICY_FIXED, new Dimension(200, -1), new Dimension(300, -1),
                         new Dimension(400, -1), 0, false));
+        arithmDec.setVisible(false);
 
         back = createButton("Назад");
         jPanel.add(back,

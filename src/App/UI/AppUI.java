@@ -1,15 +1,8 @@
 package App.UI;
 
-import App.core.classes.controller.coding.ArithmeticController;
-import App.core.classes.controller.coding.HuffmanController;
-import App.core.classes.controller.coding.ShenonController;
-import App.core.classes.controller.decoding.BinaryDecoderController;
-import App.core.classes.controller.formulas.FormulasController;
-import App.core.classes.model.POJO.Data;
-import App.core.interfaces.controller.ControllerCoding;
-import App.core.interfaces.controller.ControllerDecoding;
-import App.core.interfaces.controller.ControllerFormulas;
-import App.core.interfaces.view.BaseView;
+import App.UI.listeners.OnClickListener;
+import App.UI.listeners.OnDecodingListener;
+import App.UI.listeners.OnInputListener;
 import App.UI.panels.RootPanel;
 import App.UI.panels.functional.InputPanel;
 import App.UI.panels.functional.arithmetic.ArithmeticDecodingPanel;
@@ -20,6 +13,18 @@ import App.UI.panels.functional.binary.HuffmanPanel;
 import App.UI.panels.functional.binary.ShenonPanel;
 import App.UI.panels.menu.MenuPanel;
 import App.UI.panels.menu.OptionsPanel;
+import App.core.classes.controller.coding.ArithmeticController;
+import App.core.classes.controller.coding.HuffmanController;
+import App.core.classes.controller.coding.ShenonController;
+import App.core.classes.controller.decoding.ArithmeticDecoderController;
+import App.core.classes.controller.decoding.BinaryDecoderController;
+import App.core.classes.controller.decoding.BinaryTextDecoderController;
+import App.core.classes.controller.formulas.FormulasController;
+import App.core.classes.model.POJO.Data;
+import App.core.interfaces.controller.ControllerCoding;
+import App.core.interfaces.controller.ControllerDecoding;
+import App.core.interfaces.controller.ControllerFormulas;
+import App.core.interfaces.view.BaseView;
 import App.options.Options;
 import com.intellij.uiDesigner.core.GridConstraints;
 
@@ -64,9 +69,9 @@ public class AppUI extends JFrame implements BaseView {
         return linkedList;
     }
 
-    public AppUI() {
+    public AppUI(double version){
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setTitle("TOI Calculator");
+        setTitle("TOI Calculator Version " + version);
         setSize(700, 500);
         setToCenter();
     }
@@ -193,7 +198,7 @@ public class AppUI extends JFrame implements BaseView {
             if (flag){
                 if (linkedList != null){
                     huffmanPanel.getRootPanel().setVisible(false);
-                    binaryDecodingScreen(rootPanel);
+                    binaryDecodingScreen(rootPanel, "Декодирование Хаффмана");
                 }
             }
         });
@@ -231,7 +236,7 @@ public class AppUI extends JFrame implements BaseView {
             if (flag){
                 if (linkedList != null){
                     shenonPanel.getRootPanel().setVisible(false);
-                    binaryDecodingScreen(rootPanel);
+                    binaryDecodingScreen(rootPanel, "Декодирование Шенонна-Фанно");
                 }
             }
         });
@@ -257,47 +262,111 @@ public class AppUI extends JFrame implements BaseView {
 
     }
 
-    private void binaryDecodingScreen(JPanel rootPanel){
-        setSize(705, 590);
+    private void binaryDecodingScreen(JPanel rootPanel, String title){
+        setSize(705, 595);
         BinaryDecodingPanel binaryDecodingPanel = new BinaryDecodingPanel();
-        binaryDecodingPanel.createDecoding(getInputData(), "Декодирование Хаффмана");
+        binaryDecodingPanel.createDecoding(getInputData(), title);
         addPanel(rootPanel, binaryDecodingPanel.getBinaryDecodingPanel());
-        binaryDecodingPanel.setOnDecodingListener((flag, string) -> {
-            if (!flag){
-                if (string.equals(BinaryDecodingPanel.INPUT_MENU)){
+        binaryDecodingPanel.setOnDecodingListener((flag, string, isChar) -> {
+            if (!flag) {
+                if (string.equals(BinaryDecodingPanel.INPUT_MENU)) {
                     binaryDecodingPanel.getBinaryDecodingPanel().setVisible(false);
-                    optionsMenuScreen(rootPanel);
-                }
-                else if (string.equals(BinaryDecodingPanel.MAIN_MENU)){
+                    AppUI.this.optionsMenuScreen(rootPanel);
+                } else if (string.equals(BinaryDecodingPanel.MAIN_MENU)) {
                     binaryDecodingPanel.getBinaryDecodingPanel().setVisible(false);
-                    mainMenuScreen(rootPanel, var, getInputData());
+                    AppUI.this.mainMenuScreen(rootPanel, var, AppUI.this.getInputData());
                 }
-            }
-            else {
-                ControllerDecoding decoder = new BinaryDecoderController(string, getInputData());
-                decoder.execute();
-                binaryDecodingPanel.setTextToResult(decoder.getDecodingResult());
+            } else {
+                if (!isChar) {
+                    ControllerDecoding decoder = new BinaryDecoderController(string, AppUI.this.getInputData());
+                    decoder.execute();
+                    binaryDecodingPanel.setTextToResult(decoder.getDecodingResult());
+                }
+                else {
+                    ControllerDecoding decoder = new BinaryTextDecoderController(string, AppUI.this.getInputData());
+                    decoder.execute();
+                    binaryDecodingPanel.setTextToResult(decoder.getDecodingResult());
+                }
             }
         });
     }
 
+    private double res;
+
     private void arithmeticCodingScreen(JPanel rootPanel, LinkedList<Data> list){
-        setSize(1010, 700);
+        setSize(1010, 590);
         ArithmeticPanel arithmeticPanel = new ArithmeticPanel();
         arithmeticPanel.createArithmeticCoding("Арифметическое кодирование");
-        addPanel(rootPanel, arithmeticPanel.getArithmeticPanel());
-        ArithmeticController arithm = new ArithmeticController(list);
-        arithm.setText(arithmeticPanel.getText());
-        arithm.execute();
-//        if (arithm.getRes() != -1) {
-//            arithmeticPanel.createResultPanel(arithmeticPanel.getArithmeticPanel(), arithm.getDataToDraw());
-//            System.out.println("Результат: " + arithm.getRes());
-//        }
+        addPanel(rootPanel, arithmeticPanel.getRootPanel());
+
+        arithmeticPanel.setOnDecodingListener(new OnDecodingListener() {
+            @Override
+            public void OnDecoding(boolean flag, String str, boolean isChar) {
+                if (!flag){
+                    switch (str){
+                        case ArithmeticPanel.INPUT_MENU:
+                            arithmeticPanel.getRootPanel().setVisible(false);
+                            rootPanel.removeAll();
+                            optionsMenuScreen(rootPanel);
+                            break;
+                        case ArithmeticPanel.MAIN_MENU:
+                            arithmeticPanel.getRootPanel().setVisible(false);
+                            rootPanel.removeAll();
+                            mainMenuScreen(rootPanel, var, getInputData());
+                            break;
+                    }
+                }
+                else {
+                    ArithmeticController arithm = new ArithmeticController(list);
+                    if (str != null);
+                    arithm.setText(str);
+                    arithm.execute();
+                    arithmeticPanel.setData(arithm.getRes(), list);
+                    System.out.println("Результат: " + arithm.getRes());
+                    res = arithm.getRes();
+                }
+            }
+        });
+
+        arithmeticPanel.setOnInputListener(new OnInputListener() {
+            @Override
+            public void OnInput(boolean flag, LinkedList<Data> linkedList) {
+                if (flag){
+                    if (linkedList != null){
+                        arithmeticPanel.getRootPanel().setVisible(false);
+                        arithmeticDecodingScreen(rootPanel, res, linkedList);
+                    }
+                }
+            }
+        });
     }
 
-    private void arithmeticDecodingScreen(JPanel rootPanel){
-        setSize(1010, 700);
+    private void arithmeticDecodingScreen(JPanel rootPanel, double res, LinkedList<Data> linkedList){
+        setSize(750, 580);
         ArithmeticDecodingPanel arithmeticDecodingPanel = new ArithmeticDecodingPanel();
+        arithmeticDecodingPanel.createArithmDecoding(res, getInputData());
+        addPanel(rootPanel, arithmeticDecodingPanel.getRootPanel());
+        arithmeticDecodingPanel.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(boolean flag, int name) {
+                if (flag){
+                    ControllerDecoding decoder = new ArithmeticDecoderController(res, name, linkedList);
+                    decoder.execute();
+                    arithmeticDecodingPanel.setResult(decoder.getDecodingResult());
+                    System.out.println(decoder.getDecodingResult());
+                }
+                else {
+                    if (name == ArithmeticDecodingPanel.INPUT_MENU) {
+                        arithmeticDecodingPanel.getRootPanel().setVisible(false);
+                        optionsMenuScreen(rootPanel);
+                    }
+                    else if (name == ArithmeticDecodingPanel.MAIN_MENU) {
+                        arithmeticDecodingPanel.getRootPanel().setVisible(false);
+                        mainMenuScreen(rootPanel, var, transportList());
+                    }
+                }
+            }
+        });
     }
 
 

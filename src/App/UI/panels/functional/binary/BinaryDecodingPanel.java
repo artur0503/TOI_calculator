@@ -24,6 +24,8 @@ public class BinaryDecodingPanel implements ActionListener, DocumentListener{
     private JButton homeButton;
     private JButton backButton;
     private JTextArea resultArea;
+    private JButton typeDecodingButton;
+    private JPanel inputTextPanel;
 
     public static final String INPUT_MENU = "fke;,41'24ko213ew";
     public static final String MAIN_MENU = "f1;'ef1L5wo53kf543o";
@@ -83,6 +85,10 @@ public class BinaryDecodingPanel implements ActionListener, DocumentListener{
                         null, null, null, 0, false));
     }
 
+    private void addTexField(JTextField textField){
+
+    }
+
     private void createChancePanel(JPanel rootPanel, String chances){
         JPanel chancePanel = Components.createJPanel(2, 1);
         rootPanel.add(chancePanel, BorderLayout.WEST);
@@ -98,13 +104,13 @@ public class BinaryDecodingPanel implements ActionListener, DocumentListener{
         addSpacer(chanceLabelPanel, 0, 2, null);
     }
 
-    private void createInputPanel(JPanel rootPanel){
-        JPanel inputTextPanel = Components.createJPanel(3, 1);
+    private void createInputPanel(JPanel rootPanel, JTextField textField){
+        inputTextPanel = Components.createJPanel(3, 1);
         functionsPanel.add(inputTextPanel, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        inputTextField = Components.createInputJTextField();
-        inputTextPanel.add(inputTextField, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+        inputTextPanel.add(textField, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
 
-        inputTextField.getDocument().addDocumentListener(this);
+        textField.getDocument().addDocumentListener(this);
+        inputTextField = textField;
 
         final JPanel panel1 = new JPanel();
         panel1.setLayout(new GridLayoutManager(2, 3, new Insets(0, 0, 0, 0), -1, -1));
@@ -150,16 +156,18 @@ public class BinaryDecodingPanel implements ActionListener, DocumentListener{
 
     private void createButtonPanel(JPanel rootPanel){
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayoutManager(2, 3, new Insets(0, 0, 0, 0), -1, -1));
+        buttonPanel.setLayout(new GridLayoutManager(2, 5, new Insets(0, 0, 0, 0), -1, -1));
         functionsPanel.add(buttonPanel, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         homeButton = Components.createJButton("Меню", this);
-        buttonPanel.add(homeButton, new GridConstraints(1, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        buttonPanel.add(homeButton, new GridConstraints(1, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer8 = new Spacer();
         buttonPanel.add(spacer8, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
         final Spacer spacer9 = new Spacer();
         buttonPanel.add(spacer9, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         backButton = Components.createJButton("Назад", this);
-        buttonPanel.add(backButton, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        buttonPanel.add(backButton, new GridConstraints(1, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        typeDecodingButton = Components.createJButton("Декодировать текст", this);
+        buttonPanel.add(typeDecodingButton, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer10 = new Spacer();
         functionsPanel.add(spacer10, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final Spacer spacer11 = new Spacer();
@@ -169,7 +177,7 @@ public class BinaryDecodingPanel implements ActionListener, DocumentListener{
     private String convertListToString(LinkedList<Data> input){
         String str = "";
         for (Data data : input){
-            str = str + "\n  " + data.getNameS() + " " + data.getCodeBinary();
+            str = str + "\n  " + data.getNameS() + " (" + data.getChance() + ")  " + data.getCodeBinary();
         }
         return str;
     }
@@ -185,7 +193,7 @@ public class BinaryDecodingPanel implements ActionListener, DocumentListener{
         binaryDecodingPanel.add(functionsPanel, BorderLayout.CENTER);
 
         createChancePanel(binaryDecodingPanel, convertListToString(data));
-        createInputPanel(binaryDecodingPanel);
+        createInputPanel(binaryDecodingPanel, Components.createBinaryJTextField());
         createResultPanel(binaryDecodingPanel);
         createButtonPanel(binaryDecodingPanel);
 
@@ -198,13 +206,33 @@ public class BinaryDecodingPanel implements ActionListener, DocumentListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == okButton){
-            listener.OnDecoding(true, inputTextField.getText());
+            if (!typeDecodingButton.getText().equals("Декодировать код")) {
+                listener.OnDecoding(true, inputTextField.getText(), false);
+            }
+            else {
+                listener.OnDecoding(true, inputTextField.getText(), true);
+            }
+
         }
         else if (e.getSource() == backButton){
-            listener.OnDecoding(false, MAIN_MENU);
+            listener.OnDecoding(false, MAIN_MENU, false);
         }
         else if (e.getSource() == homeButton){
-            listener.OnDecoding(false, INPUT_MENU);
+            listener.OnDecoding(false, INPUT_MENU, false);
+        }
+        else if (e.getSource() == typeDecodingButton){
+            if (!typeDecodingButton.getText().equals("Декодировать код")) {
+                typeDecodingButton.setText("Декодировать код");
+                inputTextPanel.setVisible(false);
+                resultArea.setText("");
+                createInputPanel(binaryDecodingPanel, Components.createInputJTextField());
+            }
+            else {
+                typeDecodingButton.setText("Декодировать текст");
+                inputTextPanel.setVisible(false);
+                resultArea.setText("");
+                createInputPanel(binaryDecodingPanel, Components.createInputJTextField());
+            }
         }
     }
 
@@ -224,7 +252,5 @@ public class BinaryDecodingPanel implements ActionListener, DocumentListener{
     }
 
     @Override
-    public void changedUpdate(DocumentEvent e) {
-        System.out.println("lol3");
-    }
+    public void changedUpdate(DocumentEvent e) { }
 }

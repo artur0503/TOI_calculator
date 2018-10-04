@@ -4,7 +4,7 @@ import App.core.classes.controller.coding.ArithmeticController;
 import App.core.classes.controller.coding.HuffmanController;
 import App.core.classes.controller.coding.ShenonController;
 import App.core.classes.controller.decoding.ArithmeticDecoderController;
-import App.core.classes.controller.decoding.BinaryDecoderController;
+import App.core.classes.controller.decoding.BinaryTextDecoderController;
 import App.core.classes.controller.formulas.FormulasController;
 import App.core.classes.model.POJO.Data;
 import App.core.interfaces.controller.ControllerCoding;
@@ -124,7 +124,7 @@ public class ConsoleView implements BaseView {
                 case 1:
                     System.out.println("Введите строку(пример '10100...'): ");
                     String text = sc2.nextLine();
-                    ControllerDecoding decoder = new BinaryDecoderController(text, cc.getCodeToDraw());
+                    ControllerDecoding decoder = new BinaryTextDecoderController(text, cc.getCodeToDraw());
                     decoder.execute();
                     System.out.println("Результат: " + decoder.getDecodingResult());
                     break;
@@ -156,8 +156,8 @@ public class ConsoleView implements BaseView {
                         System.out.print("Введите кол-во элементов: ");
                         int count = new Scanner(System.in).nextInt();
                         System.out.println("Введите строку(пример '0,12345....'): ");
-                        double text = new Scanner(System.in).nextDouble();
-                        ControllerDecoding decoder = new ArithmeticDecoderController(text, count, transportList());
+                        double res = new Scanner(System.in).nextDouble();
+                        ControllerDecoding decoder = new ArithmeticDecoderController(res, count, transportList());
                         decoder.execute();
                         System.out.println("Результат: " + decoder.getDecodingResult());
                     } catch (Exception e){

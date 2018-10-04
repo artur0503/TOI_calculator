@@ -92,8 +92,22 @@ public class Components {
         return textField;
     }
 
-    public static JTextField createInputJTextField(){
+    public static JTextField createBinaryJTextField(){
         JTextField textField = new BinaryJTextField();
+        textField.setFont(new Font("Arial", Font.PLAIN, 16));
+        textField.setForeground(new Color(-16777216));
+        return textField;
+    }
+
+    public static JTextField createIntegerJTextField(){
+        JTextField textField = new IntegerJTextField();
+        textField.setFont(new Font("Arial", Font.PLAIN, 16));
+        textField.setForeground(new Color(-16777216));
+        return textField;
+    }
+
+    public static JTextField createInputJTextField(){
+        JTextField textField = new JTextField();
         textField.setFont(new Font("Arial", Font.PLAIN, 16));
         textField.setForeground(new Color(-16777216));
         return textField;
@@ -103,6 +117,13 @@ public class Components {
         TitledBorder titledBorder = new TitledBorder(text);
         titledBorder.setTitleColor(new Color(-16777216));
         titledBorder.setTitleFont(new Font("Arial", Font.PLAIN, 23));
+        return titledBorder;
+    }
+
+    public static TitledBorder createPreTitleBorder(String text){
+        TitledBorder titledBorder = new TitledBorder(text);
+        titledBorder.setTitleColor(new Color(-16777216));
+        titledBorder.setTitleFont(new Font("Arial", Font.PLAIN, 16));
         return titledBorder;
     }
 

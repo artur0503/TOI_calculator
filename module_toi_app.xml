@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_toi_app" default="compile.module.toi_app">
+  <dirname property="module.toi_app.basedir" file="${ant.file.module_toi_app}"/>
+  
+  <property name="module.jdk.home.toi_app" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.toi_app" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.toi_app" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.toi_app" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="toi_app.output.dir" value="${module.toi_app.basedir}/out/production/TOI_APP"/>
+  <property name="toi_app.testoutput.dir" value="${module.toi_app.basedir}/out/test/TOI_APP"/>
+  
+  <path id="toi_app.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="toi_app.module.production.classpath">
+    <path refid="${module.jdk.classpath.toi_app}"/>
+    <path refid="library.jgoodies:forms:1.0.4.classpath"/>
+    <path refid="library.jformdesigner-6.0.3-intellij-idea.classpath"/>
+    <path refid="library.com.github.adedayo.intellij.sdk:forms_rt:142.1.classpath"/>
+  </path>
+  
+  <path id="toi_app.runtime.production.module.classpath">
+    <pathelement location="${toi_app.output.dir}"/>
+    <path refid="library.jgoodies:forms:1.0.4.classpath"/>
+    <path refid="library.jformdesigner-6.0.3-intellij-idea.classpath"/>
+    <path refid="library.com.github.adedayo.intellij.sdk:forms_rt:142.1.classpath"/>
+  </path>
+  
+  <path id="toi_app.module.classpath">
+    <path refid="${module.jdk.classpath.toi_app}"/>
+    <pathelement location="${toi_app.output.dir}"/>
+    <path refid="library.jgoodies:forms:1.0.4.classpath"/>
+    <path refid="library.jformdesigner-6.0.3-intellij-idea.classpath"/>
+    <path refid="library.com.github.adedayo.intellij.sdk:forms_rt:142.1.classpath"/>
+  </path>
+  
+  <path id="toi_app.runtime.module.classpath">
+    <pathelement location="${toi_app.testoutput.dir}"/>
+    <pathelement location="${toi_app.output.dir}"/>
+    <path refid="library.jgoodies:forms:1.0.4.classpath"/>
+    <path refid="library.jformdesigner-6.0.3-intellij-idea.classpath"/>
+    <path refid="library.com.github.adedayo.intellij.sdk:forms_rt:142.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.toi_app">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.toi_app">
+    <patternset refid="excluded.from.module.toi_app"/>
+  </patternset>
+  
+  <path id="toi_app.module.sourcepath">
+    <dirset dir="${module.toi_app.basedir}">
+      <include name="src/resources"/>
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.toi_app" depends="compile.module.toi_app.production,compile.module.toi_app.tests" description="Compile module TOI_APP"/>
+  
+  <target name="compile.module.toi_app.production" depends="register.custom.compilers" description="Compile module TOI_APP; production classes">
+    <mkdir dir="${toi_app.output.dir}"/>
+    <javac2 destdir="${toi_app.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.toi_app}/javac">
+      <compilerarg line="${compiler.args.toi_app}"/>
+      <bootclasspath refid="toi_app.module.bootclasspath"/>
+      <classpath refid="toi_app.module.production.classpath"/>
+      <src refid="toi_app.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.toi_app"/>
+    </javac2>
+    
+    <copy todir="${toi_app.output.dir}">
+      <fileset dir="${module.toi_app.basedir}/src/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.toi_app.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.toi_app.tests" depends="register.custom.compilers,compile.module.toi_app.production" description="compile module TOI_APP; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.toi_app" description="cleanup module">
+    <delete dir="${toi_app.output.dir}"/>
+    <delete dir="${toi_app.testoutput.dir}"/>
+  </target>
+</project>

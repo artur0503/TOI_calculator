@@ -11,10 +11,12 @@ public class DrawingPanel extends JPanel {
     private LinkedList<Data> list;
     private LinkedList<JLabel> labelList;
     private int n;
+    private Dimension size;
 
-    DrawingPanel(LinkedList<Data> list, int n) {
+    DrawingPanel(LinkedList<Data> list, int n, Dimension size) {
         this.list = list;
         this.n = n;
+        this.size = size;
         setLayout(null);
     }
 
@@ -36,7 +38,7 @@ public class DrawingPanel extends JPanel {
 
     @Override
     public Dimension getPreferredSize() {
-        return new Dimension(1000, 100);
+        return size;
     }
 
     protected void paintComponent(Graphics g) {
@@ -45,13 +47,8 @@ public class DrawingPanel extends JPanel {
         g2d.drawLine(0, 50, getPreferredSize().width, 50);
         double all = getPreferredSize().width;
         int step = getPreferredSize().width / n;
-        for (int i = step; i < all - step; i = i + step) {
+        for (int i = step; i < all; i = i + step) {
             g2d.drawLine(i, 45, i, 55);
-        }
-        if (labelList != null){
-            if (!labelList.isEmpty()){
-                g2d.drawLine(labelList.getFirst().getX() + (step / 2), 55, labelList.getFirst().getX(), 75);
-            }
         }
         g2d.dispose();
     }

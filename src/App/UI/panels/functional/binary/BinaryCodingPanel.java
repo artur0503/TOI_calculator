@@ -155,7 +155,7 @@ public class BinaryCodingPanel implements ActionListener {
                         dim, dim, dim, 0, false));
     }
 
-    private void addButtonPanel(JPanel rootPanel){
+    private void addButtonPanel(JPanel rootPanel, int countIter){
         JPanel panel = Components.createJPanel(4, 1);
         rootPanel.add(panel,
                 new GridConstraints(0, 0, 1, 1,
@@ -164,11 +164,11 @@ public class BinaryCodingPanel implements ActionListener {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
                         null, null, null, 0, false));
 
-        addSpacer(panel, 1, 0, new Dimension(0, 0));
+//        addSpacer(panel, 1, 0, new Dimension(0, 0));
 
         JPanel panel1 = Components.createJPanel(1, 2);
         panel.add(panel1,
-                new GridConstraints(0, 0, 1, 1,
+                new GridConstraints(1, 0, 1, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
@@ -179,6 +179,17 @@ public class BinaryCodingPanel implements ActionListener {
         nextStepButton = Components.createJButton(">", this);
         addButton(panel1, nextStepButton, 0, 1, new Dimension(70, 30));
 
+        JPanel panel4 = Components.createJPanel(1, 2);
+        panel.add(panel4,
+                new GridConstraints(0, 0, 1, 1,
+                        GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                        null, null, null, 0, false));
+
+//        JLabel label = Components.createLabel("Кол-во итераций:" + countIter);
+
+        addLabel(panel4,("Итерации: " + countIter));
 
         JPanel panel2 = Components.createJPanel(1, 2);
         panel.add(panel2,
@@ -226,7 +237,7 @@ public class BinaryCodingPanel implements ActionListener {
     private String convertListToString(LinkedList<Data> input){
         String str = "";
         for (Data data : input){
-            str = str + "\n  " + data.getNameS() + " " + data.getCodeBinary();
+            str = str + "\n  " + data.getNameS() + " (" + data.getChance() + ")  " + data.getCodeBinary();
         }
         return str;
     }
@@ -251,10 +262,10 @@ public class BinaryCodingPanel implements ActionListener {
                 + formulas.resRedundancy());
         JPanel formulasResultPanel = Components.createJPanel(2, 1);
         addPanel(resultPanel, formulasResultPanel, formulaResultTextArea, 1, new Dimension(190, 210));
-        addLabel(formulasResultPanel, "Результат формул");
+        addLabel(formulasResultPanel, "Результат");
     }
 
-    private void createInfoPanel(JPanel rootPanel, String[] draw){
+    private void createInfoPanel(JPanel rootPanel, String[] draw, LinkedList<Data> list){
         JPanel infoPanel = Components.createJPanel(3, 1);
         rootPanel.add(infoPanel, BorderLayout.CENTER);
 
@@ -288,13 +299,22 @@ public class BinaryCodingPanel implements ActionListener {
                 "  R = H(x)max - H(x) / H(x)max");
         JPanel formulasPanel = Components.createJPanel(2, 1);
         addInfoPanel(formulasInfoPanel, formulasPanel,formulaTextArea, 0, 2, new Dimension(250, 210));
-        addLabel(formulasPanel, "Формулы");
+        addLabel(formulasPanel, "Характеристики Кода");
         addLabelPanel(formulasInfoPanel);
-        addButtonPanel(formulasInfoPanel);
+        addButtonPanel(formulasInfoPanel, getCountIteration(list));
     }
 
     public String[] logicDrawing(LinkedList<String[]> draw, LinkedList<Data> data){
         return new String[]{};
+    }
+
+    private int getCountIteration(LinkedList<Data> linkedList){
+        int max = 0;
+        for (Data data : linkedList){
+            if (data.getCodeBinary().split("").length > max)
+                max = data.getCodeBinary().split("").length;
+        }
+        return max;
     }
 
     public void createHuffmanPanel(String text, LinkedList<Data> input, LinkedList<String[]> draw, ControllerFormulas formulas){
@@ -303,9 +323,8 @@ public class BinaryCodingPanel implements ActionListener {
         rootPanel.setLayout(new BorderLayout(0, 0));
         rootPanel.setBorder(Components.createTitleBorder(text));
         createResultPanel(rootPanel, input, formulas);
-        createInfoPanel(rootPanel, logicDrawing(draw, input));
+        createInfoPanel(rootPanel, logicDrawing(draw, input), input);
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {

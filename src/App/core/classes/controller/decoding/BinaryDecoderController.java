@@ -3,6 +3,7 @@ package App.core.classes.controller.decoding;
 import App.core.classes.model.POJO.Data;
 import App.core.classes.model.logic.decoding.BinaryDecoder;
 import App.core.interfaces.controller.ControllerDecoding;
+import App.core.interfaces.model.decoding.ModelDecodingBinary;
 
 import java.util.LinkedList;
 
@@ -35,7 +36,7 @@ public class BinaryDecoderController implements ControllerDecoding {
 
     @Override
     public void execute() {
-        BinaryDecoder decoder = new BinaryDecoder(getText(), getList());
+        ModelDecodingBinary decoder = new BinaryDecoder(getText(), getList());
         decoder.decoding();
         setRes(decoder.getResult());
     }

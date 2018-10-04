@@ -111,7 +111,7 @@ public class InputPanel implements ActionListener, ChangeListener {
                         new Dimension(45, 25), new Dimension(45, 25),
                         new Dimension(45, 25), 0, false));
         if (isChar)
-            textField.setText(textField.getText() + number);
+            textField.setText(String.valueOf(number));
     }
 
     public void createInputPanel(){
@@ -219,7 +219,7 @@ public class InputPanel implements ActionListener, ChangeListener {
         } else if (((int) spinner.getValue()) < now) {
             now = (int) spinner.getValue();
             System.out.println(now);
-            ((JTextField) arrPanels.get(now).getComponent(0)).setText("X" + (now + 1));
+            ((JTextField) arrPanels.get(now).getComponent(0)).setText(String.valueOf((now + 1)));
             ((JTextField) arrPanels.get(now).getComponent(1)).setText("0.");
             arrPanels.get(now).setVisible(false);
         }
