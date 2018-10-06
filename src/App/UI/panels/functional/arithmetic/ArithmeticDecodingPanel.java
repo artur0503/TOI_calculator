@@ -2,6 +2,7 @@ package App.UI.panels.functional.arithmetic;
 
 import App.UI.listeners.OnClickListener;
 import App.UI.supporting.Components;
+import App.UI.supporting.DrawingPanel;
 import App.core.classes.model.POJO.Data;
 import com.intellij.uiDesigner.core.GridConstraints;
 
@@ -87,14 +88,17 @@ public class ArithmeticDecodingPanel implements ActionListener, DocumentListener
         inputPanel.add(Components.createSpacer(), new GridConstraints(0, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, 1, 1, new Dimension(30, 0), new Dimension(30, 0), new Dimension(30, 0), 0, false));
 
         JPanel drawingPanel = Components.createJPanel(1, 1);
-        headerPanel.add(drawingPanel, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, 1, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, new Dimension(-1, 100), new Dimension(-1, 100), new Dimension(-1, 100), 0, false));
+        headerPanel.add(drawingPanel, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, 1, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, new Dimension(720, 100), new Dimension(720, 100), new Dimension(720, 100), 0, false));
 
         JScrollPane drawingScroll = new JScrollPane();
         drawingPanel.add(drawingScroll, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
 
-        DrawingPanel drawingCustomPanel = new DrawingPanel(input, input.size(), new Dimension(drawingPanel.getWidth(), drawingPanel.getHeight()));
-        drawingScroll.setViewportView(drawingCustomPanel);
-        drawingCustomPanel.setCharToDraw();
+        JPanel drawingPanel2 = Components.createJPanel(1, 1);
+        drawingScroll.setViewportView(drawingPanel2);
+
+        DrawingPanel drawingCustomPanel = new ArithmeticDrawingPanel(input, input.size(), new Dimension(drawingPanel2.getWidth(), drawingPanel2.getHeight()));
+        drawingPanel2.add(drawingCustomPanel, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, 1, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        drawingCustomPanel.getIteration(2);
 
         JPanel buttonPanel = Components.createJPanel(1, 7);
         headerPanel.add(buttonPanel, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));

@@ -66,6 +66,7 @@ public class ShenonController implements ControllerCoding {
                 magic.sortCh();
                 System.out.println();
                 magic.showConsole();
+                magic.sortCh();
                 setResCode(magic.dataResult());
                 setDrawData(magic.dataForDrawing());
             }

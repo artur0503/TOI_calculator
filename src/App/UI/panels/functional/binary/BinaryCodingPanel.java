@@ -1,5 +1,6 @@
 package App.UI.panels.functional.binary;
 
+import App.UI.supporting.DrawingPanel;
 import App.core.classes.model.POJO.Data;
 import App.core.interfaces.controller.ControllerFormulas;
 import App.UI.listeners.OnClickListener;
@@ -12,15 +13,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class BinaryCodingPanel implements ActionListener {
 
     private JPanel rootPanel;
+    private DrawingPanel drawingPanel;
 
     private JTextArea codingResultsTextArea;
     private JTextArea formulaResultTextArea;
-    private JTextArea codingTextArea;
     private JTextArea formulaTextArea;
     private JButton nextStepButton;
     private JButton prevStepButton;
@@ -126,6 +128,24 @@ public class BinaryCodingPanel implements ActionListener {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW,
                         dim, dim, dim, 1, false));
         codingResultScroll.setViewportView(textArea);
+    }
+
+    private void addInfoPanel(JPanel parentPanel, JPanel panel, JPanel drawingPanel, int row, int column, Dimension dim){
+        parentPanel.add(panel,
+                new GridConstraints(row, column, 1, 1,
+                        GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                        null, null, null, 0, false));
+
+        JScrollPane codingResultScroll = new JScrollPane();
+        panel.add(codingResultScroll,
+                new GridConstraints(1, 0, 1, 1,
+                        GridConstraints.ANCHOR_NORTH, GridConstraints.FILL_NONE,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW,
+                        dim, dim, dim, 1, false));
+        codingResultScroll.setViewportView(drawingPanel);
     }
 
     private void addLabelPanel(JPanel rootPanel){
@@ -254,7 +274,7 @@ public class BinaryCodingPanel implements ActionListener {
         addPanel(resultPanel, codingResultPanel, codingResultsTextArea, 0, new Dimension(190, 360));
         addLabel(codingResultPanel, "Результат кодирования");
 
-        formulaResultTextArea = Components.createJTextArea("\n "
+        formulaResultTextArea = Components.createJTextArea("\n  "
                 + formulas.resCountMessage() + "\n\n  "
                 + formulas.resMaxEntropy() + "\n\n  "
                 + formulas.resEntropy() + "\n\n  "
@@ -265,22 +285,18 @@ public class BinaryCodingPanel implements ActionListener {
         addLabel(formulasResultPanel, "Результат");
     }
 
-    private void createInfoPanel(JPanel rootPanel, String[] draw, LinkedList<Data> list){
+    private void createInfoPanel(JPanel rootPanel, HashMap<Integer, String[]> draw, LinkedList<Data> list){
         JPanel infoPanel = Components.createJPanel(3, 1);
         rootPanel.add(infoPanel, BorderLayout.CENTER);
-
-
-
 
         JPanel codingPanel = Components.createJPanel(2, 1);
 
         //TODO:CREATE PANEL RECOGNIZE
-        codingTextArea = Components.createJTextArea("");
 
+        drawingPanel = drawingPanel(list, draw);
 
-        addInfoPanel(infoPanel, codingPanel, codingTextArea, 1, 0, new Dimension(785, 360));
+        addInfoPanel(infoPanel, codingPanel, drawingPanel, 1, 0, new Dimension(785, 360));
         addLabel(infoPanel, "Кодирование");
-
 
 
         JPanel formulasInfoPanel = Components.createJPanel(1, 3);
@@ -304,8 +320,16 @@ public class BinaryCodingPanel implements ActionListener {
         addButtonPanel(formulasInfoPanel, getCountIteration(list));
     }
 
-    public String[] logicDrawing(LinkedList<String[]> draw, LinkedList<Data> data){
-        return new String[]{};
+    private HashMap<Integer, String[]> logicDrawing(LinkedList<String[]> draw) {
+        HashMap<Integer, String[]> drawMap = new HashMap<>();
+        for (int i = 0; i < draw.size(); i++){
+            drawMap.put(i + 3, draw.get(i));
+        }
+        return drawMap;
+    }
+
+    public DrawingPanel drawingPanel(LinkedList<Data> list, HashMap<Integer, String[]> draw){
+        return null;
     }
 
     private int getCountIteration(LinkedList<Data> linkedList){
@@ -314,6 +338,7 @@ public class BinaryCodingPanel implements ActionListener {
             if (data.getCodeBinary().split("").length > max)
                 max = data.getCodeBinary().split("").length;
         }
+        iterationMax = max;
         return max;
     }
 
@@ -323,8 +348,11 @@ public class BinaryCodingPanel implements ActionListener {
         rootPanel.setLayout(new BorderLayout(0, 0));
         rootPanel.setBorder(Components.createTitleBorder(text));
         createResultPanel(rootPanel, input, formulas);
-        createInfoPanel(rootPanel, logicDrawing(draw, input), input);
+        createInfoPanel(rootPanel, logicDrawing(draw), input);
     }
+
+    private int iterationNow = 0;
+    private int iterationMax;
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -335,10 +363,14 @@ public class BinaryCodingPanel implements ActionListener {
             listener2.onClick(false, INPUT_MENU);
         }
         else if (e.getSource() == prevStepButton){
-            //TODO:Предыдщий шаг
+            if (iterationNow != 0){
+                drawingPanel.getIteration(--iterationNow);
+            }
         }
         else if (e.getSource() == nextStepButton){
-            //TODO:Следующий шаг
+            if (iterationNow != iterationMax){
+                drawingPanel.getIteration(++iterationNow);
+            }
         }
         else if (e.getSource() == decodingButton){
             listener1.OnInput(true, getDataList());

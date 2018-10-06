@@ -51,11 +51,14 @@ public class Huffman implements ModelCodingTree {
             j++;
             drawer.add(arr);
         }
+        int i = 0;
         for (String[] str : drawer){
+            System.out.print(i + ". ");
             for (String s : str){
                 System.out.print(s);
             }
             System.out.println();
+            i++;
         }
         return drawer;
     }
@@ -78,6 +81,7 @@ public class Huffman implements ModelCodingTree {
     private LinkedList<Data> sortResult(LinkedList<Data> listOld){
         listOld.sort(new DataComparatorDown());
         listOld.sort(new IndexComparatorUp());
+        listOld.sort(new DataComparatorDown());
         return listOld;
     }
 
@@ -113,6 +117,7 @@ public class Huffman implements ModelCodingTree {
             }
             growTree(listNode);
             giveCode(root);
+            sortResult(listOld);
     }
 
     @Override

@@ -1,19 +1,20 @@
 package App.UI.panels.functional.arithmetic;
 
+import App.UI.supporting.DrawingPanel;
 import App.core.classes.model.POJO.Data;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.LinkedList;
 
-public class DrawingPanel extends JPanel {
+public class ArithmeticDrawingPanel extends DrawingPanel {
 
     private LinkedList<Data> list;
     private LinkedList<JLabel> labelList;
     private int n;
     private Dimension size;
 
-    DrawingPanel(LinkedList<Data> list, int n, Dimension size) {
+    ArithmeticDrawingPanel(LinkedList<Data> list, int n, Dimension size) {
         this.list = list;
         this.n = n;
         this.size = size;
@@ -21,7 +22,10 @@ public class DrawingPanel extends JPanel {
     }
 
 
-    void setCharToDraw(){
+    private void setCharToDraw(int iteration){
+        if (iteration == 2){
+            System.out.println(2);
+        }
         labelList = new LinkedList<>();
         int step = (getPreferredSize().width / n);
         int j = 0;
@@ -35,6 +39,11 @@ public class DrawingPanel extends JPanel {
         }
     }
 
+
+    @Override
+    public void getIteration(int iteration) {
+        setCharToDraw(iteration);
+    }
 
     @Override
     public Dimension getPreferredSize() {

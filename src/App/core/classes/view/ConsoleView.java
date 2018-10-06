@@ -33,28 +33,9 @@ public class ConsoleView implements BaseView {
     /**ACTION AFTER USE BUTTON**/
     @Override
     public void afterAction(){
-        //введенные данные которые получили после нажатия кнопки
-        LinkedList<Data> linkedList = new Options().optionAlphabet();
-
-//        new Options().option1(linkedList);
-        //введенные пользователем элементы
-
+        LinkedList<Data> linkedList = new Options().option1();
         setInputData(linkedList);
     }
-
-//    private LinkedList<Data> userInput(){
-//        LinkedList<Data> linkedList = new LinkedList<>();
-//        Scanner sc = new Scanner(System.in);
-//        int k = 0;
-//        System.out.println("Введите элемент и частоту(через пробел)\nДля заверщения введите '000'");
-//        while (true){
-//            String s1 = sc.nextLine();
-//            if (s1.equals("000")) break;
-//            String s[] = s1.split(" ");
-//            linkedList.add(new Data(Double.parseDouble(s[1]), s[0], k++));
-//        }
-//        return linkedList;
-//    }
 
     private void mainMenu(Scanner sc){
         a:while (true) {
