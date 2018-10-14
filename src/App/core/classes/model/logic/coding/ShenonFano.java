@@ -2,8 +2,8 @@ package App.core.classes.model.logic.coding;
 
 import App.core.classes.model.comparator.shenonComp.DataComparatorDown;
 import App.core.classes.model.comparator.shenonComp.IndexComparatorUp;
-import App.core.classes.model.POJO.Data;
-import App.core.classes.model.POJO.Node;
+import App.core.classes.model.models.Data;
+import App.core.classes.model.models.Node;
 import App.core.interfaces.model.coding.ModelCodingTree;
 
 import java.math.BigDecimal;

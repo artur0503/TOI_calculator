@@ -4,7 +4,7 @@ import App.UI.listeners.OnDecodingListener;
 import App.UI.listeners.OnInputListener;
 import App.UI.supporting.Components;
 import App.UI.supporting.DrawingPanel;
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import com.intellij.uiDesigner.core.GridConstraints;
 
 import javax.swing.*;

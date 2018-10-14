@@ -1,6 +1,6 @@
 package App.options;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 
 import java.util.LinkedList;
 
@@ -59,12 +59,20 @@ public class Options {
     public LinkedList<Data> option2(){
         LinkedList<Data> magic = new LinkedList<>();
         magic.add(new Data(0.3, "A", 1));
-        magic.add(new Data(0.2, "B", 2));
-        magic.add(new Data(0.15, "C", 3));
-        magic.add(new Data(0.1, "D", 4));
-        magic.add(new Data(0.1, "E", 5));
-        magic.add(new Data(0.1, "F", 6));
+        magic.add(new Data(0.1, "B", 2));
+        magic.add(new Data(0.1, "C", 3));
+        magic.add(new Data(0.05, "D", 4));
+        magic.add(new Data(0.05, "E", 5));
+        magic.add(new Data(0.05, "F", 6));
         magic.add(new Data(0.05, "G", 7));
+        magic.add(new Data(0.05, "H", 8));
+        magic.add(new Data(0.05, "J", 9));
+        magic.add(new Data(0.05, "I", 10));
+        magic.add(new Data(0.05, "K", 11));
+        magic.add(new Data(0.025, "L", 12));
+        magic.add(new Data(0.025, "M", 13));
+        magic.add(new Data(0.025, "N", 14));
+        magic.add(new Data(0.025, "W", 15));
         return magic;
     }
 

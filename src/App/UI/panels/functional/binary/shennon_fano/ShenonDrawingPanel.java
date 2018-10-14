@@ -3,7 +3,7 @@ package App.UI.panels.functional.binary.shennon_fano;
 import App.UI.supporting.Components;
 import App.UI.supporting.DrawingModel;
 import App.UI.supporting.DrawingPanel;
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 
 import javax.swing.*;
 import java.awt.*;

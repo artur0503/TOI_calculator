@@ -1,6 +1,6 @@
 package App.core.classes.controller.formulas;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.core.classes.model.logic.formulas.Formulas;
 import App.core.interfaces.controller.ControllerFormulas;
 

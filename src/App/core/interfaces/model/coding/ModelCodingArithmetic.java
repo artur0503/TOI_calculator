@@ -1,6 +1,6 @@
 package App.core.interfaces.model.coding;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 
 import java.util.LinkedList;
 

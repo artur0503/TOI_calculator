@@ -1,6 +1,6 @@
 package App.UI.panels.functional.binary;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.UI.listeners.OnDecodingListener;
 import App.UI.supporting.Components;
 import com.intellij.uiDesigner.core.GridConstraints;

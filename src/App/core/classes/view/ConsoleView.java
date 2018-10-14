@@ -6,7 +6,7 @@ import App.core.classes.controller.coding.ShenonController;
 import App.core.classes.controller.decoding.ArithmeticDecoderController;
 import App.core.classes.controller.decoding.BinaryTextDecoderController;
 import App.core.classes.controller.formulas.FormulasController;
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.core.interfaces.controller.ControllerCoding;
 import App.core.interfaces.controller.ControllerDecoding;
 import App.core.interfaces.controller.ControllerFormulas;

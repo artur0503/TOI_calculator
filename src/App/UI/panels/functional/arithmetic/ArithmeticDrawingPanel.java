@@ -1,7 +1,7 @@
 package App.UI.panels.functional.arithmetic;
 
 import App.UI.supporting.DrawingPanel;
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 
 import javax.swing.*;
 import java.awt.*;

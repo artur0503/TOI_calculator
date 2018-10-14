@@ -1,12 +1,14 @@
 package App.core.classes.model.logic.coding;
 
-import App.core.classes.model.POJO.Data;
-import App.core.classes.model.POJO.Node;
 import App.core.classes.model.comparator.huffmanComp.DataComparatorUp;
+import App.core.classes.model.comparator.huffmanComp.DataDrawComporatorDown;
 import App.core.classes.model.comparator.huffmanComp.IndexComparatorDown;
 import App.core.classes.model.comparator.huffmanComp.NodeComparatorUp;
 import App.core.classes.model.comparator.shenonComp.DataComparatorDown;
 import App.core.classes.model.comparator.shenonComp.IndexComparatorUp;
+import App.core.classes.model.models.Data;
+import App.core.classes.model.models.DataDraw;
+import App.core.classes.model.models.Node;
 import App.core.interfaces.model.coding.ModelCodingTree;
 
 import java.math.BigDecimal;
@@ -22,7 +24,49 @@ public class Huffman implements ModelCodingTree {
     private LinkedList<Data> list = new LinkedList<>();
     private LinkedList<Data> listOld = new LinkedList<>();
     private LinkedList<Node> listNode = new LinkedList<>();
+    private LinkedList<Double> lastSum = new LinkedList<>();
     private Node root;
+
+    private LinkedList<DataDraw> addAllCustom(LinkedList<DataDraw> draws){
+        LinkedList<DataDraw> linkedList = new LinkedList<>();
+        for (DataDraw draw : draws){
+            DataDraw model = new DataDraw(draw.getChance(), draw.isRes());
+            linkedList.add(model);
+        }
+        return linkedList;
+    }
+
+    public LinkedList<LinkedList<DataDraw>> getLastSum() {
+        LinkedList<Data> list = new LinkedList<>(sortResult(listOld));
+        LinkedList<LinkedList<DataDraw>> drawList = new LinkedList<>();
+        LinkedList<Integer> indexList = new LinkedList<>();
+        int j = 2;
+        int s = 0;
+        LinkedList<DataDraw> draws = new LinkedList<>();
+        for (Data aList : list) {
+            draws.add(new DataDraw(aList.getChance(), false));
+        }
+        drawList.add(draws);
+        for (double last : lastSum){
+            LinkedList<DataDraw> linkedList = new LinkedList<>(addAllCustom(drawList.getLast()));
+            for (DataDraw draw : linkedList) {
+                draw.setRes(false);
+            }
+            linkedList.remove(linkedList.size() - 1);
+            linkedList.remove(linkedList.size() - 1);
+            DataDraw drawModel = new DataDraw(last, true);
+            linkedList.add(drawModel);
+            linkedList.sort(new DataDrawComporatorDown());
+            indexList.add(linkedList.indexOf(drawModel));
+            drawList.add(linkedList);
+            for (DataDraw draw : linkedList) {
+                System.out.println(draw.getChance() + " " + draw.isRes());
+            }
+            System.out.println();
+        }
+        return drawList;
+    }
+
 
     @Override
     public LinkedList<String[]> dataForDrawing() {
@@ -50,15 +94,6 @@ public class Huffman implements ModelCodingTree {
             }
             j++;
             drawer.add(arr);
-        }
-        int i = 0;
-        for (String[] str : drawer){
-            System.out.print(i + ". ");
-            for (String s : str){
-                System.out.print(s);
-            }
-            System.out.println();
-            i++;
         }
         return drawer;
     }
@@ -115,7 +150,7 @@ public class Huffman implements ModelCodingTree {
                 listOld.add(list.getFirst());
                 listNode.add(new Node(list.poll()));
             }
-            growTree(listNode);
+            growTree(listNode, lastSum);
             giveCode(root);
             sortResult(listOld);
     }
@@ -132,7 +167,7 @@ public class Huffman implements ModelCodingTree {
         }
     }
 
-    private void growTree(LinkedList<Node> listNode){
+    private void growTree(LinkedList<Node> listNode, LinkedList<Double> lastSum){
         double sumCh;
         String sumN;
         while (listNode.size() != 1){
@@ -147,6 +182,7 @@ public class Huffman implements ModelCodingTree {
             sortNode();
             listNode.add(node);
             sortNode();
+            lastSum.add(new BigDecimal(node.getData().getChance()).setScale(3, RoundingMode.HALF_UP).doubleValue());
             if (listNode.size() == 1){ root = listNode.getLast(); }
         }
     }

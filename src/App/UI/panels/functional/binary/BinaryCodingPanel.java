@@ -1,7 +1,7 @@
 package App.UI.panels.functional.binary;
 
 import App.UI.supporting.DrawingPanel;
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.core.interfaces.controller.ControllerFormulas;
 import App.UI.listeners.OnClickListener;
 import App.UI.listeners.OnInputListener;
@@ -332,17 +332,19 @@ public class BinaryCodingPanel implements ActionListener {
         return null;
     }
 
-    private int getCountIteration(LinkedList<Data> linkedList){
-        int max = 0;
-        for (Data data : linkedList){
-            if (data.getCodeBinary().split("").length > max)
-                max = data.getCodeBinary().split("").length;
-        }
-        iterationMax = max;
-        return max;
+    public int getCountIteration(LinkedList<Data> linkedList){
+        return 0;
     }
 
-    public void createHuffmanPanel(String text, LinkedList<Data> input, LinkedList<String[]> draw, ControllerFormulas formulas){
+    private int getIterationMax() {
+        return iterationMax;
+    }
+
+    protected void setIterationMax(int iterationMax) {
+        this.iterationMax = iterationMax;
+    }
+
+    public void createPanel(String text, LinkedList<Data> input, LinkedList<String[]> draw, ControllerFormulas formulas){
         setDataList(input);
         rootPanel = new JPanel();
         rootPanel.setLayout(new BorderLayout(0, 0));
@@ -368,7 +370,7 @@ public class BinaryCodingPanel implements ActionListener {
             }
         }
         else if (e.getSource() == nextStepButton){
-            if (iterationNow != iterationMax){
+            if (iterationNow != getIterationMax()){
                 drawingPanel.getIteration(++iterationNow);
             }
         }

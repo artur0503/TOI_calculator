@@ -20,7 +20,7 @@ import App.core.classes.controller.decoding.ArithmeticDecoderController;
 import App.core.classes.controller.decoding.BinaryDecoderController;
 import App.core.classes.controller.decoding.BinaryTextDecoderController;
 import App.core.classes.controller.formulas.FormulasController;
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.core.interfaces.controller.ControllerCoding;
 import App.core.interfaces.controller.ControllerDecoding;
 import App.core.interfaces.controller.ControllerFormulas;
@@ -187,12 +187,12 @@ public class AppUI extends JFrame implements BaseView {
     }
 
     private void huffmanScreen(JPanel rootPanel, LinkedList<Data> data){
-        ControllerCoding huffman = new HuffmanController(data);
+        HuffmanController huffman = new HuffmanController(data);
         huffman.execute();
         ControllerFormulas formulas = new FormulasController(huffman.getCodeToDraw());
         formulas.execute();
-        HuffmanPanel huffmanPanel = new HuffmanPanel();
-        huffmanPanel.createHuffmanPanel("Метод Хаффмана", huffman.getCodeToDraw(), huffman.getDataToDraw(), formulas);
+        HuffmanPanel huffmanPanel = new HuffmanPanel(huffman.getDrawLastSum());
+        huffmanPanel.createPanel("Метод Хаффмана", huffman.getCodeToDraw(), huffman.getDataToDraw(), formulas);
         addPanel(rootPanel, huffmanPanel.getRootPanel());
         huffmanPanel.setOnInputListener((flag, linkedList) -> {
             if (flag){
@@ -230,7 +230,7 @@ public class AppUI extends JFrame implements BaseView {
         ControllerFormulas formulas = new FormulasController(shenon.getCodeToDraw());
         formulas.execute();
         ShenonPanel shenonPanel = new ShenonPanel();
-        shenonPanel.createHuffmanPanel("Метод Шенона-Фанно", shenon.getCodeToDraw(), shenon.getDataToDraw(), formulas);
+        shenonPanel.createPanel("Метод Шенона-Фанно", shenon.getCodeToDraw(), shenon.getDataToDraw(), formulas);
         addPanel(rootPanel, shenonPanel.getRootPanel());
         shenonPanel.setOnInputListener((flag, linkedList) -> {
             if (flag){

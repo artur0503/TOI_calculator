@@ -1,6 +1,6 @@
 package App.core.classes.model.comparator.huffmanComp;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.core.classes.model.comparator.BaseComparator;
 
 /**

@@ -1,6 +1,6 @@
 package App.core.classes.controller.coding;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.core.classes.model.logic.coding.ShenonFano;
 import App.core.interfaces.controller.ControllerCoding;
 import App.core.interfaces.model.coding.ModelCodingTree;

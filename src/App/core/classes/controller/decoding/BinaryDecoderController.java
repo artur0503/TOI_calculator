@@ -1,6 +1,6 @@
 package App.core.classes.controller.decoding;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.core.classes.model.logic.decoding.BinaryDecoder;
 import App.core.interfaces.controller.ControllerDecoding;
 import App.core.interfaces.model.decoding.ModelDecodingBinary;

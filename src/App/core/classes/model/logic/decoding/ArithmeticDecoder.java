@@ -1,6 +1,6 @@
 package App.core.classes.model.logic.decoding;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.core.interfaces.model.decoding.ModelDecodingArithmetic;
 
 import java.math.BigDecimal;

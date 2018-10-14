@@ -1,6 +1,6 @@
 package App.core.classes.model.logic.formulas;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.core.interfaces.model.formulas.ModelFormulas;
 
 import java.math.BigDecimal;

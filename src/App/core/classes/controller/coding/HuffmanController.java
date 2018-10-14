@@ -1,9 +1,9 @@
 package App.core.classes.controller.coding;
 
+import App.core.classes.model.models.Data;
 import App.core.classes.model.logic.coding.Huffman;
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.DataDraw;
 import App.core.interfaces.controller.ControllerCoding;
-import App.core.interfaces.model.coding.ModelCodingTree;
 
 import java.util.LinkedList;
 
@@ -12,6 +12,7 @@ public class HuffmanController implements ControllerCoding {
     private LinkedList<Data> inputData;
     private LinkedList<Data> resCode;
     private LinkedList<String[]> drawData;
+    private LinkedList<LinkedList<DataDraw>> drawLastSum;
 
     public HuffmanController(LinkedList<Data> inputData) {
         this.inputData = inputData;
@@ -37,6 +38,14 @@ public class HuffmanController implements ControllerCoding {
         this.drawData = drawData;
     }
 
+    public LinkedList<LinkedList<DataDraw>> getDrawLastSum() {
+        return drawLastSum;
+    }
+
+    private void setDrawLastSum(LinkedList<LinkedList<DataDraw>> drawLastSum) {
+        this.drawLastSum = drawLastSum;
+    }
+
     @Override
     public LinkedList<Data> getDataFromView() {
         return getInputData();
@@ -54,7 +63,7 @@ public class HuffmanController implements ControllerCoding {
 
     @Override
     public void execute() {
-        ModelCodingTree magic = new Huffman();
+        Huffman magic = new Huffman();
         if (getDataFromView() != null) {
             magic.create(getDataFromView());
             if (magic.check()) {
@@ -62,8 +71,8 @@ public class HuffmanController implements ControllerCoding {
                 magic.tree();
                 magic.sortCh();
                 magic.sortInd();
-                System.out.println();
-                magic.showConsole();
+//                magic.showConsole();
+                setDrawLastSum(magic.getLastSum());
                 magic.sortCh();
                 setResCode(magic.dataResult());
                 setDrawData(magic.dataForDrawing());

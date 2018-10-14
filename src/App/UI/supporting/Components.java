@@ -65,7 +65,7 @@ public class Components {
     public static JLabel createLabel(String text){
         JLabel jLabel = new JLabel();
         jLabel.setForeground(new Color(-16777216));
-        jLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+        jLabel.setFont(new Font("Arial", Font.PLAIN, 15));
         jLabel.setText(text);
         return jLabel;
     }

@@ -1,6 +1,6 @@
 package App.UI.panels.functional;
 
-import App.core.classes.model.POJO.Data;
+import App.core.classes.model.models.Data;
 import App.UI.listeners.OnInputListener;
 import App.UI.supporting.Components;
 import App.validation.ValidationUI;
