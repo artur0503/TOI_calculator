@@ -7,24 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb67758f-f615-43f7-8a4c-be7f47dbd23d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/core/classes/model/comparator/huffmanComp/BinaryComparatorDown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TOI_APP_jar/TOI_APP.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TOI_APP_jar/TOI_APP.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/UI/panels/functional/InputPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/UI/panels/functional/InputPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/UI/panels/functional/binary/BinaryCodingPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/UI/panels/functional/binary/BinaryCodingPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/UI/panels/functional/binary/huffan/HuffmanDrawingPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/UI/panels/functional/binary/huffan/HuffmanDrawingPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/UI/supporting/StringJTextField$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/UI/supporting/StringJTextField$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/core/classes/model/logic/coding/Huffman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/core/classes/model/logic/coding/Huffman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/core/classes/model/logic/formulas/Formulas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/core/classes/model/logic/formulas/Formulas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOI_APP/App/core/classes/model/models/DataDraw.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOI_APP/App/core/classes/model/models/DataDraw.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/UI/panels/functional/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/UI/panels/functional/InputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticDrawingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticDrawingPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/UI/panels/functional/binary/BinaryCodingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/UI/panels/functional/binary/BinaryCodingPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/UI/panels/functional/binary/huffan/HuffmanDrawingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/UI/panels/functional/binary/huffan/HuffmanDrawingPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/UI/supporting/StringJTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/UI/supporting/StringJTextField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/core/classes/model/logic/coding/Huffman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/logic/coding/Huffman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/core/classes/model/logic/formulas/Formulas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/logic/formulas/Formulas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/core/classes/model/models/DataDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/core/classes/model/models/DataDraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +50,7 @@
         <counts>
           <entry key="form" value="15" />
           <entry key="iml" value="2" />
-          <entry key="java" value="270" />
+          <entry key="java" value="271" />
           <entry key="png" value="2" />
         </counts>
       </usages-collector>
@@ -76,7 +59,7 @@
           <entry key="GUI_DESIGNER_FORM" value="15" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="270" />
+          <entry key="JAVA" value="271" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -89,6 +72,11 @@
         <counts>
           <entry key="JAVA" value="25663" />
           <entry key="PLAIN_TEXT" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -129,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticDrawingPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+            <state relative-caret-position="-239">
+              <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1235#1236#0" expanded="true" />
@@ -145,24 +133,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticDecodingPanel.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-29">
-              <caret line="99" column="220" selection-start-line="99" selection-start-column="216" selection-end-line="99" selection-end-column="220" />
+            <state relative-caret-position="-903">
+              <caret line="56" column="7" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="56" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/core/classes/model/logic/coding/Huffman.java">
+        <entry file="file://$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticDecodingPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
-              <folding>
-                <element signature="e#2266#2267#0" expanded="true" />
-                <element signature="e#2318#2319#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-29">
+              <caret line="99" column="220" selection-start-line="99" selection-start-column="216" selection-end-line="99" selection-end-column="220" />
             </state>
           </provider>
         </entry>
@@ -219,6 +206,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="creating_ui" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -250,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/App/UI/panels/functional/DrawingPanel.java" />
         <option value="$PROJECT_DIR$/src/App/UI/panels/functional/binary/DrawingPanel.java" />
         <option value="$PROJECT_DIR$/src/App/UI/supporting/DrawingPanel.java" />
-        <option value="$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticPanel.java" />
         <option value="$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticDecodingPanel.java" />
         <option value="$PROJECT_DIR$/src/App/core/classes/controller/coding/ShenonController.java" />
         <option value="$PROJECT_DIR$/src/App/App.java" />
@@ -274,6 +265,7 @@
         <option value="$PROJECT_DIR$/src/App/UI/panels/functional/binary/BinaryCodingPanel.java" />
         <option value="$PROJECT_DIR$/src/App/core/classes/model/logic/formulas/Formulas.java" />
         <option value="$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticDrawingPanel.java" />
+        <option value="$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticPanel.java" />
       </list>
     </option>
   </component>
@@ -653,15 +645,15 @@
       <window_info id="Favorites" order="3" sideWeight="0.5064935" side_tool="true" weight="0.26852846" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.2872483" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4935065" visible="true" weight="0.2872483" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50201344" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49934897" weight="0.3248227" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32915717" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32907802" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3248227" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49798658" visible="true" weight="0.45106384" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49798658" weight="0.45106384" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.364539" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -735,12 +727,6 @@
           <line>69</line>
           <properties />
           <option name="timeStamp" value="204" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticDrawingPanel.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="208" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/App/UI/panels/functional/binary/huffan/HuffmanDrawingPanel.java</url>
@@ -915,13 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="407" column="29" lean-forward="true" selection-start-line="407" selection-start-column="29" selection-end-line="407" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1144,14 +1123,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticDrawingPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        <state relative-caret-position="-239">
+          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1235#1236#0" expanded="true" />
             <element signature="e#1275#1276#0" expanded="true" />
             <element signature="e#1332#1333#0" expanded="true" />
             <element signature="e#1359#1360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/UI/panels/functional/arithmetic/ArithmeticPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-903">
+          <caret line="56" column="7" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="56" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -17,18 +17,11 @@ import java.util.LinkedList;
 
 public class ArithmeticPanel implements ActionListener, DocumentListener {
 
-    private JPanel headerPanel;
-    private JPanel labelPanel;
-    private JPanel buttonPanel;
-    private JPanel inputPanel;
-    private JPanel resultPanel;
     private JPanel codingPanel;
-    private JPanel functionalPanel;
-    private JPanel infoListPanel;
     private JScrollPane scrollPane1;
 
-    private JButton previousButton;
-    private JButton nextButton;
+//    private JButton previousButton;
+//    private JButton nextButton;
     private JButton decodingButton;
     private JButton backButton;
     private JButton menuButton;
@@ -55,16 +48,16 @@ public class ArithmeticPanel implements ActionListener, DocumentListener {
         this.listener2 = listener2;
     }
 
-    private void createResultPanel(){
-
-    }
-
-    private void createButtonPanel(){
-
-    }
+//    private void createResultPanel(){
+//
+//    }
+//
+//    private void createButtonPanel(){
+//
+//    }
 
     private void createInfoPanel(JPanel panel1){
-        headerPanel = Components.createJPanel(2,1);
+        JPanel headerPanel = Components.createJPanel(2, 1);
         panel1.add(headerPanel,
                 new GridConstraints(0, 0, 1, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
@@ -74,7 +67,7 @@ public class ArithmeticPanel implements ActionListener, DocumentListener {
 
         headerPanel.setBorder(BorderFactory.createTitledBorder(""));
 
-        labelPanel = Components.createJPanel(1, 3);
+        JPanel labelPanel = Components.createJPanel(1, 3);
         headerPanel.add(labelPanel,
                 new GridConstraints(0, 0, 1, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
@@ -110,7 +103,7 @@ public class ArithmeticPanel implements ActionListener, DocumentListener {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
                         null, null, null, 0, false));
 
-        buttonPanel = Components.createJPanel(1, 5);
+        JPanel buttonPanel = Components.createJPanel(1, 5);
         panel2.add(buttonPanel,
                 new GridConstraints(1, 0, 1, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
@@ -155,7 +148,7 @@ public class ArithmeticPanel implements ActionListener, DocumentListener {
                         GridConstraints.SIZEPOLICY_FIXED,
                         null, null, null, 0, false));
 
-        inputPanel = Components.createJPanel(1, 3);
+        JPanel inputPanel = Components.createJPanel(1, 3);
         panel2.add(inputPanel,
                 new GridConstraints(0, 0, 1, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
@@ -200,7 +193,7 @@ public class ArithmeticPanel implements ActionListener, DocumentListener {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
                         null, null, null, 0, false));
 
-        resultPanel = Components.createJPanel(3, 2);
+        JPanel resultPanel = Components.createJPanel(3, 2);
         panel4.add(resultPanel,
                 new GridConstraints(0, 0, 2, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
@@ -233,7 +226,7 @@ public class ArithmeticPanel implements ActionListener, DocumentListener {
                         null, null, null, 0, false));
 
 
-        functionalPanel = Components.createJPanel(1, 1);
+        JPanel functionalPanel = Components.createJPanel(1, 1);
         resultPanel.add(functionalPanel,
                 new GridConstraints(1, 0, 1, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
@@ -320,21 +313,21 @@ public class ArithmeticPanel implements ActionListener, DocumentListener {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
                         null, null, null, 0, false));
 
-        previousButton = Components.createJButton("<", this);
-        panel9.add(previousButton,
-                new GridConstraints(0, 0, 1, 1,
-                        GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL,
-                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                        GridConstraints.SIZEPOLICY_FIXED,
-                        null, null, null, 0, false));
-
-        nextButton = Components.createJButton(">", this);
-        panel9.add(nextButton,
-                new GridConstraints(0, 1, 1, 1,
-                        GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL,
-                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-                        GridConstraints.SIZEPOLICY_FIXED,
-                        null, null, null, 0, false));
+//        previousButton = Components.createJButton("<", this);
+//        panel9.add(previousButton,
+//                new GridConstraints(0, 0, 1, 1,
+//                        GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL,
+//                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+//                        GridConstraints.SIZEPOLICY_FIXED,
+//                        null, null, null, 0, false));
+//
+//        nextButton = Components.createJButton(">", this);
+//        panel9.add(nextButton,
+//                new GridConstraints(0, 1, 1, 1,
+//                        GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL,
+//                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+//                        GridConstraints.SIZEPOLICY_FIXED,
+//                        null, null, null, 0, false));
 
         panel6.add(Components.createSpacer(),
                 new GridConstraints(0, 2, 1, 1,
@@ -348,7 +341,7 @@ public class ArithmeticPanel implements ActionListener, DocumentListener {
                         GridConstraints.SIZEPOLICY_WANT_GROW,
                         null, null, null, 0, false));
 
-        infoListPanel = Components.createJPanel(1, 2);
+        JPanel infoListPanel = Components.createJPanel(1, 2);
         panel4.add(infoListPanel,
                 new GridConstraints(0, 1, 1, 1,
                         GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
@@ -440,12 +433,12 @@ public class ArithmeticPanel implements ActionListener, DocumentListener {
         else if (e.getSource() == decodingButton){
             listener1.OnInput(true, list);
         }
-        else if (e.getSource() == previousButton){
-            //TODO:PREVIOUS ITERATION
-        }
-        else if(e.getSource() == nextButton){
-            //TODO:NEXT ITERATION
-        }
+//        else if (e.getSource() == previousButton){
+//            //TODO:PREVIOUS ITERATION
+//        }
+//        else if(e.getSource() == nextButton){
+//            //TODO:NEXT ITERATION
+//        }
     }
 
     @Override
