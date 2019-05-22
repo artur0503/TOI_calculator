@@ -308,8 +308,8 @@ public class BinaryCodingPanel implements ActionListener {
                         null, null, null, 0, false));
 
         formulaTextArea = Components.createJTextArea("\n  N = кол-во собщений\n\n" +
-                "  H(X)max = -∑ (p(xi) * log(xi)\n\n" +
-                "  H(X)max = -∑ (p(xi) * log(xi)????\n\n" +
+                "  H(X)max = log(N)\n\n" +
+                "  H(X) = -∑ (p(xi) * log(xi)\n\n" +
                 "  m ср = ∑ p(xi) * mi\n" +
                 "         \n" +
                 "  R = H(x)max - H(x) / H(x)max");
@@ -322,9 +322,10 @@ public class BinaryCodingPanel implements ActionListener {
 
     private HashMap<Integer, String[]> logicDrawing(LinkedList<String[]> draw) {
         HashMap<Integer, String[]> drawMap = new HashMap<>();
-        for (int i = 0; i < draw.size(); i++){
-            drawMap.put(i + 3, draw.get(i));
-        }
+        if (draw != null)
+            for (int i = 0; i < draw.size(); i++){
+                drawMap.put(i + 3, draw.get(i));
+            }
         return drawMap;
     }
 

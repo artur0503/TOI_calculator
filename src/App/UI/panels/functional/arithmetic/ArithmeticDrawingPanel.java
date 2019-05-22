@@ -30,12 +30,14 @@ public class ArithmeticDrawingPanel extends DrawingPanel {
         int step = (getPreferredSize().width / n);
         int j = 0;
         for (int i = step / 2; i < getPreferredSize().width; i = i + (step)) {
-            JLabel label = new JLabel();
-            add(label);
-            label.setBounds(i, 20, 30, 20);
-            label.setText(list.get(j).getNameS());
-            labelList.add(label);
-            j++;
+            if (j < list.size()) {
+                JLabel label = new JLabel();
+                add(label);
+                label.setBounds(i, 20, 30, 20);
+                label.setText(list.get(j).getNameS());
+                labelList.add(label);
+                j++;
+            }
         }
     }
 

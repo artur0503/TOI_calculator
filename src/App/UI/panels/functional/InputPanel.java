@@ -19,6 +19,7 @@ public class InputPanel implements ActionListener, ChangeListener {
 
     private final static int DEFAULT = 16;
     private int now = 2;
+    private LinkedList<Character> listChar;
 
     private JPanel inputPanel;
     private ArrayList<JPanel> arrPanels;
@@ -111,10 +112,14 @@ public class InputPanel implements ActionListener, ChangeListener {
                         new Dimension(45, 25), new Dimension(45, 25),
                         new Dimension(45, 25), 0, false));
         if (isChar)
-            textField.setText(String.valueOf(number));
+            textField.setText(String.valueOf(listChar.get(number - 1)));
     }
 
     public void createInputPanel(){
+        listChar = new LinkedList<>();
+        for(char i = 'a';i<='z';i++) {
+            listChar.add(i);
+        }
         arrPanels = new ArrayList<>();
         inputPanel = Components.createJPanel(4, 17);
         backButton = Components.createJButton("Назад", this);
@@ -219,7 +224,7 @@ public class InputPanel implements ActionListener, ChangeListener {
         } else if (((int) spinner.getValue()) < now) {
             now = (int) spinner.getValue();
             System.out.println(now);
-            ((JTextField) arrPanels.get(now).getComponent(0)).setText(String.valueOf((now + 1)));
+            ((JTextField) arrPanels.get(now).getComponent(0)).setText(String.valueOf((listChar.get(now))));
             ((JTextField) arrPanels.get(now).getComponent(1)).setText("0.");
             arrPanels.get(now).setVisible(false);
         }

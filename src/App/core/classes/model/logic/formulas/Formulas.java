@@ -53,11 +53,11 @@ public class Formulas implements ModelFormulas {
 
         double N = list.size();
 
-        double q = new BigDecimal(1 / N)
+        double q = new BigDecimal(N)
                 .setScale(4, RoundingMode.HALF_UP)
                 .doubleValue();
 
-        double exp = (-1 * N) * ( q * Math.log(q));
+        double exp = (Math.log(q) / Math.log(2));
 
         return new BigDecimal(exp)
                 .setScale(4, RoundingMode.HALF_UP)
@@ -65,10 +65,11 @@ public class Formulas implements ModelFormulas {
     }
 
     private double findEntropy(LinkedList<Data> list){
-
-        double exp = list.size();
-        //TODO:УТОЧНИТЬ
-        return new BigDecimal(exp)
+        double sum = 0;
+        for (Data data : list){
+            sum = sum + (-1 * ( data.getChance() * (Math.log(data.getChance()) / Math.log(2))));
+        }
+        return new BigDecimal(sum)
                 .setScale(4, RoundingMode.HALF_UP)
                 .doubleValue();
     }

@@ -9,7 +9,7 @@ class StringJTextField extends JTextField {
     StringJTextField() {
         addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
-                if (getText().length() > 3) {
+                if (getText().length() >= 1) {
                     e.consume();
                 }
             }

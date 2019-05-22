@@ -1,9 +1,6 @@
 package App.core.classes.model.logic.coding;
 
-import App.core.classes.model.comparator.huffmanComp.DataComparatorUp;
-import App.core.classes.model.comparator.huffmanComp.DataDrawComporatorDown;
-import App.core.classes.model.comparator.huffmanComp.IndexComparatorDown;
-import App.core.classes.model.comparator.huffmanComp.NodeComparatorUp;
+import App.core.classes.model.comparator.huffmanComp.*;
 import App.core.classes.model.comparator.shenonComp.DataComparatorDown;
 import App.core.classes.model.comparator.shenonComp.IndexComparatorUp;
 import App.core.classes.model.models.Data;
@@ -39,9 +36,6 @@ public class Huffman implements ModelCodingTree {
     public LinkedList<LinkedList<DataDraw>> getLastSum() {
         LinkedList<Data> list = new LinkedList<>(sortResult(listOld));
         LinkedList<LinkedList<DataDraw>> drawList = new LinkedList<>();
-        LinkedList<Integer> indexList = new LinkedList<>();
-        int j = 2;
-        int s = 0;
         LinkedList<DataDraw> draws = new LinkedList<>();
         for (Data aList : list) {
             draws.add(new DataDraw(aList.getChance(), false));
@@ -57,12 +51,7 @@ public class Huffman implements ModelCodingTree {
             DataDraw drawModel = new DataDraw(last, true);
             linkedList.add(drawModel);
             linkedList.sort(new DataDrawComporatorDown());
-            indexList.add(linkedList.indexOf(drawModel));
             drawList.add(linkedList);
-            for (DataDraw draw : linkedList) {
-                System.out.println(draw.getChance() + " " + draw.isRes());
-            }
-            System.out.println();
         }
         return drawList;
     }
@@ -70,30 +59,45 @@ public class Huffman implements ModelCodingTree {
 
     @Override
     public LinkedList<String[]> dataForDrawing() {
-        return drawingData(listOld);
+        return drawingData(sortBinary(list));
     }
 
     private LinkedList<String[]> drawingData(LinkedList<Data> listData){
         LinkedList<String[]> drawer = new LinkedList<>();
-        int max = 0;
-        for (Data data : listData){
-            int temp = data.getCodeBinary().split("").length;
-            if (temp >= max)
-                max = temp;
-        }
+        LinkedList<DataDraw> tempList = new LinkedList<>();
+        LinkedList<Data> listOld = sortResult(this.listOld);
         int j = 0;
-        while (drawer.size() != max) {
-            String[] arr = new String[listData.size()];
-            for (int i = 0; i < listData.size(); i++) {
-                try {
-                    arr[i] = listData.get(i).getCodeBinary().split("")[j];
-                }
-                catch (ArrayIndexOutOfBoundsException exp){
-                    arr[i] = "";
+        Data temp = null;
+        for (Data aListData : listData) {
+            System.out.println(aListData.getNameS() + " " + aListData.getChance() + " " + aListData.getCodeBinary());
+            if (!aListData.getCodeBinary().equals("")) {
+                String[] strArray = aListData.getNameS().split("");
+                if (strArray.length >= 1) {
+                    for (Data data : listOld) {
+                        for (String str : strArray) {
+                            if (str.equals(data.getNameS())) {
+                                String[] code = aListData.getCodeBinary().split("");
+                                tempList.add(new DataDraw(code[code.length - 1], listOld.indexOf(data), j));
+                                break;
+                            }
+                        }
+                    }
+                    if (j != 1)
+                        j++;
+                    else {
+                        String[] strings = new String[listOld.size()];
+                        for (int i = 0; i < strings.length; i++) {
+                            strings[i] = "";
+                        }
+                        for (DataDraw draw : tempList) {
+                            strings[draw.getIndex()] = draw.getCode();
+                        }
+                        drawer.addFirst(strings);
+                        tempList.clear();
+                        j = 0;
+                    }
                 }
             }
-            j++;
-            drawer.add(arr);
         }
         return drawer;
     }
@@ -113,11 +117,19 @@ public class Huffman implements ModelCodingTree {
         list.sort(new DataComparatorUp());
     }
 
-    private LinkedList<Data> sortResult(LinkedList<Data> listOld){
-        listOld.sort(new DataComparatorDown());
-        listOld.sort(new IndexComparatorUp());
-        listOld.sort(new DataComparatorDown());
-        return listOld;
+    private LinkedList<Data> sortResult(LinkedList<Data> list){
+        list.sort(new DataComparatorDown());
+        list.sort(new IndexComparatorUp());
+        list.sort(new DataComparatorDown());
+        return list;
+    }
+
+    private LinkedList<Data> sortBinary(LinkedList<Data> list){
+        list.sort(new DataComparatorDown());
+        list.sort(new IndexComparatorUp());
+        list.sort(new BinaryComparatorDown());
+        list.sort(new BinaryComparatorDown());
+        return list;
     }
 
     @Override

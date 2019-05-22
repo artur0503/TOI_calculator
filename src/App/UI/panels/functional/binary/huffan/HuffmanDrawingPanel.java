@@ -36,38 +36,39 @@ public class HuffmanDrawingPanel extends DrawingPanel {
     private void setCharToDraw(int iteration){
         size.setSize(size.getWidth(), list.size() * 31);
         int step = 30;
-        int middle = getPreferredSize().width / 3 - 100;
+        int middle = getPreferredSize().width / 3 - 50;
         int x = 30;
-        int j = 0;
+        int j1 = 0;
+        int j2 = 0;
         for (int i = step / 2; i < getPreferredSize().width; i = i + (step)) {
             if (iteration == 1) {
-                if (j != list.size()) {
-                    addLabel(list.get(j).getNameS(), middle, i);
+                if (j1 != list.size()) {
+                    addLabel(list.get(j1).getNameS(), middle, i);
                     isLine = false;
                     modelList = new LinkedList<>();
                     sumList = new LinkedList<>();
                     temp = 0;
                     stepTemp = 0;
                     lastIteration = 0;
-                    j++;
+                    j1++;
                 }
                 else
                     break;
             }
             else if (iteration == 2) {
-                if (j != list.size()) {
-                    addLabel(String.valueOf(list.get(j).getChance()), middle + x, i);
-                    if (j == list.size() - 2)
+                if (j1 != list.size()) {
+                    addLabel(String.valueOf(list.get(j1).getChance()), middle + x, i);
+                    if (j1 == list.size() - 2)
                         if (modelList.isEmpty()){
-                            addModelForDrawing(iteration, j, middle, x, i);
+                            addModelForDrawing(iteration, j1, middle, x, i);
                         }
-                    j++;
+                    j1++;
                 }
                 else
                     break;
             }
             else if (iteration > 2){
-                if (j != (list.size() - (iteration - 2))) {
+                if (j1 != (list.size() - (iteration - 2))) {
                     int x1;
                     if (iteration == 3) {
                         x1 = middle + x * iteration;
@@ -75,16 +76,13 @@ public class HuffmanDrawingPanel extends DrawingPanel {
                     else {
                         x1 = middle + (2 * x * iteration) - 100;
                     }
-                    if (j == 13){
-                        System.out.println();
-                    }
-                    addLabel(String.valueOf(lastSumList.get(iteration - 2).get(j).getChance()), x1, i);
-                    if (lastSumList.get(iteration - 2).get(j).isRes()) {
+                    addLabel(String.valueOf(lastSumList.get(iteration - 2).get(j1).getChance()), x1, i);
+                    if (lastSumList.get(iteration - 2).get(j1).isRes()) {
                         sumList.add(new DrawingModel(iteration, x1, i));
                     }
                     if (list.size() >= iteration) {
-                        if (j == (list.size() - (iteration))) {
-                            addModelForDrawing(lastIteration, j, middle, temp - middle, stepTemp);
+                        if (j1 == (list.size() - (iteration))) {
+                            addModelForDrawing(lastIteration, j1, middle, temp - middle, stepTemp);
                             temp = x1;
                             stepTemp = i;
                             lastIteration = iteration;
@@ -92,10 +90,23 @@ public class HuffmanDrawingPanel extends DrawingPanel {
                         }
                     }
                     else
-                        if (j == (list.size() - (iteration - 1))){
-                            addModelForDrawing(lastIteration, j, middle, temp - middle, stepTemp);
+                        if (j1 == (list.size() - (iteration - 1))){
+                            addModelForDrawing(lastIteration, j1, middle, temp - middle, stepTemp);
                         }
-                    j++;
+                    j1++;
+                }
+                if (j2 != (list.size())) {
+                    int x2;
+                    if (iteration == 3) {
+                        x2 = middle - x;
+                    } else {
+                        x2 = middle - x * (iteration - 2);
+                    }
+                    if (j2 == 13) {
+                        System.out.println();
+                    }
+                    addLabel(String.valueOf(draw.get(iteration)[j2]), x2, i);
+                    j2++;
                 }
             }
         }
