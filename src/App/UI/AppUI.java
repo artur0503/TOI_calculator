@@ -1,8 +1,5 @@
 package App.UI;
 
-import App.UI.listeners.OnClickListener;
-import App.UI.listeners.OnDecodingListener;
-import App.UI.listeners.OnInputListener;
 import App.UI.panels.RootPanel;
 import App.UI.panels.functional.InputPanel;
 import App.UI.panels.functional.arithmetic.ArithmeticDecodingPanel;
@@ -299,43 +296,37 @@ public class AppUI extends JFrame implements BaseView {
         arithmeticPanel.createArithmeticCoding("Арифметическое кодирование");
         addPanel(rootPanel, arithmeticPanel.getRootPanel());
 
-        arithmeticPanel.setOnDecodingListener(new OnDecodingListener() {
-            @Override
-            public void OnDecoding(boolean flag, String str, boolean isChar) {
-                if (!flag){
-                    switch (str){
-                        case ArithmeticPanel.INPUT_MENU:
-                            arithmeticPanel.getRootPanel().setVisible(false);
-                            rootPanel.removeAll();
-                            optionsMenuScreen(rootPanel);
-                            break;
-                        case ArithmeticPanel.MAIN_MENU:
-                            arithmeticPanel.getRootPanel().setVisible(false);
-                            rootPanel.removeAll();
-                            mainMenuScreen(rootPanel, var, getInputData());
-                            break;
-                    }
+        arithmeticPanel.setOnDecodingListener((flag, str, isChar) -> {
+            if (!flag){
+                switch (str){
+                    case ArithmeticPanel.INPUT_MENU:
+                        arithmeticPanel.getRootPanel().setVisible(false);
+                        rootPanel.removeAll();
+                        optionsMenuScreen(rootPanel);
+                        break;
+                    case ArithmeticPanel.MAIN_MENU:
+                        arithmeticPanel.getRootPanel().setVisible(false);
+                        rootPanel.removeAll();
+                        mainMenuScreen(rootPanel, var, getInputData());
+                        break;
                 }
-                else {
-                    ArithmeticController arithm = new ArithmeticController(list);
-                    if (str != null);
-                    arithm.setText(str);
-                    arithm.execute();
-                    arithmeticPanel.setData(arithm.getRes(), list);
-                    System.out.println("Результат: " + arithm.getRes());
-                    res = arithm.getRes();
-                }
+            }
+            else {
+                ArithmeticController arithm = new ArithmeticController(list);
+                if (str != null);
+                arithm.setText(str);
+                arithm.execute();
+                arithmeticPanel.setData(arithm.getRes(), list);
+                System.out.println("Результат: " + arithm.getRes());
+                res = arithm.getRes();
             }
         });
 
-        arithmeticPanel.setOnInputListener(new OnInputListener() {
-            @Override
-            public void OnInput(boolean flag, LinkedList<Data> linkedList) {
-                if (flag){
-                    if (linkedList != null){
-                        arithmeticPanel.getRootPanel().setVisible(false);
-                        arithmeticDecodingScreen(rootPanel, res, linkedList);
-                    }
+        arithmeticPanel.setOnInputListener((flag, linkedList) -> {
+            if (flag){
+                if (linkedList != null){
+                    arithmeticPanel.getRootPanel().setVisible(false);
+                    arithmeticDecodingScreen(rootPanel, res, linkedList);
                 }
             }
         });
@@ -346,24 +337,21 @@ public class AppUI extends JFrame implements BaseView {
         ArithmeticDecodingPanel arithmeticDecodingPanel = new ArithmeticDecodingPanel();
         arithmeticDecodingPanel.createArithmDecoding(res, getInputData());
         addPanel(rootPanel, arithmeticDecodingPanel.getRootPanel());
-        arithmeticDecodingPanel.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(boolean flag, int name) {
-                if (flag){
-                    ControllerDecoding decoder = new ArithmeticDecoderController(res, name, linkedList);
-                    decoder.execute();
-                    arithmeticDecodingPanel.setResult(decoder.getDecodingResult());
-                    System.out.println(decoder.getDecodingResult());
+        arithmeticDecodingPanel.setOnClickListener((flag, name) -> {
+            if (flag){
+                ControllerDecoding decoder = new ArithmeticDecoderController(res, name, linkedList);
+                decoder.execute();
+                arithmeticDecodingPanel.setResult(decoder.getDecodingResult());
+                System.out.println(decoder.getDecodingResult());
+            }
+            else {
+                if (name == ArithmeticDecodingPanel.INPUT_MENU) {
+                    arithmeticDecodingPanel.getRootPanel().setVisible(false);
+                    optionsMenuScreen(rootPanel);
                 }
-                else {
-                    if (name == ArithmeticDecodingPanel.INPUT_MENU) {
-                        arithmeticDecodingPanel.getRootPanel().setVisible(false);
-                        optionsMenuScreen(rootPanel);
-                    }
-                    else if (name == ArithmeticDecodingPanel.MAIN_MENU) {
-                        arithmeticDecodingPanel.getRootPanel().setVisible(false);
-                        mainMenuScreen(rootPanel, var, transportList());
-                    }
+                else if (name == ArithmeticDecodingPanel.MAIN_MENU) {
+                    arithmeticDecodingPanel.getRootPanel().setVisible(false);
+                    mainMenuScreen(rootPanel, var, transportList());
                 }
             }
         });

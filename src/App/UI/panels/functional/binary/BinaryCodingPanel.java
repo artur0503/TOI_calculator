@@ -21,9 +21,6 @@ public class BinaryCodingPanel implements ActionListener {
     private JPanel rootPanel;
     private DrawingPanel drawingPanel;
 
-    private JTextArea codingResultsTextArea;
-    private JTextArea formulaResultTextArea;
-    private JTextArea formulaTextArea;
     private JButton nextStepButton;
     private JButton prevStepButton;
     private JButton backButton;
@@ -269,12 +266,12 @@ public class BinaryCodingPanel implements ActionListener {
                         new Insets(0, 0, 0, 0), -1, -1));
         rootPanel.add(resultPanel, BorderLayout.EAST);
 
-        codingResultsTextArea = Components.createJTextArea(convertListToString(input));
+        JTextArea codingResultsTextArea = Components.createJTextArea(convertListToString(input));
         JPanel codingResultPanel = Components.createJPanel(2, 1);
         addPanel(resultPanel, codingResultPanel, codingResultsTextArea, 0, new Dimension(190, 360));
         addLabel(codingResultPanel, "Результат кодирования");
 
-        formulaResultTextArea = Components.createJTextArea("\n  "
+        JTextArea formulaResultTextArea = Components.createJTextArea("\n  "
                 + formulas.resCountMessage() + "\n\n  "
                 + formulas.resMaxEntropy() + "\n\n  "
                 + formulas.resEntropy() + "\n\n  "
@@ -307,14 +304,14 @@ public class BinaryCodingPanel implements ActionListener {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
                         null, null, null, 0, false));
 
-        formulaTextArea = Components.createJTextArea("\n  N = кол-во собщений\n\n" +
+        JTextArea formulaTextArea = Components.createJTextArea("\n  N = кол-во собщений\n\n" +
                 "  H(X)max = log(N)\n\n" +
                 "  H(X) = -∑ (p(xi) * log(xi)\n\n" +
                 "  m ср = ∑ p(xi) * mi\n" +
                 "         \n" +
                 "  R = H(x)max - H(x) / H(x)max");
         JPanel formulasPanel = Components.createJPanel(2, 1);
-        addInfoPanel(formulasInfoPanel, formulasPanel,formulaTextArea, 0, 2, new Dimension(250, 210));
+        addInfoPanel(formulasInfoPanel, formulasPanel, formulaTextArea, 0, 2, new Dimension(250, 210));
         addLabel(formulasPanel, "Характеристики Кода");
         addLabelPanel(formulasInfoPanel);
         addButtonPanel(formulasInfoPanel, getCountIteration(list));

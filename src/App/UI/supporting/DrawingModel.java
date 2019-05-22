@@ -22,31 +22,15 @@ public class DrawingModel {
         return iteration;
     }
 
-    public void setIteration(int iteration) {
-        this.iteration = iteration;
-    }
-
     public int getStep() {
         return step;
     }
 
-    public void setStep(int step) {
-        this.step = step;
-    }
-
-    public int getxLine() {
+    public int getXLine() {
         return xLine;
     }
 
-    public void setxLine(int xLine) {
-        this.xLine = xLine;
-    }
-
-    public int getyLine() {
+    public int getYLine() {
         return yLine;
-    }
-
-    public void setyLine(int yLine) {
-        this.yLine = yLine;
     }
 }

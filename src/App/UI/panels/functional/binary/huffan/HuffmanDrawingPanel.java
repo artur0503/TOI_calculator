@@ -168,7 +168,7 @@ public class HuffmanDrawingPanel extends DrawingPanel {
         int iterationCount = 2;
         for (DrawingModel model : modelList) {
             if (iterationCount <= lastIteration)
-                graphics2D.drawLine(model.getxLine(), model.getyLine(), model.getxLine(), model.getyLine() + 50);
+                graphics2D.drawLine(model.getXLine(), model.getYLine(), model.getXLine(), model.getYLine() + 50);
             iterationCount++;
         }
     }
@@ -177,7 +177,7 @@ public class HuffmanDrawingPanel extends DrawingPanel {
         int iterationCount = 2;
         for (DrawingModel model : modelList) {
             if (iterationCount <= lastIteration)
-                graphics2D.drawLine(model.getxLine(), model.getyLine() + 22, model.getxLine() + 25, model.getyLine() + 22);
+                graphics2D.drawLine(model.getXLine(), model.getYLine() + 22, model.getXLine() + 25, model.getYLine() + 22);
             iterationCount++;
         }
     }

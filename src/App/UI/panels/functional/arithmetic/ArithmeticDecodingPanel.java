@@ -18,7 +18,6 @@ public class ArithmeticDecodingPanel implements ActionListener, DocumentListener
 
     private JPanel rootPanel;
 
-    private JTextArea formulasTextArea;
     private JTextArea resultTextArea;
     private JButton previousButton;
     private JButton nextButton;

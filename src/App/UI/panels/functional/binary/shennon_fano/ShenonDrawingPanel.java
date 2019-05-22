@@ -14,7 +14,6 @@ public class ShenonDrawingPanel extends DrawingPanel {
 
     private LinkedList<Data> list;
     private HashMap<Integer, String[]> draw;
-    private LinkedList<JLabel> labelList;
     private Dimension size;
     private String  temp = "";
     private boolean isDivide;
@@ -33,7 +32,6 @@ public class ShenonDrawingPanel extends DrawingPanel {
     }
 
     private void setCharToDraw(int iteration){
-        labelList = new LinkedList<>();
         int step = 30;
         int x = 30;
         int j = 0;
